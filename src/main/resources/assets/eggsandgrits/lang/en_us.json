@@ -1,0 +1,81 @@
+{
+  "item.eggsandgrits.pink_garnet": "Pink Garnet",
+  "item.eggsandgrits.raw_pink_garnet": "Raw Pink Garnet",
+  "item.eggsandgrits.chisel": "Chisel",
+  "item.eggsandgrits.cauliflower": "Cauliflower",
+  "item.eggsandgrits.starlight_ashes": "Starlight Ashes",
+
+  "item.eggsandgrits.pink_garnet_sword": "Pink Garnet Sword",
+  "item.eggsandgrits.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.eggsandgrits.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.eggsandgrits.pink_garnet_axe": "Pink Garnet Axe",
+  "item.eggsandgrits.pink_garnet_hoe": "Pink Garnet Hoe",
+
+  "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
+  "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
+
+  "effect.eggsandgrits.slimey": "Slimey",
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+  "painting.eggsandgrits.world.title": "World",
+  "painting.eggsandgrits.world.author": "NanoAttack",
+
+  "enchantment.eggsandgrits.lightning_striker": "Lightning Striker",
+
+  "item.eggsandgrits.pink_garnet_hammer": "Pink Garnet Hammer",
+
+  "item.eggsandgrits.pink_garnet_helmet": "Pink Garnet Helmet",
+  "item.eggsandgrits.pink_garnet_chestplate": "Pink Garnet Chestplate",
+  "item.eggsandgrits.pink_garnet_leggings": "Pink Garnet Leggings",
+  "item.eggsandgrits.pink_garnet_boots": "Pink Garnet Boots",
+  "item.eggsandgrits.jak": "Lays",
+  "item.eggsandgrits.grits": "Grits",
+  "item.eggsandgrits.ritz": "Ritz",
+  "item.eggsandgrits.eggs": "Eggs",
+  "item.eggsandgrits.syrup": "Syrup",
+
+  "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
+
+  "item.eggsandgrits.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
+  "item.eggsandgrits.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
+
+
+  "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
+  "block.eggsandgrits.raw_pink_garnet_block": "Block of Raw Pink Garnet",
+
+  "block.eggsandgrits.pink_garnet_ore": "Pink Garnet Ore",
+  "block.eggsandgrits.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+  "block.eggsandgrits.magic_block": "Magic Block",
+
+  "block.eggsandgrits.pink_garnet_stairs": "Pink Garnet Stairs",
+  "block.eggsandgrits.pink_garnet_slab": "Pink Garnet Slab",
+
+  "block.eggsandgrits.pink_garnet_button": "Pink Garnet Button",
+  "block.eggsandgrits.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate",
+
+  "block.eggsandgrits.pink_garnet_fence": "Pink Garnet Fence",
+  "block.eggsandgrits.pink_garnet_fence_gate": "Pink Garnet Fence Gate",
+  "block.eggsandgrits.pink_garnet_wall": "Pink Garnet Wall",
+
+  "block.eggsandgrits.pink_garnet_door": "Pink Garnet Door",
+  "block.eggsandgrits.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
+
+  "block.eggsandgrits.pink_garnet_lamp": "Pink Garnet Lamp",
+
+
+  "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.eggsandgrits.pink_garnet_blocks": "Pink Garnet Blocks",
+
+  "tooltip.eggsandgrits.magic_block.tooltip": "This block is very, very §9MAGICAL§r",
+
+  "tooltip.eggsandgrits.chisel.shift_down": "This item chisels blocks into Bricks!",
+  "tooltip.eggsandgrits.chisel": "Press §eShift§r for more Information!",
+
+  "tooltip.eggsandgrits.cauliflower.tooltip": "This is delicious!",
+
+  "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
+  "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"
+}
