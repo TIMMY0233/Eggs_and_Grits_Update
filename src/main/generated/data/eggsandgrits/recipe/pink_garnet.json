@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "eggsandgrits:pink_garnet_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "eggsandgrits:pink_garnet"
+  }
+}

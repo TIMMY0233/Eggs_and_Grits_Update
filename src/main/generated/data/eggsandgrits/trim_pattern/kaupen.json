@@ -1,0 +1,8 @@
+{
+  "asset_id": "eggsandgrits:kaupen",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.eggsandgrits.kaupen"
+  },
+  "template_item": "eggsandgrits:kaupen_armor_trim_smithing_template"
+}

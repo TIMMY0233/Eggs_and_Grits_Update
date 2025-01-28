@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "eggsandgrits:block/pink_garnet_lamp"
+    },
+    "clicked=true": {
+      "model": "eggsandgrits:block/pink_garnet_lamp_on"
+    }
+  }
+}

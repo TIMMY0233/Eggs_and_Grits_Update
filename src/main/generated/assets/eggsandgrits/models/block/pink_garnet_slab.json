@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "eggsandgrits:block/pink_garnet_block",
+    "side": "eggsandgrits:block/pink_garnet_block",
+    "top": "eggsandgrits:block/pink_garnet_block"
+  }
+}

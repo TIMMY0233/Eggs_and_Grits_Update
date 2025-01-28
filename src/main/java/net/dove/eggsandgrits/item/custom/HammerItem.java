@@ -15,6 +15,7 @@ import java.util.List;
 public class HammerItem extends MiningToolItem {
     public HammerItem(ToolMaterial material, Settings settings) {
         super(material, BlockTags.PICKAXE_MINEABLE, settings);
+
     }
 
     public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayerEntity player) {

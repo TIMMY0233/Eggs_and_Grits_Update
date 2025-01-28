@@ -40,3 +40,5 @@ public class ModSounds {
 
 
 //Sounds must be .ogg files and mono
+
+//Sounds must be .ogg files and mono
