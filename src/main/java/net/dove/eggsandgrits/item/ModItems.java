@@ -57,7 +57,13 @@ public class ModItems {
     );
 
     public static final Item CREAM = registerItem(
-            "cream", new DrinkItem(new Item.Settings().food(ModFoodComponents.CREAM).maxCount(1))
+            "cream", new DrinkItem(new Item.Settings().food(ModFoodComponents.CREAM).maxCount(1)){
+                @Override
+                public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+                    tooltip.add(Text.translatable("tooltip.eggsandgrits.cream.tooltip"));
+                    super.appendTooltip(stack, context, tooltip, options);
+                }
+            }
     );
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
