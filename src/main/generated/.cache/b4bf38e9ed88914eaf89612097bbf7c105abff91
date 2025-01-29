@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-27T16:19:37.985383	Eggs and Grits/Block Loot Tables
+// 1.21.1	2025-01-28T22:09:31.750243	Eggs and Grits/Block Loot Tables
 f4727988a8f37ecaefc18259d5d2d583e24fa710 data/eggsandgrits/loot_table/blocks/pink_garnet_block.json
 fb6fee22b627368cde7ca5394d43f8bdb695aa49 data/eggsandgrits/loot_table/blocks/pink_garnet_ore.json
 83c37d9171ce260263993aac10cc5907a433e7c7 data/eggsandgrits/loot_table/blocks/magic_block.json
@@ -8,8 +8,8 @@ acab5e609b300739e726a5466be46aa9f7ee1160 data/eggsandgrits/loot_table/blocks/pin
 0799e798e12ce8ef076b0c8f7476d24953832f8d data/eggsandgrits/loot_table/blocks/pink_garnet_fence_gate.json
 56101aa54befaa25ef1e3b99760ed2474cc0290c data/eggsandgrits/loot_table/blocks/pink_garnet_fence.json
 3664f177b87132cc457c47e7bf472fba31d70c0c data/eggsandgrits/loot_table/blocks/pink_garnet_door.json
+a641680af0b365ff9ab7e45a5c06998bbd4e0283 data/eggsandgrits/loot_table/blocks/pink_garnet_slab.json
 034ab21bb085506d3a3f8883ae9d4f3367a98fb3 data/eggsandgrits/loot_table/blocks/pink_garnet_deepslate_ore.json
 168dedc1ec6ecf21887336093994aa9561103e2a data/eggsandgrits/loot_table/blocks/pink_garnet_button.json
-a641680af0b365ff9ab7e45a5c06998bbd4e0283 data/eggsandgrits/loot_table/blocks/pink_garnet_slab.json
 dde5f0ca47d89535b1f0b6bd12ede1c21c61e815 data/eggsandgrits/loot_table/blocks/pink_garnet_pressure_plate.json
 5130c55e76fa534e8ef3b62e28a9e1237b994818 data/eggsandgrits/loot_table/blocks/pink_garnet_wall.json

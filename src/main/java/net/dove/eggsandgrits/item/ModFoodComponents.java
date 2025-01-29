@@ -1,10 +1,9 @@
 package net.dove.eggsandgrits.item;
 
+
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.UseAction;
 
 public class ModFoodComponents {
     public static final FoodComponent CAULIFLOWER = new FoodComponent.Builder().nutrition(3).saturationModifier(0.25f)
@@ -21,6 +20,10 @@ public class ModFoodComponents {
 
     public static final FoodComponent SYRUP = new FoodComponent.Builder().nutrition(10).saturationModifier(0.75f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100), 1f).build();
+
+    public static final FoodComponent CREAM = new FoodComponent.Builder().nutrition(10).saturationModifier(0.75f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 3), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 2),1f).build();
 
 
 

@@ -3,6 +3,7 @@
   "item.eggsandgrits.raw_pink_garnet": "Raw Pink Garnet",
   "item.eggsandgrits.chisel": "Chisel",
   "item.eggsandgrits.cauliflower": "Cauliflower",
+  "item.eggsandgrits.cream": "Cream",
   "item.eggsandgrits.starlight_ashes": "Starlight Ashes",
 
   "item.eggsandgrits.pink_garnet_sword": "Pink Garnet Sword",
@@ -75,6 +76,7 @@
   "tooltip.eggsandgrits.chisel": "Press §eShift§r for more Information!",
 
   "tooltip.eggsandgrits.cauliflower.tooltip": "This is delicious!",
+  "tooltip.eggsandgrits.cream.tooltip": "Maybe I shouldn't drink this..",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"
