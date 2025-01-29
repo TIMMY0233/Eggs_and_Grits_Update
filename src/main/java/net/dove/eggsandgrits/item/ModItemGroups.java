@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.JAK);
                         entries.add(ModItems.SYRUP);
                         entries.add(ModItems.CREAM);
+                        entries.add(ModItems.CAULIFLOWER_SEEDS);
 
                         entries.add(ModItems.KAUPEN_BOW);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);

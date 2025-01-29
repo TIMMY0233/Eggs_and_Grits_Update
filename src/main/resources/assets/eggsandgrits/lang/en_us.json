@@ -11,6 +11,7 @@
   "item.eggsandgrits.pink_garnet_shovel": "Pink Garnet Shovel",
   "item.eggsandgrits.pink_garnet_axe": "Pink Garnet Axe",
   "item.eggsandgrits.pink_garnet_hoe": "Pink Garnet Hoe",
+  "item.eggsandgrits.cauliflower_seeds": "Cauliflower Seeds",
 
   "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
   "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
@@ -65,6 +66,9 @@
   "block.eggsandgrits.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
 
   "block.eggsandgrits.pink_garnet_lamp": "Pink Garnet Lamp",
+
+
+  "block.eggsandgrits.cauliflower_crop": "Cauliflower Crop",
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",

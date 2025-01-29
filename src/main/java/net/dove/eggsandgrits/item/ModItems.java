@@ -1,5 +1,6 @@
 package net.dove.eggsandgrits.item;
 
+import net.dove.eggsandgrits.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.item.custom.ChiselItem;
@@ -57,7 +58,13 @@ public class ModItems {
     );
 
     public static final Item CREAM = registerItem(
-            "cream", new DrinkItem(new Item.Settings().food(ModFoodComponents.CREAM).maxCount(1))
+            "cream", new DrinkItem(new Item.Settings().food(ModFoodComponents.CREAM).maxCount(1)){
+                @Override
+                public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+                    tooltip.add(Text.translatable("tooltip.eggsandgrits.cream.tooltip"));
+                    super.appendTooltip(stack, context, tooltip, options);
+                }
+            }
     );
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
@@ -111,6 +118,9 @@ public class ModItems {
             new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1)));
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(EggsAndGrits.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
+
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+            new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);
