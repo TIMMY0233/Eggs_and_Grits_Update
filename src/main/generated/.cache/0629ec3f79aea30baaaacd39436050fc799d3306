@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-29T21:16:49.1217063	Eggs and Grits/Model Definitions
+// 1.21.1	2025-01-29T21:41:12.6858986	Eggs and Grits/Model Definitions
 82ffc571557014b636373bcdb5fafbd8144360ce assets\eggsandgrits\blockstates\pink_garnet_slab.json
 11e8d0beb9d8717db283bbd9bcdf801e1dea47fa assets\eggsandgrits\models\item\ritz.json
 f140fb8b3a47c2791c2025f8e4825a356c8ebb27 assets\eggsandgrits\blockstates\pink_garnet_button.json
@@ -55,8 +55,8 @@ dc59075b4df3df94b1a1adc9447d4c83e907fa1b assets\eggsandgrits\models\block\pink_g
 9d250a8d43b0b5b1d6dfcfb60fd48b4fa8269e57 assets\eggsandgrits\blockstates\magic_block.json
 f31316c5b1d49a6eaf42db227197d52bb9ba1e4a assets\eggsandgrits\models\block\cauliflower_crop_stage6.json
 8066114cfa37451e954313b5585138deb28897d8 assets\eggsandgrits\models\item\pink_garnet_helmet_amethyst_trim.json
-3d3ef45f2a28312218e3e1afa5d16f240593338d assets\eggsandgrits\models\block\pink_garnet_ore.json
 ce1a18c5eb1ee78bc51871ae0b1ddc66015d959a assets\eggsandgrits\models\block\beans_crop_stage0.json
+3d3ef45f2a28312218e3e1afa5d16f240593338d assets\eggsandgrits\models\block\pink_garnet_ore.json
 722490a6fd918b547432a6ce41603a83e4e67c14 assets\eggsandgrits\models\item\pink_garnet_chestplate_netherite_trim.json
 569af2ace0bb25c694fd2eddc7721aa3889c4ac2 assets\eggsandgrits\models\item\raw_pink_garnet_block.json
 592c22a028c7b8e95ead67e7527228afad7aa884 assets\eggsandgrits\models\item\pink_garnet_helmet_emerald_trim.json
@@ -90,6 +90,7 @@ c2f54c7a6625f4b0d9d0bd21f91b1287acfeffdf assets\eggsandgrits\models\block\beans_
 a1a1a85beb78b698a18e5b4bc958972d661b7446 assets\eggsandgrits\models\block\pink_garnet_button.json
 bef21149c3efa9e1583c82dfd07fba2c2faa0d21 assets\eggsandgrits\models\item\cauliflower.json
 61ee2ce3d23ee0d357651bf9736c200b0192d08b assets\eggsandgrits\blockstates\pink_garnet_door.json
+1455b036bd187a3ac9ae9dfc2877f9ca3637bf90 assets\eggsandgrits\models\item\butter.json
 fbe25814143c88182bf7a01dddf6d4751fe99189 assets\eggsandgrits\models\item\pink_garnet_helmet_redstone_trim.json
 dbe99a01ed177d74edcee56634c9ce018fbde96b assets\eggsandgrits\models\item\pink_garnet_stairs.json
 0ffb647f37440959980d0b2ba1e628e9d012c5ea assets\eggsandgrits\models\item\pink_garnet_boots_quartz_trim.json

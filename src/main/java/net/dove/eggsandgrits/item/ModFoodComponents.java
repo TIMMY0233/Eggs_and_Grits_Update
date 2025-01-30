@@ -34,6 +34,8 @@ public class ModFoodComponents {
             .alwaysEdible()
             .build();
 
+    public static final FoodComponent BUTTER = new FoodComponent.Builder().nutrition(5).saturationModifier(0.75f)
+            .build();
 
 
 

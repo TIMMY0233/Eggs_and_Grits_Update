@@ -5,9 +5,9 @@ import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
-import net.minecraft.block.Blocks;
-import net.minecraft.component.type.FoodComponent;
-import net.minecraft.component.type.FoodComponents;
+
+import net.minecraft.client.gui.screen.Screen;
+
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -37,6 +37,7 @@ public class ModItems {
         }
     });
 
+
     public static final Item EGGS = registerItem("eggs", new Item(new Item.Settings().food(ModFoodComponents.EGGS)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -55,6 +56,10 @@ public class ModItems {
 
     public static final Item SYRUP = registerItem(
             "syrup", new DrinkItem(new Item.Settings().food(ModFoodComponents.SYRUP).maxCount(16))
+    );
+
+    public static final Item BUTTER = registerItem(
+            "butter", new Item(new Item.Settings().food(ModFoodComponents.BUTTER).maxCount(64))
     );
 
     public static final Item CREAM = registerItem(
@@ -79,8 +84,12 @@ public class ModItems {
     public static final Item CHILI = registerItem("chili", new Item(new Item.Settings().food(ModFoodComponents.CHILI)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-            tooltip.add(Text.translatable("tooltip.eggsandgrits.chili.tooltip"));
-            super.appendTooltip(stack, context, tooltip, type);
+            if(Screen.hasShiftDown()) {
+                tooltip.add(Text.translatable("tooltip.eggsandgrits.chili.shift_down"));
+            } else {
+                tooltip.add(Text.translatable("tooltip.eggsandgrits.chili.tooltip"));
+            }
+                 super.appendTooltip(stack, context, tooltip, type);
         }
     });
 

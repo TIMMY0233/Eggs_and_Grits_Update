@@ -9,6 +9,7 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -44,14 +45,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHILI, 1)
-                .input(ModItems.BEANS)
+                .input(ModItems.BEANS,8)
+                .input(Items.BOWL)
                 .criterion(hasItem(ModItems.BEANS), conditionsFromItem(ModItems.BEANS))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRITS, 1)
+                .input(ModItems.CREAM)
+                .input(ModItems.BUTTER)
+                .input(Items.BOWL)
+                .input(Items.WATER_BUCKET)
+                .criterion(hasItem(ModItems.CREAM), conditionsFromItem(ModItems.CREAM))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_PINK_GARNET, 32)
                 .input(ModBlocks.MAGIC_BLOCK)
                 .criterion(hasItem(ModBlocks.MAGIC_BLOCK), conditionsFromItem(ModBlocks.MAGIC_BLOCK))
                 .offerTo(exporter, Identifier.of(EggsAndGrits.MOD_ID, "raw_pink_garnet_from_magic_block"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CREAM, 1)
+                .input(Items.MILK_BUCKET)
+                .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
+                .offerTo(exporter, Identifier.of(EggsAndGrits.MOD_ID, "cream"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BUTTER, 2)
+                .input(ModItems.CREAM)
+                .criterion(hasItem(ModItems.CREAM), conditionsFromItem(ModItems.CREAM))
+                .offerTo(exporter, Identifier.of(EggsAndGrits.MOD_ID, "butter"));
 
         offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(EggsAndGrits.MOD_ID, "kaupen"));
     }

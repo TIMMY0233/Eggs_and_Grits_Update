@@ -39,6 +39,7 @@
   "item.eggsandgrits.eggs": "Eggs",
   "item.eggsandgrits.syrup": "Syrup",
   "item.eggsandgrits.chili": "Chili",
+  "item.eggsandgrits.butter": "Butter",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -85,7 +86,8 @@
 
   "tooltip.eggsandgrits.cauliflower.tooltip": "This is delicious!",
   "tooltip.eggsandgrits.cream.tooltip": "Maybe I shouldn't drink this..",
-  "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit, the more you eat the more you §ktoot§r",
+  "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit",
+  "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"

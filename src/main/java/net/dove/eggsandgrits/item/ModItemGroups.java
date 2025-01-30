@@ -29,6 +29,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.BEANS);
                         entries.add(ModItems.CHILI);
+                        entries.add(ModItems.BUTTER);
 
                         entries.add(ModItems.KAUPEN_BOW);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
