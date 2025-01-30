@@ -9,6 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 public class ModSounds {
@@ -27,6 +28,8 @@ public class ModSounds {
     public static final SoundEvent BAR_BRAWL = registerSoundEvent("bar_brawl");
     public static final RegistryKey<JukeboxSong> BAR_BRAWL_KEY =
             RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(EggsAndGrits.MOD_ID, "bar_brawl"));
+
+    public static final SoundEvent TOOT = registerSoundEvent("toot");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);
