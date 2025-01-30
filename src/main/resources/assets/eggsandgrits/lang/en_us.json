@@ -12,6 +12,7 @@
   "item.eggsandgrits.pink_garnet_axe": "Pink Garnet Axe",
   "item.eggsandgrits.pink_garnet_hoe": "Pink Garnet Hoe",
   "item.eggsandgrits.cauliflower_seeds": "Cauliflower Seeds",
+  "item.eggsandgrits.beans": "Beans",
 
   "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
   "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
@@ -37,6 +38,7 @@
   "item.eggsandgrits.ritz": "Ritz",
   "item.eggsandgrits.eggs": "Eggs",
   "item.eggsandgrits.syrup": "Syrup",
+  "item.eggsandgrits.chili": "Chili",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -51,6 +53,7 @@
   "block.eggsandgrits.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
 
   "block.eggsandgrits.magic_block": "Magic Block",
+  "block.eggsandgrits.gem_polishing_station": "Gem Polishing Station",
 
   "block.eggsandgrits.pink_garnet_stairs": "Pink Garnet Stairs",
   "block.eggsandgrits.pink_garnet_slab": "Pink Garnet Slab",
@@ -69,6 +72,7 @@
 
 
   "block.eggsandgrits.cauliflower_crop": "Cauliflower Crop",
+  "block.eggsandgrits.beans_crop": "Beans Crop",
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
@@ -81,6 +85,7 @@
 
   "tooltip.eggsandgrits.cauliflower.tooltip": "This is delicious!",
   "tooltip.eggsandgrits.cream.tooltip": "Maybe I shouldn't drink this..",
+  "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit, the more you eat the more you §ktoot§r",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"

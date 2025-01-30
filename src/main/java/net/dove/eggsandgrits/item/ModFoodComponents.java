@@ -25,6 +25,15 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 3), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 200, 2),1f).build();
 
+    public static final FoodComponent BEANS = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
+           .build();
+
+    public static final FoodComponent CHILI = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 1200,0), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40,2), 1f)
+            .alwaysEdible()
+            .build();
+
 
 
 

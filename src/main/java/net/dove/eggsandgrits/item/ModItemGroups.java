@@ -27,6 +27,9 @@ public class ModItemGroups {
                         entries.add(ModItems.CREAM);
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
 
+                        entries.add(ModItems.BEANS);
+                        entries.add(ModItems.CHILI);
+
                         entries.add(ModItems.KAUPEN_BOW);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
 
@@ -41,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_SHOVEL);
                         entries.add(ModItems.PINK_GARNET_AXE);
                         entries.add(ModItems.PINK_GARNET_HOE);
+
 
                         entries.add(ModItems.PINK_GARNET_HAMMER);
 
@@ -64,6 +68,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.PINK_GARNET_ORE);
                         entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 

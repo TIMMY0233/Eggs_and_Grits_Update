@@ -45,6 +45,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
 
+        blockStateModelGenerator.registerCrop(ModBlocks.BEANS_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+
 
     }
 
@@ -60,6 +62,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SYRUP, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.CREAM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHILI, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
 

@@ -1,13 +1,13 @@
 package net.dove.eggsandgrits.item;
 
 import net.dove.eggsandgrits.block.ModBlocks;
+import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
-import net.dove.eggsandgrits.item.custom.ChiselItem;
-import net.dove.eggsandgrits.item.custom.DrinkItem;
-import net.dove.eggsandgrits.item.custom.HammerItem;
-import net.dove.eggsandgrits.item.custom.ModArmorItem;
 import net.dove.eggsandgrits.sound.ModSounds;
+import net.minecraft.block.Blocks;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -76,6 +76,14 @@ public class ModItems {
         }
     });
 
+    public static final Item CHILI = registerItem("chili", new Item(new Item.Settings().food(ModFoodComponents.CHILI)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.chili.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
     public static final Item KAUPEN_BOW = registerItem("kaupen_bow", new BowItem(new Item.Settings().maxDamage(500).rarity(Rarity.EPIC)));
 
 
@@ -121,6 +129,10 @@ public class ModItems {
 
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
+
+    public static final Item BEANS = registerItem("beans",
+            new AliasedBlockItem(ModBlocks.BEANS_CROP, new Item.Settings().food(ModFoodComponents.BEANS)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);
