@@ -30,14 +30,24 @@ public class DiarrheaEffect extends StatusEffect {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 40, amplifier, false, true, true));
 
             // Randomly play fart sounds (1 in 5 chance every tick)
-            if (player.getWorld().random.nextFloat() < 0.02f) {
+            if (player.getWorld().random.nextFloat() < 0.07f) {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
                         ModSounds.TOOT,
                         SoundCategory.PLAYERS,
-                        1.0f,
-                        1.0f
+                        0.5f,
+                        1.3f
+                );
+            }
+            else if (player.getWorld().random.nextFloat() <0.1f) {
+                player.getWorld().playSound(
+                        null,
+                        player.getBlockPos(),
+                        ModSounds.TOOT2,
+                        SoundCategory.PLAYERS,
+                        0.5f,
+                        1.3f
                 );
             }
         }

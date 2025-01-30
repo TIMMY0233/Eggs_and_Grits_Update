@@ -30,6 +30,7 @@ public class ModSounds {
             RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(EggsAndGrits.MOD_ID, "bar_brawl"));
 
     public static final SoundEvent TOOT = registerSoundEvent("toot");
+    public static final SoundEvent TOOT2 = registerSoundEvent("toot2");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);

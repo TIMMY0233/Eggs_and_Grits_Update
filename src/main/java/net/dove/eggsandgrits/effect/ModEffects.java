@@ -28,7 +28,6 @@ public class ModEffects {
 
 
 
-
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(EggsAndGrits.MOD_ID, name), statusEffect);
     }

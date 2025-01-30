@@ -48,5 +48,11 @@
     "sounds": [
       "eggsandgrits:toot"
     ]
+  },
+  "toot2": {
+    "subtitle": "sounds.eggsandgrits.toot2",
+    "sounds": [
+      "eggsandgrits:toot2"
+    ]
   }
 }

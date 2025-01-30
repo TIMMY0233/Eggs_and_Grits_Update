@@ -60,7 +60,7 @@ public class EggsAndGrits implements ModInitializer {
 
 
 
-		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+		/*AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (entity instanceof SheepEntity sheepEntity && !world.isClient()) {
 				if (player.getMainHandStack().getItem() == Items.END_ROD) {
 					player.sendMessage(Text.literal("The Player just hit a sheep with an END ROD!"));
@@ -72,7 +72,7 @@ public class EggsAndGrits implements ModInitializer {
 			}
 
 			return ActionResult.SUCCESS;
-		});
+		});*/
 
 
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
