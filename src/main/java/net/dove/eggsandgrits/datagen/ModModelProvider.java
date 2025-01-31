@@ -1,6 +1,8 @@
 package net.dove.eggsandgrits.datagen;
 
+import net.dove.eggsandgrits.block.custom.BeansCropBlock;
 import net.dove.eggsandgrits.block.custom.CauliflowerCropBlock;
+import net.dove.eggsandgrits.block.custom.CornCropBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.dove.eggsandgrits.block.ModBlocks;
@@ -45,7 +47,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
 
-        blockStateModelGenerator.registerCrop(ModBlocks.BEANS_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+        blockStateModelGenerator.registerCrop(ModBlocks.BEANS_CROP, BeansCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
+
+
 
 
     }
@@ -63,6 +69,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.CREAM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHILI, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BUTTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
+
 
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
 

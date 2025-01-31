@@ -15,7 +15,17 @@ public class ModEffects {
             new SlimeyEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                             Identifier.of(EggsAndGrits.MOD_ID, "slimey"), -0.25f,
-                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+
+    public static final RegistryEntry<StatusEffect> DIARRHEA = registerStatusEffect("diarrhea",
+            new DiarrheaEffect(StatusEffectCategory.NEUTRAL, 0x9d593a)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                            Identifier.of(EggsAndGrits.MOD_ID, "diarrhea"), -0.25f,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {

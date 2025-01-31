@@ -1,10 +1,8 @@
 package net.dove.eggsandgrits.block;
 
-import net.dove.eggsandgrits.block.custom.CauliflowerCropBlock;
-import net.dove.eggsandgrits.block.custom.MagicBlock;
+import net.dove.eggsandgrits.block.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
-import net.dove.eggsandgrits.block.custom.PinkGarnetLampBlock;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -67,8 +65,13 @@ public class ModBlocks {
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     public static final Block BEANS_CROP = registerBlockWithoutBlockItem("beans_crop",
-            new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
+            new BeansCropBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block CORN_CROP = registerBlockWithoutBlockItem("corn_crop",
+            new CornCropBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
 
 
 

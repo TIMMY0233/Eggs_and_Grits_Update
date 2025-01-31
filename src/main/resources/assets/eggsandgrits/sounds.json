@@ -18,9 +18,9 @@
     ]
   },
   "magic_block_place": {
-    "subtitle": "sounds.eggsandgrits.magic_block_place",
+    "subtitle": "sounds.eggsandgrits.toot",
     "sounds": [
-      "eggsandgrits:magic_block_place"
+      "eggsandgrits:toot"
     ]
   },
   "magic_block_hit": {
@@ -41,6 +41,18 @@
         "name": "eggsandgrits:bar_brawl",
         "stream": true
       }
+    ]
+  },
+  "toot": {
+    "subtitle": "sounds.eggsandgrits.toot",
+    "sounds": [
+      "eggsandgrits:toot"
+    ]
+  },
+  "toot2": {
+    "subtitle": "sounds.eggsandgrits.toot2",
+    "sounds": [
+      "eggsandgrits:toot2"
     ]
   }
 }

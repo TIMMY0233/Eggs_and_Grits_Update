@@ -22,6 +22,8 @@
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
 
+  "effect.eggsandgrits.diarrhea": "diarrhea",
+
   "painting.eggsandgrits.world.title": "World",
   "painting.eggsandgrits.world.author": "NanoAttack",
 
@@ -39,6 +41,10 @@
   "item.eggsandgrits.eggs": "Eggs",
   "item.eggsandgrits.syrup": "Syrup",
   "item.eggsandgrits.chili": "Chili",
+  "item.eggsandgrits.butter": "Butter",
+
+  "item.eggsandgrits.corn": "Corn",
+  "item.eggsandgrits.corn_seeds": "Corn Kernels",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -73,6 +79,7 @@
 
   "block.eggsandgrits.cauliflower_crop": "Cauliflower Crop",
   "block.eggsandgrits.beans_crop": "Beans Crop",
+  "block.eggsandgrits.corn_crop": "Corn Crop",
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
@@ -85,7 +92,8 @@
 
   "tooltip.eggsandgrits.cauliflower.tooltip": "This is delicious!",
   "tooltip.eggsandgrits.cream.tooltip": "Maybe I shouldn't drink this..",
-  "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit, the more you eat the more you §ktoot§r",
+  "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit",
+  "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"

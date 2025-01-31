@@ -1,9 +1,11 @@
 package net.dove.eggsandgrits.item;
 
 
+import net.dove.eggsandgrits.effect.ModEffects;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.stat.Stat;
 
 public class ModFoodComponents {
     public static final FoodComponent CAULIFLOWER = new FoodComponent.Builder().nutrition(3).saturationModifier(0.25f)
@@ -28,12 +30,18 @@ public class ModFoodComponents {
     public static final FoodComponent BEANS = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
            .build();
 
+    public static final FoodComponent CORN = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
+            .build();
+
     public static final FoodComponent CHILI = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
             .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 1200,0), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40,2), 1f)
+            .statusEffect(new StatusEffectInstance(ModEffects.DIARRHEA, 100,0), 0.25f)
             .alwaysEdible()
             .build();
 
+    public static final FoodComponent BUTTER = new FoodComponent.Builder().nutrition(5).saturationModifier(0.75f)
+            .build();
 
 
 
