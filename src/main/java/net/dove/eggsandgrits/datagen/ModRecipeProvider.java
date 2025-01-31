@@ -74,5 +74,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(EggsAndGrits.MOD_ID, "butter"));
 
         offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(EggsAndGrits.MOD_ID, "kaupen"));
-    }
+
+
+      }
 }
