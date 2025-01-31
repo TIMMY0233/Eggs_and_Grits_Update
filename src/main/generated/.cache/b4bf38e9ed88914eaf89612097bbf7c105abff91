@@ -1,7 +1,8 @@
-// 1.21.1	2025-01-29T21:41:12.6839039	Eggs and Grits/Block Loot Tables
+// 1.21.1	2025-01-30T20:16:58.9741899	Eggs and Grits/Block Loot Tables
 9e62444763b1e91f95f91b7a5b668ff4ad7df7f1 data\eggsandgrits\loot_table\blocks\beans_crop.json
 83c37d9171ce260263993aac10cc5907a433e7c7 data\eggsandgrits\loot_table\blocks\magic_block.json
 2c1d6a742a1ff43ef61c3ceda4bb1535577f59ba data\eggsandgrits\loot_table\blocks\cauliflower_crop.json
+3d79435bbdc8cc1be189f6b603d137bda364bb75 data\eggsandgrits\loot_table\blocks\corn_crop.json
 3664f177b87132cc457c47e7bf472fba31d70c0c data\eggsandgrits\loot_table\blocks\pink_garnet_door.json
 5226b61514eb03dc70170699867eec4f50e8ec40 data\eggsandgrits\loot_table\blocks\pink_garnet_stairs.json
 56101aa54befaa25ef1e3b99760ed2474cc0290c data\eggsandgrits\loot_table\blocks\pink_garnet_fence.json

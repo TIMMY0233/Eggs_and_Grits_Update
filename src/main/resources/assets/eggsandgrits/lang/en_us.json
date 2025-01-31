@@ -43,6 +43,9 @@
   "item.eggsandgrits.chili": "Chili",
   "item.eggsandgrits.butter": "Butter",
 
+  "item.eggsandgrits.corn": "Corn",
+  "item.eggsandgrits.corn_seeds": "Corn Kernels",
+
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
   "item.eggsandgrits.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
@@ -76,6 +79,7 @@
 
   "block.eggsandgrits.cauliflower_crop": "Cauliflower Crop",
   "block.eggsandgrits.beans_crop": "Beans Crop",
+  "block.eggsandgrits.corn_crop": "Corn Crop",
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",

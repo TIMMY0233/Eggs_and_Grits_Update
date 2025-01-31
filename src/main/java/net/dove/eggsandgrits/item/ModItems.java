@@ -143,6 +143,13 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.BEANS_CROP, new Item.Settings().food(ModFoodComponents.BEANS)));
 
 
+    public static final Item CORN = registerItem("corn",
+            new Item(new Item.Settings().food(ModFoodComponents.CORN)));
+
+    public static final Item CORN_SEED = registerItem("corn_seeds",
+            new AliasedBlockItem(ModBlocks.CORN_CROP, new  Item.Settings()));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);
     }
