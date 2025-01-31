@@ -32,6 +32,10 @@ public class ModSounds {
     public static final SoundEvent TOOT = registerSoundEvent("toot");
     public static final SoundEvent TOOT2 = registerSoundEvent("toot2");
 
+
+    public static final SoundEvent COUGH = registerSoundEvent("cough");
+    public static final SoundEvent COUGH2 = registerSoundEvent("cough2");
+
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

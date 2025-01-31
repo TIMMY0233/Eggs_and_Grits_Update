@@ -26,6 +26,10 @@ public class ModEffects {
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final RegistryEntry<StatusEffect> COUGH = registerStatusEffect("cough",
+            new CoughEffect(StatusEffectCategory.NEUTRAL, 0x353935)
+    );
+
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {

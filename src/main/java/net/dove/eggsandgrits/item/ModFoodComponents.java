@@ -43,6 +43,10 @@ public class ModFoodComponents {
     public static final FoodComponent BUTTER = new FoodComponent.Builder().nutrition(5).saturationModifier(0.75f)
             .build();
 
+    public static final FoodComponent PEPPERCORN = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(ModEffects.COUGH, 200,0),1f)
+            .build();
+
 
 
 }

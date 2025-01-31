@@ -45,6 +45,7 @@
 
   "item.eggsandgrits.corn": "Corn",
   "item.eggsandgrits.corn_seeds": "Corn Kernels",
+  "item.eggsandgrits.peppercorn": "Peppercorn",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -80,6 +81,7 @@
   "block.eggsandgrits.cauliflower_crop": "Cauliflower Crop",
   "block.eggsandgrits.beans_crop": "Beans Crop",
   "block.eggsandgrits.corn_crop": "Corn Crop",
+  "block.eggsandgrits.peppercorn_bush_block": "Peppercorn Bush",
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",

@@ -34,6 +34,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CORN);
                         entries.add(ModItems.CORN_SEED);
 
+                        entries.add(ModItems.PEPPERCORN);
+
                         entries.add(ModItems.KAUPEN_BOW);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
 

@@ -3,6 +3,7 @@ package net.dove.eggsandgrits;
 import net.fabricmc.api.ModInitializer;
 
 
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
@@ -18,6 +19,7 @@ import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.potion.ModPotions;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.dove.eggsandgrits.util.HammerUsageEvent;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
@@ -57,6 +59,8 @@ public class EggsAndGrits implements ModInitializer {
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+
+
 
 
 

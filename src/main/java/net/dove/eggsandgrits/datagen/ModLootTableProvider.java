@@ -6,9 +6,12 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
@@ -31,6 +34,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+
+
         addDrop(ModBlocks.PINK_GARNET_BLOCK);
         addDrop(ModBlocks.RAW_PINK_GARNET_BLOCK);
         addDrop(ModBlocks.MAGIC_BLOCK);
@@ -67,6 +73,32 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         this.addDrop(ModBlocks.CORN_CROP, this.cropDrops(ModBlocks.CORN_CROP, ModItems.CORN, ModItems.CORN_SEED, builder4));
 
 
+
+        this.addDrop(
+                ModBlocks.PEPPERCORN_BUSH_BLOCK,
+                block -> this.applyExplosionDecay(
+                        block,
+                        LootTable.builder()
+                                .pool(
+                                        LootPool.builder()
+                                                .conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.PEPPERCORN_BUSH_BLOCK).properties(StatePredicate.Builder.create().exactMatch(SweetBerryBushBlock.AGE, 3))
+                                                )
+                                                .with(ItemEntry.builder(ModItems.PEPPERCORN))
+                                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                )
+                                .pool(
+                                        LootPool.builder()
+                                                .conditionally(
+                                                        BlockStatePropertyLootCondition.builder(ModBlocks.PEPPERCORN_BUSH_BLOCK).properties(StatePredicate.Builder.create().exactMatch(SweetBerryBushBlock.AGE, 2))
+                                                )
+                                                .with(ItemEntry.builder(ModItems.PEPPERCORN))
+                                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                                )
+                )
+        );
 
     }
 

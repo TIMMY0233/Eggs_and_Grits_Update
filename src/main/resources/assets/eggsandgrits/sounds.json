@@ -54,5 +54,17 @@
     "sounds": [
       "eggsandgrits:toot2"
     ]
+  },
+  "cough": {
+    "subtitle": "sounds.eggsandgrits.cough",
+    "sounds": [
+      "eggsandgrits:cough"
+    ]
+  },
+  "cough2": {
+    "subtitle": "sounds.eggsandgrits.cough2",
+    "sounds": [
+      "eggsandgrits:cough2"
+    ]
   }
 }

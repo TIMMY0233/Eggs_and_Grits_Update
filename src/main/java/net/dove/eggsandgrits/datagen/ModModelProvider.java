@@ -1,12 +1,9 @@
 package net.dove.eggsandgrits.datagen;
 
-import net.dove.eggsandgrits.block.custom.BeansCropBlock;
-import net.dove.eggsandgrits.block.custom.CauliflowerCropBlock;
-import net.dove.eggsandgrits.block.custom.CornCropBlock;
+import net.dove.eggsandgrits.block.custom.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.dove.eggsandgrits.block.ModBlocks;
-import net.dove.eggsandgrits.block.custom.PinkGarnetLampBlock;
 import net.dove.eggsandgrits.item.ModItems;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
@@ -51,6 +48,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
 
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERCORN_BUSH_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED,
+                PeppercornBushBlock.AGE, 0,1,2,3);
+
 
 
 
@@ -72,7 +72,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.BUTTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
+
+        //itemModelGenerator.register(ModItems.PEPPERCORN, Models.GENERATED);
 
 
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
