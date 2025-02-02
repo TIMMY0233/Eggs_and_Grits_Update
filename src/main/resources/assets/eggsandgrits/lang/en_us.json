@@ -52,12 +52,16 @@
   "item.eggsandgrits.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
   "item.eggsandgrits.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
 
+  "item.eggsandgrits.trucker_hat": "Trucker Hat",
+
 
   "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
   "block.eggsandgrits.raw_pink_garnet_block": "Block of Raw Pink Garnet",
 
   "block.eggsandgrits.pink_garnet_ore": "Pink Garnet Ore",
   "block.eggsandgrits.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+  "block.eggsandgrits.pink_garnet_end_ore": "Pink Garnet End Ore",
+  "block.eggsandgrits.pink_garnet_nether_ore": "Pink Garnet Nether Ore",
 
   "block.eggsandgrits.magic_block": "Magic Block",
   "block.eggsandgrits.gem_polishing_station": "Gem Polishing Station",

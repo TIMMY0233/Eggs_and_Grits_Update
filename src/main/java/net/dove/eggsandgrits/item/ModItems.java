@@ -153,6 +153,7 @@ public class ModItems {
             new AliasedBlockItem(ModBlocks.PEPPERCORN_BUSH_BLOCK, new Item.Settings().food(ModFoodComponents.PEPPERCORN)));
 
 
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);
     }

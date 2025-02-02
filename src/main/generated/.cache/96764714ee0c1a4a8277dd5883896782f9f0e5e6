@@ -1,4 +1,10 @@
-// 1.21.1	2025-01-30T22:43:08.1797506	Eggs and Grits/
+// 1.21.1	2025-02-01T20:21:28.4237423	Eggs and Grits/
+588e6ee7e989761769b48e767380d2d75a6d8720 data\eggsandgrits\worldgen\configured_feature\pink_garnet_ore.json
 7bc2eb0dcafa66948d1d3c09925a96ce09f72d5c data\eggsandgrits\enchantment\lightning_striker.json
 dae2dbcdc2340d4226a91b71623773440a84ad4c data\eggsandgrits\trim_material\pink_garnet.json
+f9c58f6215c73521b57815548fecdda2d59c6628 data\eggsandgrits\worldgen\placed_feature\nether_pink_garnet_ore_placed.json
+0ef24f5f9ac786aa463fa5288ca2be8b13e88b74 data\eggsandgrits\worldgen\configured_feature\nether_pink_garnet_ore.json
+6819881f472fef7acc58e961e1a4806343a3db43 data\eggsandgrits\worldgen\configured_feature\end_pink_garnet_ore.json
 99f153036b5f4d95a67f0c70c134629a04adf8b8 data\eggsandgrits\trim_pattern\kaupen.json
+a8025dfc5c771b55cbe97c345a197b41c73a3eb2 data\eggsandgrits\worldgen\placed_feature\end_pink_garnet_ore_placed.json
+ae34733991aed576ac610ef14139f69235ccae93 data\eggsandgrits\worldgen\placed_feature\pink_garnet_ore_placed.json

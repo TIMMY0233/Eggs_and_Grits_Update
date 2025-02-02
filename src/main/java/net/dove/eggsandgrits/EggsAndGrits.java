@@ -1,5 +1,6 @@
 package net.dove.eggsandgrits;
 
+import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 
@@ -60,7 +61,7 @@ public class EggsAndGrits implements ModInitializer {
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
-
+		ModWorldGeneration.generateModWorldGen();
 
 
 
