@@ -1,0 +1,11 @@
+{
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "minecraft:item/carved_pumpkin"
+ },
+ 
+ "overrides": [
+  {"predicate": {"custom_model_data":1}, "model": "eggsandgrits:block/custom/trucker_hat"}
+ ]
+}
+

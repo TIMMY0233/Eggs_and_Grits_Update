@@ -1,5 +1,6 @@
 package net.dove.eggsandgrits.world;
 
+
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.minecraft.block.Blocks;
@@ -12,12 +13,19 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.IntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
+
+
 
 import java.util.List;
 
@@ -55,16 +63,6 @@ public class ModConfiguredFeatures {
         register(context, END_PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(endPinkGarnetOres, 12));
 
 
-        register(context, DRIFTWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.DRIFTWOOD_LOG), //chooses the block that will be placed as a log
-                new StraightTrunkPlacer(5, 6, 3),
-
-                BlockStateProvider.of(ModBlocks.DRIFTWOOD_LEAVES), //type of leaves
-                new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), 3), //how leaves are placed
-
-                new TwoLayersFeatureSize(1, 0, 2)).dirtProvider(BlockStateProvider.of(Blocks.SAND)).build());
-
-
 
 
 
@@ -76,7 +74,37 @@ public class ModConfiguredFeatures {
                         List.of(Blocks.GRASS_BLOCK))
         );
 
+        register(context, DRIFTWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.DRIFTWOOD_LOG),
+                new CherryTrunkPlacer(7, 1, 0,
+                        new WeightedListIntProvider(DataPool.<IntProvider>builder()
+                                .add(ConstantIntProvider.create(1), 1)
+                                .add(ConstantIntProvider.create(2), 1)
+                                .add(ConstantIntProvider.create(3), 1)
+                                .build()
+                        ),
+                        UniformIntProvider.create(2, 4),
+                        UniformIntProvider.create(-4, -3),
+                        UniformIntProvider.create(-1, 0)
+                ),
+                BlockStateProvider.of(ModBlocks.DRIFTWOOD_LEAVES),
+                new CherryFoliagePlacer(
+                        ConstantIntProvider.create(4),  // Size of the foliage
+                        ConstantIntProvider.create(1),  // Offset
+                        ConstantIntProvider.create(5),  // Radius
+                        0.25f, 0.5f, 0.1666667f, 0.33333334f // Blossom-like shape factors
+                ),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).build());
+
+
+
+
+
     }
+
+
+
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(EggsAndGrits.MOD_ID, name));
