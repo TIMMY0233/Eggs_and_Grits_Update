@@ -26,8 +26,8 @@ public class ModEnchantments {
                         items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                         5,
                         2,
-                        Enchantment.leveledCost(5, 7),
-                        Enchantment.leveledCost(25, 9),
+                        Enchantment.leveledCost(15, 9),
+                        Enchantment.leveledCost(65, 9),
                         2,
                         AttributeModifierSlot.MAINHAND))
                 .exclusiveSet(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))

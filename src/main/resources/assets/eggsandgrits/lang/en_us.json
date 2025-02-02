@@ -87,6 +87,14 @@
   "block.eggsandgrits.corn_crop": "Corn Crop",
   "block.eggsandgrits.peppercorn_bush_block": "Peppercorn Bush",
 
+  "block.eggsandgrits.driftwood_log": "Driftwood Log",
+  "block.eggsandgrits.stripped_driftwood_log": "Stripped Driftwood Log",
+  "block.eggsandgrits.driftwood_wood": "Driftwood Wood",
+  "block.eggsandgrits.driftwood_plank": "Driftwood Plank",
+  "block.eggsandgrits.driftwood_leaves": "Driftwood Leaves",
+  "block.eggsandgrits.driftwood_sapling": "Driftwood Sapling",
+  "block.eggsandgrits.stripped_driftwood_wood": "Stripped Driftwood Wood",
+
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.eggsandgrits.pink_garnet_blocks": "Pink Garnet Blocks",

@@ -1,8 +1,9 @@
-// 1.21.1	2025-02-01T20:21:28.4207501	Eggs and Grits/Tags for minecraft:block
+// 1.21.1	2025-02-01T23:29:36.7109322	Eggs and Grits/Tags for minecraft:block
 a326f1f11cf4f3c27a9e44de06489a76b063bd85 data\eggsandgrits\tags\block\needs_pink_garnet_tool.json
 f380b9d49bcf7af86990dba58b88fba214e669b4 data\minecraft\tags\block\mineable\pickaxe.json
 a9e2e7641d33567f46dc599b5de9bbe03fcf803a data\minecraft\tags\block\needs_iron_tool.json
 a59b0f3d1091617abdc1de7a1dbbf7bdfd712e98 data\minecraft\tags\block\fences.json
 7e4d57e18fb35e88e72e28487a9b2d0e60b09403 data\minecraft\tags\block\needs_diamond_tool.json
 bef32287b04be26eeb01566cea96fc5756c96da6 data\minecraft\tags\block\walls.json
+9f29b612b9fcdb262529ee0d5893f8f6a136708a data\minecraft\tags\block\logs_that_burn.json
 3cb6ddabc486507d8506ffdbc0f4caf85b422c63 data\minecraft\tags\block\fence_gates.json

@@ -34,7 +34,7 @@ public class DiarrheaEffect extends StatusEffect {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
-                        ModSounds.TOOT,
+                        ModSounds.TOOT2,
                         SoundCategory.PLAYERS,
                         0.5f,
                         1.3f
@@ -44,7 +44,7 @@ public class DiarrheaEffect extends StatusEffect {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
-                        ModSounds.TOOT2,
+                        ModSounds.TOOT,
                         SoundCategory.PLAYERS,
                         0.5f,
                         1.3f

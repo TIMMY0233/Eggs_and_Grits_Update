@@ -19,6 +19,8 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PEPPERCORN_BUSH_BLOCK, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIFTWOOD_SAPLING, RenderLayer.getCutout());
+
         ModModelPredicates.registerModelPredicates();
     }
 }

@@ -1,6 +1,7 @@
 package net.dove.eggsandgrits.block;
 
 import net.dove.eggsandgrits.block.custom.*;
+import net.dove.eggsandgrits.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
@@ -80,6 +81,24 @@ public class ModBlocks {
     public static final Block CORN_CROP = registerBlockWithoutBlockItem("corn_crop",
             new CornCropBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block DRIFTWOOD_LOG = registerBlock("driftwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block DRIFTWOOD_WOOD = registerBlock("driftwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+    public static final Block STRIPPED_DRIFTWOOD_LOG = registerBlock("stripped_driftwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_DRIFTWOOD_WOOD = registerBlock("stripped_driftwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final Block DRIFTWOOD_PLANKS = registerBlock("driftwood_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block DRIFTWOOD_LEAVES = registerBlock("driftwood_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
+            new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.SAND));
+
 
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",
