@@ -24,7 +24,7 @@ public enum ModToolMaterials implements ToolMaterial {
                      final float attackDamage, final int enchantability,final Supplier<Ingredient> repairIngredient) {
         this.inverseTag = inverseTag;
         this.itemDurability = itemDurability;
-        this.miningSpeed = miningSpeed;
+        this.miningSpeed = 2.0f;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);

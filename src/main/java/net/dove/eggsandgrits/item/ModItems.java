@@ -148,8 +148,8 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 7, -3.4f))));
 
     public static final Item IRON_HAMMER = registerItem("iron_hammer",
-            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 6, -3.4f))));
+            new HammerItem(ModToolMaterials.PINK_GARNET   , new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 6, -3.4f))));
 
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
