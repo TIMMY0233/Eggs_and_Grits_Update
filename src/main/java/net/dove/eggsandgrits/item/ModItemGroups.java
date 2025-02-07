@@ -43,6 +43,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.CHISEL);
                         entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.IRON_HAMMER);
+                        entries.add(ModItems.DIAMOND_HAMMER);
+                        entries.add(ModItems.NETHERITE_HAMMER);
 
                         entries.add(ModItems.STARLIGHT_ASHES);
 

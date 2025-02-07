@@ -138,6 +138,19 @@ public class ModItems {
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(EggsAndGrits.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
 
+
+    public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8, -3.4f))));
+
+    public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 7, -3.4f))));
+
+    public static final Item IRON_HAMMER = registerItem("iron_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 6, -3.4f))));
+
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 

@@ -73,6 +73,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CREAM), conditionsFromItem(ModItems.CREAM))
                 .offerTo(exporter, Identifier.of(EggsAndGrits.MOD_ID, "butter"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER)
+                .pattern("DDD")
+                .pattern("DSD")
+                .pattern(" S ")
+                .input('D', Items.DIAMOND)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter);
+
         offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(EggsAndGrits.MOD_ID, "kaupen"));
 
 
