@@ -44,27 +44,39 @@
     ]
   },
   "toot": {
-    "subtitle": "sounds.eggsandgrits.toot",
+    "subtitle": "toot",
     "sounds": [
       "eggsandgrits:toot"
     ]
   },
   "toot2": {
-    "subtitle": "sounds.eggsandgrits.toot2",
+    "subtitle": "toot2",
     "sounds": [
       "eggsandgrits:toot2"
     ]
   },
   "cough": {
-    "subtitle": "sounds.eggsandgrits.cough",
+    "subtitle": "cough",
     "sounds": [
       "eggsandgrits:cough"
     ]
   },
   "cough2": {
-    "subtitle": "sounds.eggsandgrits.cough2",
+    "subtitle": "cough2",
     "sounds": [
       "eggsandgrits:cough2"
+    ]
+  },
+  "do_not_eat": {
+    "subtitle": "Larry",
+    "sounds": [
+      "eggsandgrits:do_not_eat"
+    ]
+  },
+  "he_did_what": {
+    "subtitle": "Larry",
+    "sounds": [
+      "eggsandgrits:he_did_what"
     ]
   }
 }

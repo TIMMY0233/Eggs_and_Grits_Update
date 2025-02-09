@@ -102,6 +102,7 @@ public class EggsAndGrits implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, MantisEntity.createAttributes());
 
 	}
 }

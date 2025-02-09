@@ -1,5 +1,6 @@
 package net.dove.eggsandgrits.entity.client;
 
+
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.minecraft.client.model.*;
@@ -10,17 +11,29 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
+
 public class MantisModel<T extends MantisEntity> extends SinglePartEntityModel<T> {
     public static final EntityModelLayer MANTIS = new EntityModelLayer(Identifier.of(EggsAndGrits.MOD_ID, "mantis"), "main");
     private final ModelPart root;
     private final ModelPart mantis;
     private final ModelPart head;
+    private final ModelPart wing1;
+    private final ModelPart wing2;
+    private final ModelPart wing3;
+    private final ModelPart wing4;
 
     public MantisModel(ModelPart root) {
         this.root = root.getChild("root");
         this.mantis = this.root.getChild("mantis");
         this.head = this.mantis.getChild("head");
+
+        // FIX: Get wings from `mantis`, NOT `root`
+        this.wing1 = this.mantis.getChild("wing1");
+        this.wing2 = this.mantis.getChild("wing2");
+        this.wing3 = this.mantis.getChild("wing3");
+        this.wing4 = this.mantis.getChild("wing4");
     }
+
 
     public static TexturedModelData getTexturedModelData() {
         ModelData modelData = new ModelData();
@@ -97,15 +110,6 @@ public class MantisModel<T extends MantisEntity> extends SinglePartEntityModel<T
         return TexturedModelData.of(modelData, 256, 256);
     }
 
-    @Override
-    public void setAngles(MantisEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.getPart().traverse().forEach(ModelPart::resetTransform);
-        this.setHeadAngles(netHeadYaw, headPitch);
-
-        this.animateMovement(MantisAnimations.ANIM_MANTIS_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-        this.updateAnimation(entity.idleAnimationState, MantisAnimations.ANIM_MANTIS_IDLE, ageInTicks, 1f);
-    }
-
     private void setHeadAngles(float headYaw, float headPitch) {
         headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
         headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
@@ -123,4 +127,27 @@ public class MantisModel<T extends MantisEntity> extends SinglePartEntityModel<T
     public ModelPart getPart() {
         return root;
     }
+
+    @Override
+    public void setAngles(MantisEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.getPart().traverse().forEach(ModelPart::resetTransform);
+        this.setHeadAngles(netHeadYaw, headPitch);
+
+        // Walking Animation
+        this.animateMovement(MantisAnimations.ANIM_MANTIS_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.updateAnimation(entity.idleAnimationState, MantisAnimations.ANIM_MANTIS_IDLE, ageInTicks, 1f);
+
+        // 🦗 Check if the mantis is falling
+        if (!entity.isOnGround() && entity.getVelocity().y < 0) {
+            applyGlidingPose();
+        }
+    }
+
+    private void applyGlidingPose() {
+        // Tilt body forward to simulate gliding
+        this.mantis.pitch = 0.5F;  // Adjust the value for the desired gliding tilt
+        // Trigger the FALLING animation
+        this.animateMovement(MantisAnimations.FALLING, 0.0F, 0.0F, 1f, 1f);
+    }
+
 }

@@ -36,6 +36,9 @@ public class ModSounds {
     public static final SoundEvent COUGH = registerSoundEvent("cough");
     public static final SoundEvent COUGH2 = registerSoundEvent("cough2");
 
+    public static final SoundEvent DO_NOT_EAT = registerSoundEvent("do_not_eat");
+    public static final SoundEvent HE_DID_WHAT = registerSoundEvent("he_did_what");
+
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

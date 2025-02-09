@@ -1,6 +1,8 @@
 package net.dove.eggsandgrits;
 
 import net.dove.eggsandgrits.entity.ModEntities;
+import net.dove.eggsandgrits.entity.client.LarryModel;
+import net.dove.eggsandgrits.entity.client.LarryRenderer;
 import net.dove.eggsandgrits.entity.client.MantisModel;
 import net.dove.eggsandgrits.entity.client.MantisRenderer;
 import net.fabricmc.api.ClientModInitializer;
@@ -30,5 +32,8 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(MantisModel.MANTIS, MantisModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.MANTIS, MantisRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(LarryModel.LARRY, LarryModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.LARRY, LarryRenderer::new);
     }
 }
