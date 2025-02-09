@@ -1,6 +1,7 @@
 package net.dove.eggsandgrits.item;
 
 import net.dove.eggsandgrits.block.ModBlocks;
+import net.dove.eggsandgrits.entity.ModEntities;
 import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
@@ -20,6 +21,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 import java.util.List;
+import java.util.Locale;
 
 public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
@@ -166,6 +168,9 @@ public class ModItems {
 
     public static final Item PEPPERCORN = registerItem("peppercorn",
             new AliasedBlockItem(ModBlocks.PEPPERCORN_BUSH_BLOCK, new Item.Settings().food(ModFoodComponents.PEPPERCORN)));
+
+    public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
+            new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfa5f, new Item.Settings()));
 
 
 

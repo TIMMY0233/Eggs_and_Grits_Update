@@ -58,6 +58,10 @@
   "item.eggsandgrits.trucker_hat": "Trucker Hat",
 
 
+  "item.eggsandgrits.mantis_spawn_egg": "Mantis Spawn Egg",
+
+
+
   "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
   "block.eggsandgrits.raw_pink_garnet_block": "Block of Raw Pink Garnet",
 
@@ -114,5 +118,7 @@
   "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
-  "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"
+  "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",
+
+  "entity.eggsandgrits.mantis": "Mantis"
 }

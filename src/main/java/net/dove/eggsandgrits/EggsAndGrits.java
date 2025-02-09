@@ -1,5 +1,7 @@
 package net.dove.eggsandgrits;
 
+import net.dove.eggsandgrits.entity.ModEntities;
+import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -8,6 +10,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.*;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.component.ModDataComponentTypes;
@@ -57,6 +60,8 @@ public class EggsAndGrits implements ModInitializer {
 
 		ModDataComponentTypes.registerDataComponentTypes();
 
+		ModEntities.registerModEntities();
+
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
@@ -95,6 +100,8 @@ public class EggsAndGrits implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DRIFTWOOD_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
 
 	}
 }
