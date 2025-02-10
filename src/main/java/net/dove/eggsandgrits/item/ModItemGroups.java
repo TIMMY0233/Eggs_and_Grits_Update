@@ -33,7 +33,10 @@ public class ModItemGroups {
 
                         entries.add(ModItems.CORN);
                         entries.add(ModItems.CORN_SEED);
+                        entries.add(ModItems.GROUND_CORN);
 
+                        entries.add(ModItems.SALT);
+                        entries.add(ModItems.PEPPER);
 
                         entries.add(ModItems.PEPPERCORN);
 
@@ -85,6 +88,7 @@ public class ModItemGroups {
 
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
+                        entries.add(ModBlocks.SALT_BLOCK);
 
                         entries.add(ModBlocks.PINK_GARNET_STAIRS);
                         entries.add(ModBlocks.PINK_GARNET_SLAB);

@@ -47,6 +47,10 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(ModEffects.COUGH, 200,0),1f)
             .build();
 
+    public static final FoodComponent PEPPER = new FoodComponent.Builder().nutrition(1).saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(ModEffects.COUGH, 200,0),1f)
+            .build();
+
 
 
 }

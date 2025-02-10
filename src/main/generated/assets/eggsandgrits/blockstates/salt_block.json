@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "eggsandgrits:block/salt_block"
+    }
+  }
+}

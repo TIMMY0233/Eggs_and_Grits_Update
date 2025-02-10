@@ -84,6 +84,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(EggsAndGrits.MOD_ID, "kaupen"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GROUND_CORN, 4)
+                .input(ModItems.CORN)
+                .criterion(hasItem(ModItems.CORN), conditionsFromItem(ModItems.CORN))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PEPPER, 4)
+                .input(ModItems.PEPPERCORN)
+                .criterion(hasItem(ModItems.PEPPERCORN), conditionsFromItem(ModItems.PEPPERCORN))
+                .offerTo(exporter);
+
 
       }
 }

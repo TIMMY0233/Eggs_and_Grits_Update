@@ -40,6 +40,11 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
 
+    public static final Block SALT_BLOCK = registerBlock("salt_block",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
+
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));
 

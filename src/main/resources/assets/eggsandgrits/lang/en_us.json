@@ -62,6 +62,11 @@
 
   "item.eggsandgrits.vape": "Vape",
 
+  "item.eggsandgrits.salt": "Salt",
+  "item.eggsandgrits.pepper": "Pepper",
+  "item.eggsandgrits.ground_corn": "Ground Corn",
+
+
 
 
   "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
@@ -104,6 +109,8 @@
   "block.eggsandgrits.driftwood_sapling": "Driftwood Sapling",
   "block.eggsandgrits.stripped_driftwood_wood": "Stripped Driftwood Wood",
 
+  "block.eggsandgrits.salt_block": "Salt Block",
+
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
@@ -118,6 +125,8 @@
   "tooltip.eggsandgrits.cream.tooltip": "Maybe I shouldn't drink this..",
   "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit",
   "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
+
+  "tooltip.eggsandgrits.pepper.tooltip": "Don't eat this.",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",

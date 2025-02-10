@@ -84,6 +84,19 @@ public class ModItems {
         }
     });
 
+    public static final Item PEPPER = registerItem("pepper", new Item(new Item.Settings().food(ModFoodComponents.PEPPER)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.pepper.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item SALT = registerItem("salt", new Item(new Item.Settings()));
+    public static final Item GROUND_CORN = registerItem("ground_corn", new Item(new Item.Settings()));
+
+
+
     public static final Item CHILI = registerItem("chili", new Item(new Item.Settings().food(ModFoodComponents.CHILI)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

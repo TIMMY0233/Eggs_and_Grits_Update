@@ -23,6 +23,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SALT_BLOCK);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_END_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_NETHER_ORE);
 
@@ -80,6 +82,10 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.BUTTER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PEPPER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GROUND_CORN, Models.GENERATED);
+
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.PEPPERCORN, Models.GENERATED);
