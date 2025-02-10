@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-09T21:16:41.035187	Eggs and Grits/Model Definitions
+// 1.21.1	2025-02-09T21:32:40.458666	Eggs and Grits/Model Definitions
 6fc30d49d577dc7f8743a68874ff1ad062db0b07 assets/eggsandgrits/models/item/corn.json
 906c3b8ed51fbec8ca3cb3cc93b7725d24b58a96 assets/eggsandgrits/models/item/pink_garnet_helmet_iron_trim.json
 c03428b6feebb3be11f66ab7bc8640bb2143bb93 assets/eggsandgrits/models/block/stripped_driftwood_wood.json
@@ -176,8 +176,8 @@ e0d5c166e26dc0a0313c56a76dea118f5ea49bc1 assets/eggsandgrits/models/block/pink_g
 2b51b8d1c00b820a1220fc29ea518ecbdc143a39 assets/eggsandgrits/models/item/driftwood_sapling.json
 d93c5ac2fb3762702842bc6b6a9ee04446fbad3c assets/eggsandgrits/models/item/pink_garnet_shovel.json
 d41aeb82ca4f7de73565658d2993bef80b38b4b2 assets/eggsandgrits/models/item/corn_seeds.json
-c62becbd22046def386dcfe0e965f5c0f82c19b4 assets/eggsandgrits/models/block/pink_garnet_door_top_left_open.json
 a310faf7c5ecbd3ba2600969a5c90933379179ea assets/eggsandgrits/models/item/pink_garnet_leggings_diamond_trim.json
+c62becbd22046def386dcfe0e965f5c0f82c19b4 assets/eggsandgrits/models/block/pink_garnet_door_top_left_open.json
 5646b2d5ddce74b8f6088ea6133fe044b5b7563d assets/eggsandgrits/models/item/pink_garnet_end_ore.json
 6dc65766b8803f72d172161896b9b0f1f3e1ba94 assets/eggsandgrits/models/item/pink_garnet_chestplate_amethyst_trim.json
 a1a1a85beb78b698a18e5b4bc958972d661b7446 assets/eggsandgrits/models/block/pink_garnet_button.json

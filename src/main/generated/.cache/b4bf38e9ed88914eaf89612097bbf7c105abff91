@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-09T21:16:41.026374	Eggs and Grits/Block Loot Tables
+// 1.21.1	2025-02-09T21:32:40.443535	Eggs and Grits/Block Loot Tables
 fb6fee22b627368cde7ca5394d43f8bdb695aa49 data/eggsandgrits/loot_table/blocks/pink_garnet_ore.json
 d0a449132d1faf7e92b3676c7fc5e87810611c91 data/eggsandgrits/loot_table/blocks/driftwood_wood.json
 076406f55fe8f35e1cf64789f20c0208d6c450b5 data/eggsandgrits/loot_table/blocks/raw_pink_garnet_block.json
@@ -10,8 +10,8 @@ d0a449132d1faf7e92b3676c7fc5e87810611c91 data/eggsandgrits/loot_table/blocks/dri
 168dedc1ec6ecf21887336093994aa9561103e2a data/eggsandgrits/loot_table/blocks/pink_garnet_button.json
 5b5d087e17c5491cfd813694da492b04e9aeacfc data/eggsandgrits/loot_table/blocks/driftwood_sapling.json
 c5608909dccfbf2961faedd63d940482fdcfe534 data/eggsandgrits/loot_table/blocks/salt_block.json
-9e62444763b1e91f95f91b7a5b668ff4ad7df7f1 data/eggsandgrits/loot_table/blocks/beans_crop.json
 dde5f0ca47d89535b1f0b6bd12ede1c21c61e815 data/eggsandgrits/loot_table/blocks/pink_garnet_pressure_plate.json
+9e62444763b1e91f95f91b7a5b668ff4ad7df7f1 data/eggsandgrits/loot_table/blocks/beans_crop.json
 f4727988a8f37ecaefc18259d5d2d583e24fa710 data/eggsandgrits/loot_table/blocks/pink_garnet_block.json
 2c1d6a742a1ff43ef61c3ceda4bb1535577f59ba data/eggsandgrits/loot_table/blocks/cauliflower_crop.json
 3dbc6cbc4f1dfaefc7e6c3d85c1b0c13292977ee data/eggsandgrits/loot_table/blocks/stripped_driftwood_log.json
