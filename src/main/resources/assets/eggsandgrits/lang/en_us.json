@@ -60,6 +60,8 @@
 
   "item.eggsandgrits.mantis_spawn_egg": "Mantis Spawn Egg",
 
+  "item.eggsandgrits.vape": "Vape",
+
 
 
   "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
@@ -121,5 +123,7 @@
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",
 
   "entity.eggsandgrits.mantis": "Mantis",
-  "entity.eggsandgrits.larry": "Larry The Cable Guy"
+  "entity.eggsandgrits.larry": "Larry The Cable Guy",
+
+  "entity.eggsandgrits.vape_cloud": "Vape Ring"
 }

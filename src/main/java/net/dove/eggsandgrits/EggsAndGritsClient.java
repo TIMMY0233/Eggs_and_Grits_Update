@@ -1,10 +1,7 @@
 package net.dove.eggsandgrits;
 
 import net.dove.eggsandgrits.entity.ModEntities;
-import net.dove.eggsandgrits.entity.client.LarryModel;
-import net.dove.eggsandgrits.entity.client.LarryRenderer;
-import net.dove.eggsandgrits.entity.client.MantisModel;
-import net.dove.eggsandgrits.entity.client.MantisRenderer;
+import net.dove.eggsandgrits.entity.client.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.dove.eggsandgrits.block.ModBlocks;
@@ -35,5 +32,8 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(LarryModel.LARRY, LarryModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.LARRY, LarryRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(VapeProjectileModel.VAPE_RING, VapeProjectileModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.VAPE_RING, VapeProjectileRenderer::new);
     }
 }

@@ -21,7 +21,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 import java.util.List;
-import java.util.Locale;
 
 public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
@@ -171,6 +170,12 @@ public class ModItems {
 
     public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
             new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfa5f, new Item.Settings()));
+
+    public static final Item LARRY_SPAWN_EGG = registerItem("larry_spawn_egg",
+            new SpawnEggItem(ModEntities.LARRY, 0x9dc783, 0xbda5f, new Item.Settings()));
+
+    public static final Item VAPE = registerItem("vape",
+            new VapeItem(new Item.Settings().maxCount(16)));
 
 
 

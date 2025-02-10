@@ -67,6 +67,8 @@ public class ModItemGroups {
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
 
                         entries.add(ModItems.MANTIS_SPAWN_EGG);
+                        entries.add(ModItems.LARRY_SPAWN_EGG);
+                        entries.add(ModItems.VAPE);
 
                     }).build());
 

@@ -8,6 +8,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.BossBar;
+import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -16,8 +18,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,6 +29,8 @@ public class LarryEntity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
+    private final ServerBossBar bossBar = new ServerBossBar(Text.literal("Larry The Cable Guy"),
+            BossBar.Color.BLUE, BossBar.Style.NOTCHED_10);
 
     public LarryEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -41,7 +47,7 @@ public class LarryEntity extends AnimalEntity {
 
         this.goalSelector.add(3, new FollowParentGoal(this, 1.1D));
 
-        this.goalSelector.add(4, new WanderAroundFarGoal(this, 1.0D));
+        this.goalSelector.add(1, new WanderAroundFarGoal(this, 4.0D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
 
@@ -107,5 +113,26 @@ public class LarryEntity extends AnimalEntity {
     @Override
     protected @Nullable SoundEvent getDeathSound() {
         return ModSounds.COUGH;
+    }
+
+    // BOSS BAR //
+
+
+    @Override
+    public void onStartedTrackingBy(ServerPlayerEntity player) {
+        super.onStartedTrackingBy(player);
+        this.bossBar.addPlayer(player);
+    }
+
+    @Override
+    public void onStoppedTrackingBy(ServerPlayerEntity player) {
+        super.onStoppedTrackingBy(player);
+        this.bossBar.removePlayer(player);
+    }
+
+    @Override
+    protected void mobTick() {
+        super.mobTick();
+        this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
     }
 }
