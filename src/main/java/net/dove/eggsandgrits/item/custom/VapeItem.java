@@ -23,7 +23,7 @@ public class VapeItem extends Item {
                 SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!world.isClient) {
             VapeProjectileEntity vape_ring = new VapeProjectileEntity(world, user);
-            vape_ring.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 30f, 0f);
+            vape_ring.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 4f, 0f);
             world.spawnEntity(vape_ring);
         }
 

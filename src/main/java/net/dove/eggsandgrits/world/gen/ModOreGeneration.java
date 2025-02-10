@@ -12,7 +12,6 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.PINK_GARNET_ORE_PLACE_KEY);
 
-
         //Example for individual biomes
         //BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST), GenerationStep.Feature.UNDERGROUND_ORES,
         //        ModPlacedFeatures.PINK_GARNET_ORE_PLACE_KEY);
@@ -20,8 +19,12 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.NETHER_PINK_GARNET_ORE_PLACE_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.END_PINK_GARNET_ORE_PLACE_KEY);
+
+        //BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST), GenerationStep.Feature.UNDERGROUND_ORES,
+          //              ModPlacedFeatures.SALT_BLOCK_PLACED_KEY);
 
 
     }

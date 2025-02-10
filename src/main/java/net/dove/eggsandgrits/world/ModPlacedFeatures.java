@@ -63,6 +63,4 @@ public class ModPlacedFeatures {
         register(context, key, configuration, List.of(modifiers));
     }
 
-
-
 }

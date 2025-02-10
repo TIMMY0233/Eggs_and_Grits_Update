@@ -47,7 +47,7 @@ public class LarryEntity extends AnimalEntity {
 
         this.goalSelector.add(3, new FollowParentGoal(this, 1.1D));
 
-        this.goalSelector.add(1, new WanderAroundFarGoal(this, 4.0D));
+        this.goalSelector.add(1, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
 
@@ -101,7 +101,7 @@ public class LarryEntity extends AnimalEntity {
             return ModSounds.HE_DID_WHAT;
         }
         else {
-            return ModSounds.TOOT;
+            return ModSounds.GIT_R_DONE;
         }
     }
 
