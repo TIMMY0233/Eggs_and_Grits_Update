@@ -17,11 +17,14 @@ public class CoughEffect extends StatusEffect {
         super(StatusEffectCategory.HARMFUL, 0x353935); // Black color for effect
     }
 
-    @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20, 1, false, true, true));
-            // Randomly play fart sounds (1 in 5 chance every tick)
+            // Apply nausea only if the player doesn't already have it
+            if (!player.hasStatusEffect(StatusEffects.NAUSEA)) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 1, false, true, true));
+            }
+
+            // Randomly play cough sounds (1 in 5 chance every tick)
             if (player.getWorld().random.nextFloat() < 0.07f) {
                 player.getWorld().playSound(
                         null,
@@ -31,8 +34,7 @@ public class CoughEffect extends StatusEffect {
                         2f,
                         1f
                 );
-            }
-            else if (player.getWorld().random.nextFloat() <0.1f) {
+            } else if (player.getWorld().random.nextFloat() < 0.1f) {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
@@ -45,6 +47,7 @@ public class CoughEffect extends StatusEffect {
         }
         return super.applyUpdateEffect(entity, amplifier);
     }
+
 
     @Override
     public void onApplied(LivingEntity entity, int amplifier) {

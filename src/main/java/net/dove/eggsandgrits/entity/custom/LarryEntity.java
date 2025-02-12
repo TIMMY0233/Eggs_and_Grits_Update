@@ -22,6 +22,10 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -106,6 +110,18 @@ public class LarryEntity extends AnimalEntity {
     }
 
     @Override
+    public void playSound(SoundEvent sound, float volume, float pitch) {
+        PlayerEntity player = this.getWorld().getClosestPlayer(this, 16);
+
+        if (player != null && !hasLineOfSight(player)) {
+            volume *= 0.4f; // Reduce volume if there's no line of sight
+        }
+
+        super.playSound(sound, volume, pitch);
+    }
+
+
+    @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource source) {
         return ModSounds.TOOT;
     }
@@ -115,24 +131,42 @@ public class LarryEntity extends AnimalEntity {
         return ModSounds.COUGH;
     }
 
-    // BOSS BAR //
+        public boolean hasLineOfSight(PlayerEntity player) {
+            World world = this.getWorld();
+            Vec3d mobPos = this.getEyePos(); // Get the eye position of the mob
+            Vec3d playerPos = player.getEyePos(); // Get the eye position of the player
+
+            BlockHitResult hit = world.raycast(new RaycastContext(
+                    mobPos, playerPos,
+                    RaycastContext.ShapeType.COLLIDER,
+                    RaycastContext.FluidHandling.NONE,
+                    this
+            ));
+
+            // If the raycast doesn't hit anything, the mob has a direct line of sight to the player
+            return hit.getType() == HitResult.Type.MISS || hit.getBlockPos().equals(player.getBlockPos());
+        }
 
 
-    @Override
-    public void onStartedTrackingBy(ServerPlayerEntity player) {
-        super.onStartedTrackingBy(player);
-        this.bossBar.addPlayer(player);
+
+        // BOSS BAR //
+
+
+        @Override
+        public void onStartedTrackingBy (ServerPlayerEntity player){
+            super.onStartedTrackingBy(player);
+            this.bossBar.addPlayer(player);
+        }
+
+        @Override
+        public void onStoppedTrackingBy (ServerPlayerEntity player){
+            super.onStoppedTrackingBy(player);
+            this.bossBar.removePlayer(player);
+        }
+
+        @Override
+        protected void mobTick () {
+            super.mobTick();
+            this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
+        }
     }
-
-    @Override
-    public void onStoppedTrackingBy(ServerPlayerEntity player) {
-        super.onStoppedTrackingBy(player);
-        this.bossBar.removePlayer(player);
-    }
-
-    @Override
-    protected void mobTick() {
-        super.mobTick();
-        this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
-    }
-}

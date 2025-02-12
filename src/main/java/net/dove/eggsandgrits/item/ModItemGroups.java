@@ -73,6 +73,9 @@ public class ModItemGroups {
                         entries.add(ModItems.LARRY_SPAWN_EGG);
                         entries.add(ModItems.VAPE);
 
+                        entries.add(ModItems.SPECTRE_STAFF);
+
+
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -112,6 +115,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_PLANKS);
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
+
+                        entries.add(ModBlocks.CHAIR);
 
 
 

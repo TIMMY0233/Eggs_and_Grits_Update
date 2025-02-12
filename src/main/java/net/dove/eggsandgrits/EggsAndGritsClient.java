@@ -35,5 +35,7 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(VapeProjectileModel.VAPE_RING, VapeProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VAPE_RING, VapeProjectileRenderer::new);
+
+        EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
     }
 }

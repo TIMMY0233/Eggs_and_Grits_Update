@@ -1,6 +1,7 @@
 package net.dove.eggsandgrits.entity;
 
 import net.dove.eggsandgrits.EggsAndGrits;
+import net.dove.eggsandgrits.entity.custom.ChairEntity;
 import net.dove.eggsandgrits.entity.custom.LarryEntity;
 import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.dove.eggsandgrits.entity.custom.VapeProjectileEntity;
@@ -27,6 +28,11 @@ public class ModEntities {
             Identifier.of(EggsAndGrits.MOD_ID, "vape_ring"),
             EntityType.Builder.<VapeProjectileEntity>create(VapeProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 1.15f).build());
+
+    public static final EntityType<ChairEntity> CHAIR = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "chair_entity"),
+            EntityType.Builder.create(ChairEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, 0.5f).build());
 
     public static void registerModEntities() {
         EggsAndGrits.LOGGER.info("Registering Mod Entities for " + EggsAndGrits.MOD_ID);
