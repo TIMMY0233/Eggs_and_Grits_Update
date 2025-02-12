@@ -1,0 +1,19 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:seven_eleven",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642136473,
+
+    "spacing": 200,
+
+    "separation": 50,
+
+    "type": "minecraft:random_spread"
+  }
+}
