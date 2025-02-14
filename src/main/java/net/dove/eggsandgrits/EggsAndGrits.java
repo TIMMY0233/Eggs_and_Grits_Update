@@ -5,9 +5,6 @@ import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
-
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -21,29 +18,16 @@ import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.potion.ModPotions;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.dove.eggsandgrits.util.HammerUsageEvent;
-import net.minecraft.block.AbstractFireBlock;
-import net.minecraft.block.FireBlock;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.passive.SheepEntity;
+
 
 import net.minecraft.item.Items;
 
 import net.minecraft.potion.Potions;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.structure.StructureType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.swing.*;
+
 
 // Very important comment
 public class EggsAndGrits implements ModInitializer {
