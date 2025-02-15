@@ -1,10 +1,7 @@
 package net.dove.eggsandgrits.entity;
 
 import net.dove.eggsandgrits.EggsAndGrits;
-import net.dove.eggsandgrits.entity.custom.ChairEntity;
-import net.dove.eggsandgrits.entity.custom.LarryEntity;
-import net.dove.eggsandgrits.entity.custom.MantisEntity;
-import net.dove.eggsandgrits.entity.custom.VapeProjectileEntity;
+import net.dove.eggsandgrits.entity.custom.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -33,6 +30,9 @@ public class ModEntities {
             Identifier.of(EggsAndGrits.MOD_ID, "chair_entity"),
             EntityType.Builder.create(ChairEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 0.5f).build());
+
+
+
 
     public static void registerModEntities() {
         EggsAndGrits.LOGGER.info("Registering Mod Entities for " + EggsAndGrits.MOD_ID);

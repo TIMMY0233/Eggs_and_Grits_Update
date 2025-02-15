@@ -74,6 +74,7 @@ public class ModItemGroups {
                         entries.add(ModItems.VAPE);
 
                         entries.add(ModItems.SPECTRE_STAFF);
+                        entries.add(ModItems.EXTENSION_CORD);
 
 
                     }).build());

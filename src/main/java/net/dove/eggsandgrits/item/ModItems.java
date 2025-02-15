@@ -193,6 +193,10 @@ public class ModItems {
     public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
             new Item(new Item.Settings().maxCount(1)));
 
+    public static final Item EXTENSION_CORD = registerItem("extension_cord",
+            new Item(new Item.Settings().maxDamage(250)));
+
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);
