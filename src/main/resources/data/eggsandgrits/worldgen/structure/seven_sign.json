@@ -11,6 +11,7 @@
   "biomes": "#eggsandgrits:has_structure/seven_sign",
 
   "step": "surface_structures",
+  "terrain_adaptation": "bury",
 
   "start_height": {
     "absolute": 1
