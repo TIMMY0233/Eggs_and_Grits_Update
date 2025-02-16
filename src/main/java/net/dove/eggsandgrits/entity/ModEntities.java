@@ -31,6 +31,11 @@ public class ModEntities {
             EntityType.Builder.create(ChairEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 0.5f).build());
 
+    public static final EntityType<StoolEntity> STOOL = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "stool_entity"),
+            EntityType.Builder.create(StoolEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, .85f).build());
+
 
 
 

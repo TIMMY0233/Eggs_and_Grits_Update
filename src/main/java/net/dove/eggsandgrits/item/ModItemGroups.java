@@ -118,6 +118,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
 
                         entries.add(ModBlocks.CHAIR);
+                        entries.add(ModBlocks.STOOL);
 
 
 

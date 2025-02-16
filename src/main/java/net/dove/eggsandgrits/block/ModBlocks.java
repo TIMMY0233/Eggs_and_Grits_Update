@@ -49,6 +49,9 @@ public class ModBlocks {
     public static final Block CHAIR = registerBlock("chair",
             new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final Block STOOL = registerBlock("stool",
+            new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
+
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));

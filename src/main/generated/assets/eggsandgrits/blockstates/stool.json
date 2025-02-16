@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "eggsandgrits:block/stool",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "eggsandgrits:block/stool"
+    },
+    "facing=south": {
+      "model": "eggsandgrits:block/stool",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "eggsandgrits:block/stool",
+      "y": 270
+    }
+  }
+}
