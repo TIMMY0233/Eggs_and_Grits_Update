@@ -3,11 +3,9 @@ package net.dove.eggsandgrits.enchantment;
 import com.mojang.serialization.MapCodec;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.enchantment.custom.LightningStrikerEnchantmentEffect;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModEnchantmentEffects {

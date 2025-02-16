@@ -5,9 +5,9 @@ import net.dove.eggsandgrits.enchantment.custom.LightningStrikerEnchantmentEffec
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentLevelBasedValue;
+
 import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
-import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
+
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -18,9 +18,6 @@ import net.minecraft.util.Identifier;
 public class ModEnchantments {
     public static final RegistryKey<Enchantment> LIGHTNING_STRIKER =
             RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(EggsAndGrits.MOD_ID, "lightning_striker"));
-
-    public static final RegistryKey<Enchantment> MULTISHOT2 =
-            RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(EggsAndGrits.MOD_ID, "multishot2"));
 
     public static void bootstrap(Registerable<Enchantment> registerable) {
         var enchantments = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
