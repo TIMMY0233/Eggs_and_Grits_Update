@@ -49,6 +49,7 @@
   "item.eggsandgrits.corn": "Corn",
   "item.eggsandgrits.corn_seeds": "Corn Kernels",
   "item.eggsandgrits.peppercorn": "Peppercorn",
+  "item.eggsandgrits.rice": "Rice",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -68,6 +69,14 @@
   "item.eggsandgrits.ground_corn": "Ground Corn",
 
   "item.eggsandgrits.spectre_staff": "Spectre Staff",
+
+
+  "item.eggsandgrits.waffle": "Waffle",
+  "item.eggsandgrits.redbull": "Redbull",
+  "item.eggsandgrits.fiestada": "Fiestada",
+  "item.eggsandgrits.toast": "Toast",
+  "item.eggsandgrits.toast_egg": "Toast & Eggs",
+  "item.eggsandgrits.toast_onion": "Fried Onions On A Slice Of Bread",
 
 
 
@@ -103,6 +112,7 @@
   "block.eggsandgrits.beans_crop": "Beans Crop",
   "block.eggsandgrits.corn_crop": "Corn Crop",
   "block.eggsandgrits.peppercorn_bush_block": "Peppercorn Bush",
+  "block.eggsandgrits.rice_crop": "Rice Crop",
 
   "block.eggsandgrits.driftwood_log": "Driftwood Log",
   "block.eggsandgrits.stripped_driftwood_log": "Stripped Driftwood Log",
@@ -132,6 +142,12 @@
   "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
 
   "tooltip.eggsandgrits.pepper.tooltip": "Don't eat this.",
+
+  "tooltip.eggsandgrits.waffle.tooltip": "(Add Syrup)",
+  "tooltip.eggsandgrits.toast.tooltip": "Hope it's not burnt",
+  "tooltip.eggsandgrits.toast_onion.tooltip": "mmmmm",
+  "tooltip.eggsandgrits.redbull.tooltip": "Take a sip, do it.",
+  "tooltip.eggsandgrits.fiestada.tooltip": "Made with love - Lunch Lady",
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",

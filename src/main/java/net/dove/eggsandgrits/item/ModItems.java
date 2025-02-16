@@ -163,13 +163,16 @@ public class ModItems {
 
     public static final Item IRON_HAMMER = registerItem("iron_hammer",
             new HammerItem(ModToolMaterials.PINK_GARNET   , new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 6, -3.4f))));
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 6, -3.4f))));
 
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
     public static final Item BEANS = registerItem("beans",
             new AliasedBlockItem(ModBlocks.BEANS_CROP, new Item.Settings().food(ModFoodComponents.BEANS)));
+
+    public static final Item RICE = registerItem("rice",
+            new AliasedBlockItem(ModBlocks.RICE_CROP, new Item.Settings()));
 
 
     public static final Item CORN = registerItem("corn",
@@ -195,6 +198,50 @@ public class ModItems {
 
     public static final Item EXTENSION_CORD = registerItem("extension_cord",
             new Item(new Item.Settings().maxDamage(250)));
+
+    public static final Item FIESTADA = registerItem("fiestada", new Item(new Item.Settings().food(ModFoodComponents.FIESTADA)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.fiestada.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item REDBULL = registerItem("redbull", new Item(new Item.Settings().food(ModFoodComponents.REDBULL)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.redbull.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item WAFFLE = registerItem("waffle", new Item(new Item.Settings().food(ModFoodComponents.WAFFLE)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.waffle.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item TOAST = registerItem("toast", new Item(new Item.Settings().food(ModFoodComponents.TOAST)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.toast.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item TOAST_EGG = registerItem("toast_egg", new Item(new Item.Settings().food(ModFoodComponents.TOAST_EGG)) {
+    });
+
+    public static final Item TOAST_ONION = registerItem("toast_onion", new Item(new Item.Settings().food(ModFoodComponents.TOAST_ONION)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.toast_onion.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
 
 
 

@@ -1,10 +1,12 @@
 package net.dove.eggsandgrits.block;
 
 import net.dove.eggsandgrits.block.custom.*;
+import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.mixin.object.builder.AbstractBlockSettingsAccessor;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -95,6 +97,10 @@ public class ModBlocks {
             new CornCropBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
+    public static final Block RICE_CROP = registerBlockWithoutBlockItem("rice_crop",
+            new RiceCropBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
     public static final Block DRIFTWOOD_LOG = registerBlock("driftwood_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
     public static final Block DRIFTWOOD_WOOD = registerBlock("driftwood_wood",
@@ -116,6 +122,7 @@ public class ModBlocks {
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",
             new PeppercornBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
+
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(EggsAndGrits.MOD_ID, name), block);

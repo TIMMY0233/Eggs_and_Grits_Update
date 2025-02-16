@@ -2,7 +2,7 @@
 
   "type": "minecraft:jigsaw",
 
-  "start_pool": "eggsandgrits:crops/start_pool",
+  "start_pool": "eggsandgrits:crops/land_crop_pool",
 
   "size": 2,
 

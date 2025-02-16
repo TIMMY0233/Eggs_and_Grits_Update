@@ -51,7 +51,28 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(ModEffects.COUGH, 200,0),1f)
             .build();
 
+    public static final FoodComponent WAFFLE = new FoodComponent.Builder().nutrition(10).saturationModifier(1.75f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 400,1), 0.5f)
+            .build();
 
+    public static final FoodComponent REDBULL = new FoodComponent.Builder().nutrition(3).saturationModifier(0.25f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 600, 6), 1f)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodComponent TOAST = new FoodComponent.Builder().nutrition(7).saturationModifier(1f)
+            .build();
+
+    public static final FoodComponent TOAST_EGG = new FoodComponent.Builder().nutrition(9).saturationModifier(1.25f)
+            .build();
+
+    public static final FoodComponent TOAST_ONION = new FoodComponent.Builder().nutrition(8).saturationModifier(1.25f)
+            .build();
+
+    public static final FoodComponent FIESTADA = new FoodComponent.Builder().nutrition(12).saturationModifier(2.4f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 1200, 3), 1f)
+            .alwaysEdible()
+            .build();
 
 }
 

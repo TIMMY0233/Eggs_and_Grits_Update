@@ -55,6 +55,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
 
+        blockStateModelGenerator.registerCrop(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
+
+
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.PEPPERCORN_BUSH_BLOCK, BlockStateModelGenerator.TintType.NOT_TINTED,
                 PeppercornBushBlock.AGE, 0,1,2,3);
 
@@ -90,6 +93,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GROUND_CORN, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.EXTENSION_CORD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.WAFFLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FIESTADA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.REDBULL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOAST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOAST_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOAST_ONION, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 

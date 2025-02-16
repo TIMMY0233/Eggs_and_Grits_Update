@@ -76,6 +76,15 @@ public class ModItemGroups {
                         entries.add(ModItems.SPECTRE_STAFF);
                         entries.add(ModItems.EXTENSION_CORD);
 
+                        entries.add(ModItems.RICE);
+
+                        entries.add(ModItems.WAFFLE);
+                        entries.add(ModItems.FIESTADA);
+                        entries.add(ModItems.REDBULL);
+                        entries.add(ModItems.TOAST);
+                        entries.add(ModItems.TOAST_EGG);
+                        entries.add(ModItems.TOAST_ONION);
+
 
                     }).build());
 
