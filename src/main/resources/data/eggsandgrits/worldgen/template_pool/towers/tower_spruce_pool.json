@@ -1,0 +1,40 @@
+{
+  "name": "eggsandgrits:towers/tower_spruce_pool",
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:tower_spruce1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:tower_spruce2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:tower_spruce3",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -168,6 +168,12 @@ public class ModItems {
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
+    public static final Item ONION_SEEDS = registerItem("onion_seeds",
+            new AliasedBlockItem(ModBlocks.ONION_CROP, new Item.Settings()));
+
+    public static final Item ONION = registerItem("onion",
+            new Item(new Item.Settings().food(ModFoodComponents.CORN)));
+
     public static final Item BEANS = registerItem("beans",
             new AliasedBlockItem(ModBlocks.BEANS_CROP, new Item.Settings().food(ModFoodComponents.BEANS)));
 
@@ -189,6 +195,9 @@ public class ModItems {
 
     public static final Item LARRY_SPAWN_EGG = registerItem("larry_spawn_egg",
             new SpawnEggItem(ModEntities.LARRY, 0x9dc783, 0xbda5f, new Item.Settings()));
+
+    public static final Item DALE_SPAWN_EGG = registerItem("dale_spawn_egg",
+            new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
 
     public static final Item VAPE = registerItem("vape",
             new VapeItem(new Item.Settings().maxCount(16)));
@@ -242,6 +251,31 @@ public class ModItems {
         }
     });
 
+    public static final Item PANCAKE = registerItem("pancakes", new Item(new Item.Settings().food(ModFoodComponents.PANCAKE)) {
+    });
+
+    public static final Item SAUSAGE = registerItem("sausage", new Item(new Item.Settings().food(ModFoodComponents.SAUSAGE)) {
+    });
+
+    public static final Item BACON = registerItem("bacon", new Item(new Item.Settings().food(ModFoodComponents.BACON)) {
+    });
+
+    public static final Item QUAALUDE = registerItem("quaalude", new Item(new Item.Settings().food(ModFoodComponents.QUAALUDE)) {
+    });
+
+    public static final Item MEATBALL = registerItem("meatball", new Item(new Item.Settings().food(ModFoodComponents.MEATBALL)) {
+    });
+
+    public static final Item MYSTERY_MEAT = registerItem("mystery_meat", new Item(new Item.Settings().food(ModFoodComponents.MYSTERY_MEAT)) {
+    });
+
+    public static final Item MOUNTAIN_DEW = registerItem(
+            "mountain_dew", new DrinkItem(new Item.Settings().food(ModFoodComponents.MOUNTAIN_DEW).maxCount(16))
+    );
+
+    public static final Item SWEET_BABY_RAYS = registerItem(
+            "sweet_baby_rays", new DrinkItem(new Item.Settings().food(ModFoodComponents.SWEET_BABY_RAYS).maxCount(16))
+    );
 
 
 

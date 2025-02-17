@@ -1,0 +1,29 @@
+{
+  "name": "eggsandgrits:gas_station/start_pool",
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:seven_eleven",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:shell_station",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

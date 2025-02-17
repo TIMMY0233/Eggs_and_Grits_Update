@@ -1,0 +1,19 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:costco0",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642136380,
+
+    "spacing": 30,
+
+    "separation": 20,
+
+    "type": "minecraft:random_spread"
+  }
+}

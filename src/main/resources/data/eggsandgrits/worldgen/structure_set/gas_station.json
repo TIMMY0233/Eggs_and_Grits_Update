@@ -1,0 +1,23 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:seven_eleven",
+      "weight": 5
+    },
+    {
+      "structure": "eggsandgrits:shell_station",
+      "weight": 5
+    }
+  ],
+  "placement": {
+
+    "salt": 1642136473,
+
+    "spacing": 100,
+
+    "separation": 50,
+
+    "type": "minecraft:random_spread"
+  }
+}

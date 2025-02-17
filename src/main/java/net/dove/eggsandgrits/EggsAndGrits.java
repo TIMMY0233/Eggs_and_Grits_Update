@@ -1,6 +1,8 @@
 package net.dove.eggsandgrits;
 
 import net.dove.eggsandgrits.entity.ModEntities;
+import net.dove.eggsandgrits.entity.custom.DaleEntity;
+import net.dove.eggsandgrits.entity.custom.LarryEntity;
 import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -92,7 +94,9 @@ public class EggsAndGrits implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
-		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, MantisEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, LarryEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());
 
 	}
 }

@@ -2,17 +2,17 @@
 
   "structures": [
     {
-      "structure": "eggsandgrits:seven_eleven",
+      "structure": "eggsandgrits:green",
       "weight": 1
     }
   ],
   "placement": {
 
-    "salt": 1642136473,
+    "salt": 1642136579,
 
-    "spacing": 200,
+    "spacing": 5,
 
-    "separation": 50,
+    "separation": 2,
 
     "type": "minecraft:random_spread"
   }

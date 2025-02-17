@@ -1,12 +1,12 @@
 {
-  "name": "eggsandgrits:seven_eleven/start_pool",
+  "name": "eggsandgrits:costco/shell_pool",
 
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "eggsandgrits:seven_eleven",
+        "location": "eggsandgrits:costco0",
 
         "processors": "minecraft:empty",
 

@@ -51,6 +51,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
 
+        blockStateModelGenerator.registerCrop(ModBlocks.ONION_CROP, OnionCropBlock.AGE, 0, 1, 2, 3);
+
         blockStateModelGenerator.registerCrop(ModBlocks.BEANS_CROP, BeansCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
 
         blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
@@ -100,6 +102,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TOAST, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOAST_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOAST_ONION, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.MOUNTAIN_DEW, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUAALUDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEET_BABY_RAYS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PANCAKE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MEATBALL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAUSAGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BACON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MYSTERY_MEAT, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 

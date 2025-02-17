@@ -27,6 +27,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CREAM);
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
 
+                        entries.add(ModItems.ONION_SEEDS);
+
                         entries.add(ModItems.BEANS);
                         entries.add(ModItems.CHILI);
                         entries.add(ModItems.BUTTER);
@@ -46,6 +48,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.CHISEL);
                         entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.ONION);
                         entries.add(ModItems.IRON_HAMMER);
                         entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.NETHERITE_HAMMER);
@@ -71,6 +74,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.MANTIS_SPAWN_EGG);
                         entries.add(ModItems.LARRY_SPAWN_EGG);
+                        entries.add(ModItems.DALE_SPAWN_EGG);
+
                         entries.add(ModItems.VAPE);
 
                         entries.add(ModItems.SPECTRE_STAFF);
@@ -84,6 +89,16 @@ public class ModItemGroups {
                         entries.add(ModItems.TOAST);
                         entries.add(ModItems.TOAST_EGG);
                         entries.add(ModItems.TOAST_ONION);
+
+                        entries.add(ModItems.SAUSAGE);
+                        entries.add(ModItems.BACON);
+                        entries.add(ModItems.SWEET_BABY_RAYS);
+                        entries.add(ModItems.MEATBALL);
+                        entries.add(ModItems.MYSTERY_MEAT);
+                        entries.add(ModItems.PANCAKE);
+
+                        entries.add(ModItems.QUAALUDE);
+                        entries.add(ModItems.MOUNTAIN_DEW);
 
 
                     }).build());

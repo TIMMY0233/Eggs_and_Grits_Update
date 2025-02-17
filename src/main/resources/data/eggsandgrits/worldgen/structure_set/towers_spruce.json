@@ -1,0 +1,27 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:tower_spruce1",
+      "weight": 1
+    },
+    {
+      "structure": "eggsandgrits:tower_spruce2",
+      "weight": 1
+    },
+    {
+      "structure": "eggsandgrits:tower_spruce3",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642134360,
+
+    "spacing": 10,
+
+    "separation": 4,
+
+    "type": "minecraft:random_spread"
+  }
+}
