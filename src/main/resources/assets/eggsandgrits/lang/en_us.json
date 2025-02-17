@@ -14,6 +14,18 @@
   "item.eggsandgrits.cauliflower_seeds": "Cauliflower Seeds",
   "item.eggsandgrits.beans": "Beans",
 
+  "item.eggsandgrits.onion": "Onion",
+  "item.eggsandgrits.onion_seeds": "Onion Seeds",
+  "item.eggsandgrits.meatball": "Meatball",
+  "item.eggsandgrits.quaalude": "Quaalude",
+  "item.eggsandgrits.sausage": "Sausage",
+  "item.eggsandgrits.pancakes": "Pancakes",
+  "item.eggsandgrits.mountain_dew": "Mountain Dew",
+  "item.eggsandgrits.bacon": "Bacon",
+  "item.eggsandgrits.mystery_meat": "Mystery Meat",
+  "item.eggsandgrits.sweet_baby_rays": "Sweet Baby Rays",
+
+
   "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
   "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
 
@@ -30,6 +42,9 @@
   "enchantment.eggsandgrits.lightning_striker": "Lightning Striker",
 
   "item.eggsandgrits.pink_garnet_hammer": "Pink Garnet Hammer",
+  "item.eggsandgrits.diamond_hammer": "Diamond Hammer",
+  "item.eggsandgrits.iron_hammer": "Iron Hammer",
+  "item.eggsandgrits.netherite_hammer": "Netherite Hammer",
 
   "item.eggsandgrits.pink_garnet_helmet": "Pink Garnet Helmet",
   "item.eggsandgrits.pink_garnet_chestplate": "Pink Garnet Chestplate",
@@ -46,6 +61,7 @@
   "item.eggsandgrits.corn": "Corn",
   "item.eggsandgrits.corn_seeds": "Corn Kernels",
   "item.eggsandgrits.peppercorn": "Peppercorn",
+  "item.eggsandgrits.rice": "Rice",
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
@@ -53,6 +69,28 @@
   "item.eggsandgrits.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
 
   "item.eggsandgrits.trucker_hat": "Trucker Hat",
+
+
+  "item.eggsandgrits.mantis_spawn_egg": "Mantis Spawn Egg",
+
+  "item.eggsandgrits.vape": "Vape",
+  "item.eggsandgrits.extension_cord": "Extension Cord",
+
+  "item.eggsandgrits.salt": "Salt",
+  "item.eggsandgrits.pepper": "Pepper",
+  "item.eggsandgrits.ground_corn": "Ground Corn",
+
+  "item.eggsandgrits.spectre_staff": "Spectre Staff",
+
+
+  "item.eggsandgrits.waffle": "Waffle",
+  "item.eggsandgrits.redbull": "Redbull",
+  "item.eggsandgrits.fiestada": "Fiestada",
+  "item.eggsandgrits.toast": "Toast",
+  "item.eggsandgrits.toast_egg": "Toast & Eggs",
+  "item.eggsandgrits.toast_onion": "Fried Onions On A Slice Of Bread",
+
+
 
 
   "block.eggsandgrits.pink_garnet_block": "Block of Pink Garnet",
@@ -86,6 +124,20 @@
   "block.eggsandgrits.beans_crop": "Beans Crop",
   "block.eggsandgrits.corn_crop": "Corn Crop",
   "block.eggsandgrits.peppercorn_bush_block": "Peppercorn Bush",
+  "block.eggsandgrits.rice_crop": "Rice Crop",
+
+  "block.eggsandgrits.driftwood_log": "Driftwood Log",
+  "block.eggsandgrits.stripped_driftwood_log": "Stripped Driftwood Log",
+  "block.eggsandgrits.driftwood_wood": "Driftwood Wood",
+  "block.eggsandgrits.driftwood_plank": "Driftwood Plank",
+  "block.eggsandgrits.driftwood_leaves": "Driftwood Leaves",
+  "block.eggsandgrits.driftwood_sapling": "Driftwood Sapling",
+  "block.eggsandgrits.stripped_driftwood_wood": "Stripped Driftwood Wood",
+
+  "block.eggsandgrits.salt_block": "Salt Block",
+  "block.eggsandgrits.chair": "Chair",
+  "block.eggsandgrits.stool": "Stool",
+
 
 
   "itemgroup.eggsandgrits.pink_garnet_items": "Pink Garnet Items",
@@ -101,6 +153,19 @@
   "tooltip.eggsandgrits.chili.tooltip": "Beans beans the §dmagical§r fruit",
   "tooltip.eggsandgrits.chili.shift_down": "the more you eat the more you §ktoot§r",
 
+  "tooltip.eggsandgrits.pepper.tooltip": "Don't eat this.",
+
+  "tooltip.eggsandgrits.waffle.tooltip": "(Add Syrup)",
+  "tooltip.eggsandgrits.toast.tooltip": "Hope it's not burnt",
+  "tooltip.eggsandgrits.toast_onion.tooltip": "mmmmm",
+  "tooltip.eggsandgrits.redbull.tooltip": "Take a sip, do it.",
+  "tooltip.eggsandgrits.fiestada.tooltip": "Made with love - Lunch Lady",
+
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
-  "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern"
+  "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",
+
+  "entity.eggsandgrits.mantis": "Mantis",
+  "entity.eggsandgrits.larry": "Larry The Cable Guy",
+
+  "entity.eggsandgrits.vape_cloud": "Vape Ring"
 }

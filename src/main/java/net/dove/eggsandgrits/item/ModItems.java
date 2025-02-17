@@ -1,10 +1,12 @@
 package net.dove.eggsandgrits.item;
 
 import net.dove.eggsandgrits.block.ModBlocks;
+import net.dove.eggsandgrits.entity.ModEntities;
 import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
+
 
 import net.minecraft.client.gui.screen.Screen;
 
@@ -13,6 +15,7 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
+
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -81,6 +84,19 @@ public class ModItems {
         }
     });
 
+    public static final Item PEPPER = registerItem("pepper", new Item(new Item.Settings().food(ModFoodComponents.PEPPER)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.pepper.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item SALT = registerItem("salt", new Item(new Item.Settings()));
+    public static final Item GROUND_CORN = registerItem("ground_corn", new Item(new Item.Settings()));
+
+
+
     public static final Item CHILI = registerItem("chili", new Item(new Item.Settings().food(ModFoodComponents.CHILI)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -136,11 +152,33 @@ public class ModItems {
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(EggsAndGrits.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
 
+
+    public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8, -3.4f))));
+
+    public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 7, -3.4f))));
+
+    public static final Item IRON_HAMMER = registerItem("iron_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET   , new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 6, -3.4f))));
+
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
             new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
+    public static final Item ONION_SEEDS = registerItem("onion_seeds",
+            new AliasedBlockItem(ModBlocks.ONION_CROP, new Item.Settings()));
+
+    public static final Item ONION = registerItem("onion",
+            new Item(new Item.Settings().food(ModFoodComponents.CORN)));
+
     public static final Item BEANS = registerItem("beans",
             new AliasedBlockItem(ModBlocks.BEANS_CROP, new Item.Settings().food(ModFoodComponents.BEANS)));
+
+    public static final Item RICE = registerItem("rice",
+            new AliasedBlockItem(ModBlocks.RICE_CROP, new Item.Settings()));
 
 
     public static final Item CORN = registerItem("corn",
@@ -151,6 +189,93 @@ public class ModItems {
 
     public static final Item PEPPERCORN = registerItem("peppercorn",
             new AliasedBlockItem(ModBlocks.PEPPERCORN_BUSH_BLOCK, new Item.Settings().food(ModFoodComponents.PEPPERCORN)));
+
+    public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
+            new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfa5f, new Item.Settings()));
+
+    public static final Item LARRY_SPAWN_EGG = registerItem("larry_spawn_egg",
+            new SpawnEggItem(ModEntities.LARRY, 0x9dc783, 0xbda5f, new Item.Settings()));
+
+    public static final Item DALE_SPAWN_EGG = registerItem("dale_spawn_egg",
+            new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
+
+    public static final Item VAPE = registerItem("vape",
+            new VapeItem(new Item.Settings().maxCount(16)));
+
+    public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
+            new Item(new Item.Settings().maxCount(1)));
+
+    public static final Item EXTENSION_CORD = registerItem("extension_cord",
+            new Item(new Item.Settings().maxDamage(250)));
+
+    public static final Item FIESTADA = registerItem("fiestada", new Item(new Item.Settings().food(ModFoodComponents.FIESTADA)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.fiestada.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item REDBULL = registerItem("redbull", new Item(new Item.Settings().food(ModFoodComponents.REDBULL)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.redbull.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item WAFFLE = registerItem("waffle", new Item(new Item.Settings().food(ModFoodComponents.WAFFLE)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.waffle.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item TOAST = registerItem("toast", new Item(new Item.Settings().food(ModFoodComponents.TOAST)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.toast.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item TOAST_EGG = registerItem("toast_egg", new Item(new Item.Settings().food(ModFoodComponents.TOAST_EGG)) {
+    });
+
+    public static final Item TOAST_ONION = registerItem("toast_onion", new Item(new Item.Settings().food(ModFoodComponents.TOAST_ONION)) {
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip.eggsandgrits.toast_onion.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    public static final Item PANCAKE = registerItem("pancakes", new Item(new Item.Settings().food(ModFoodComponents.PANCAKE)) {
+    });
+
+    public static final Item SAUSAGE = registerItem("sausage", new Item(new Item.Settings().food(ModFoodComponents.SAUSAGE)) {
+    });
+
+    public static final Item BACON = registerItem("bacon", new Item(new Item.Settings().food(ModFoodComponents.BACON)) {
+    });
+
+    public static final Item QUAALUDE = registerItem("quaalude", new Item(new Item.Settings().food(ModFoodComponents.QUAALUDE)) {
+    });
+
+    public static final Item MEATBALL = registerItem("meatball", new Item(new Item.Settings().food(ModFoodComponents.MEATBALL)) {
+    });
+
+    public static final Item MYSTERY_MEAT = registerItem("mystery_meat", new Item(new Item.Settings().food(ModFoodComponents.MYSTERY_MEAT)) {
+    });
+
+    public static final Item MOUNTAIN_DEW = registerItem(
+            "mountain_dew", new DrinkItem(new Item.Settings().food(ModFoodComponents.MOUNTAIN_DEW).maxCount(16))
+    );
+
+    public static final Item SWEET_BABY_RAYS = registerItem(
+            "sweet_baby_rays", new DrinkItem(new Item.Settings().food(ModFoodComponents.SWEET_BABY_RAYS).maxCount(16))
+    );
 
 
 

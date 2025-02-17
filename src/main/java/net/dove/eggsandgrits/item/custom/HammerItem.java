@@ -1,5 +1,6 @@
 package net.dove.eggsandgrits.item.custom;
 
+
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.tag.BlockTags;
@@ -15,40 +16,40 @@ import java.util.List;
 public class HammerItem extends MiningToolItem {
     public HammerItem(ToolMaterial material, Settings settings) {
         super(material, BlockTags.PICKAXE_MINEABLE, settings);
-
     }
 
-    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayerEntity player) {
+    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initialBlockPos, ServerPlayerEntity player) {
         List<BlockPos> positions = new ArrayList<>();
         HitResult hit = player.raycast(20, 0, false);
         if (hit.getType() == HitResult.Type.BLOCK) {
             BlockHitResult blockHit = (BlockHitResult) hit;
 
-            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
-                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
+            // Handle block destruction logic based on hit side
+            if (blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP) {
+                for (int x = -range; x <= range; x++) {
+                    for (int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initialBlockPos.getX() + x, initialBlockPos.getY(), initialBlockPos.getZ() + y));
                     }
                 }
             }
 
-            if(blockHit.getSide() == Direction.NORTH || blockHit.getSide() == Direction.SOUTH) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
-                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
+            if (blockHit.getSide() == Direction.NORTH || blockHit.getSide() == Direction.SOUTH) {
+                for (int x = -range; x <= range; x++) {
+                    for (int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initialBlockPos.getX() + x, initialBlockPos.getY() + y, initialBlockPos.getZ()));
                     }
                 }
             }
 
-            if(blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
-                for(int x = -range; x <= range; x++) {
-                    for(int y = -range; y <= range; y++) {
-                        positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+            if (blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
+                for (int x = -range; x <= range; x++) {
+                    for (int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initialBlockPos.getX(), initialBlockPos.getY() + y, initialBlockPos.getZ() + x));
                     }
                 }
             }
         }
-
         return positions;
     }
 }
+

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "eggsandgrits:waffle_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 123456789,
+    "spacing": 18,
+    "separation": 2,
+    "type": "minecraft:random_spread"
+  }
+}

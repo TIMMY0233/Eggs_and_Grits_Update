@@ -1,0 +1,19 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:green",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642136579,
+
+    "spacing": 20,
+
+    "separation": 2,
+
+    "type": "minecraft:random_spread"
+  }
+}

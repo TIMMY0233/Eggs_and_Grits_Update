@@ -1,0 +1,27 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:tower_oak1",
+      "weight": 1
+    },
+    {
+      "structure": "eggsandgrits:tower_oak2",
+      "weight": 1
+    },
+    {
+      "structure": "eggsandgrits:tower_oak3",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642134358,
+
+    "spacing": 10,
+
+    "separation": 4,
+
+    "type": "minecraft:random_spread"
+  }
+}

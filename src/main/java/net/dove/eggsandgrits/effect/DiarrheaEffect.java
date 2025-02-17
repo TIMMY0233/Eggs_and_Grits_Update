@@ -27,14 +27,16 @@ public class DiarrheaEffect extends StatusEffect {
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
             // Apply Slowness
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20, amplifier, false, true, true));
+            if (!player.hasStatusEffect(StatusEffects.SLOWNESS)) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, amplifier, false, true, true));
+            }
 
             // Randomly play fart sounds (1 in 5 chance every tick)
             if (player.getWorld().random.nextFloat() < 0.07f) {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
-                        ModSounds.TOOT,
+                        ModSounds.TOOT2,
                         SoundCategory.PLAYERS,
                         0.5f,
                         1.3f
@@ -44,7 +46,7 @@ public class DiarrheaEffect extends StatusEffect {
                 player.getWorld().playSound(
                         null,
                         player.getBlockPos(),
-                        ModSounds.TOOT2,
+                        ModSounds.TOOT,
                         SoundCategory.PLAYERS,
                         0.5f,
                         1.3f

@@ -27,13 +27,18 @@ public class ModItemGroups {
                         entries.add(ModItems.CREAM);
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
 
+                        entries.add(ModItems.ONION_SEEDS);
+
                         entries.add(ModItems.BEANS);
                         entries.add(ModItems.CHILI);
                         entries.add(ModItems.BUTTER);
 
                         entries.add(ModItems.CORN);
                         entries.add(ModItems.CORN_SEED);
+                        entries.add(ModItems.GROUND_CORN);
 
+                        entries.add(ModItems.SALT);
+                        entries.add(ModItems.PEPPER);
 
                         entries.add(ModItems.PEPPERCORN);
 
@@ -43,6 +48,10 @@ public class ModItemGroups {
 
                         entries.add(ModItems.CHISEL);
                         entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.ONION);
+                        entries.add(ModItems.IRON_HAMMER);
+                        entries.add(ModItems.DIAMOND_HAMMER);
+                        entries.add(ModItems.NETHERITE_HAMMER);
 
                         entries.add(ModItems.STARLIGHT_ASHES);
 
@@ -63,6 +72,35 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_HORSE_ARMOR);
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
 
+                        entries.add(ModItems.MANTIS_SPAWN_EGG);
+                        entries.add(ModItems.LARRY_SPAWN_EGG);
+                        entries.add(ModItems.DALE_SPAWN_EGG);
+
+                        entries.add(ModItems.VAPE);
+
+                        entries.add(ModItems.SPECTRE_STAFF);
+                        entries.add(ModItems.EXTENSION_CORD);
+
+                        entries.add(ModItems.RICE);
+
+                        entries.add(ModItems.WAFFLE);
+                        entries.add(ModItems.FIESTADA);
+                        entries.add(ModItems.REDBULL);
+                        entries.add(ModItems.TOAST);
+                        entries.add(ModItems.TOAST_EGG);
+                        entries.add(ModItems.TOAST_ONION);
+
+                        entries.add(ModItems.SAUSAGE);
+                        entries.add(ModItems.BACON);
+                        entries.add(ModItems.SWEET_BABY_RAYS);
+                        entries.add(ModItems.MEATBALL);
+                        entries.add(ModItems.MYSTERY_MEAT);
+                        entries.add(ModItems.PANCAKE);
+
+                        entries.add(ModItems.QUAALUDE);
+                        entries.add(ModItems.MOUNTAIN_DEW);
+
+
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -78,6 +116,7 @@ public class ModItemGroups {
 
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
+                        entries.add(ModBlocks.SALT_BLOCK);
 
                         entries.add(ModBlocks.PINK_GARNET_STAIRS);
                         entries.add(ModBlocks.PINK_GARNET_SLAB);
@@ -93,6 +132,18 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_TRAPDOOR);
 
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
+
+                        entries.add(ModBlocks.DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.DRIFTWOOD_LEAVES);
+                        entries.add(ModBlocks.DRIFTWOOD_PLANKS);
+                        entries.add(ModBlocks.DRIFTWOOD_SAPLING);
+                        entries.add(ModBlocks.DRIFTWOOD_WOOD);
+
+                        entries.add(ModBlocks.CHAIR);
+                        entries.add(ModBlocks.STOOL);
+
 
 
                     }).build());

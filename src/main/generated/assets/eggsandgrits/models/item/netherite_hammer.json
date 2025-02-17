@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "eggsandgrits:item/netherite_hammer"
+  }
+}

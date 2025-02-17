@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "eggsandgrits:corn"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "eggsandgrits:ground_corn"
+  }
+}

@@ -1,16 +1,16 @@
 package net.dove.eggsandgrits;
 
+import net.dove.eggsandgrits.entity.ModEntities;
+import net.dove.eggsandgrits.entity.custom.DaleEntity;
+import net.dove.eggsandgrits.entity.custom.LarryEntity;
+import net.dove.eggsandgrits.entity.custom.MantisEntity;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
-
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.registry.*;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.component.ModDataComponentTypes;
 import net.dove.eggsandgrits.effect.ModEffects;
@@ -20,21 +20,16 @@ import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.potion.ModPotions;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.dove.eggsandgrits.util.HammerUsageEvent;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.passive.SheepEntity;
+
 
 import net.minecraft.item.Items;
 
 import net.minecraft.potion.Potions;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.swing.*;
+
 
 // Very important comment
 public class EggsAndGrits implements ModInitializer {
@@ -56,6 +51,8 @@ public class EggsAndGrits implements ModInitializer {
 		ModEffects.registerEffects();
 
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		ModEntities.registerModEntities();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
@@ -85,5 +82,21 @@ public class EggsAndGrits implements ModInitializer {
 		});
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CAULIFLOWER_SEEDS, 0.25f);
+
+		StrippableBlockRegistry.register(ModBlocks.DRIFTWOOD_LOG, ModBlocks.STRIPPED_DRIFTWOOD_LOG);
+		StrippableBlockRegistry.register(ModBlocks.DRIFTWOOD_WOOD, ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_PLANKS, 5, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_DRIFTWOOD_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, LarryEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());
+
 	}
 }

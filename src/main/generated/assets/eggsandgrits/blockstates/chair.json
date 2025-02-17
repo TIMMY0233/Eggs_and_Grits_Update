@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "eggsandgrits:block/chair",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "eggsandgrits:block/chair"
+    },
+    "facing=south": {
+      "model": "eggsandgrits:block/chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "eggsandgrits:block/chair",
+      "y": 270
+    }
+  }
+}

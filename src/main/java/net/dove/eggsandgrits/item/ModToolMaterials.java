@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     PINK_GARNET(ModTags.Blocks.INCORRECT_FOR_PINK_GARNET_TOOL,
-            1200, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
+            1200, 2.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
@@ -24,7 +24,7 @@ public enum ModToolMaterials implements ToolMaterial {
                      final float attackDamage, final int enchantability,final Supplier<Ingredient> repairIngredient) {
         this.inverseTag = inverseTag;
         this.itemDurability = itemDurability;
-        this.miningSpeed = miningSpeed;
+        this.miningSpeed = 2.0f;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);

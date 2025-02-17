@@ -5,7 +5,9 @@ import net.dove.eggsandgrits.enchantment.custom.LightningStrikerEnchantmentEffec
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
+
 import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
+
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -26,8 +28,8 @@ public class ModEnchantments {
                         items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                         5,
                         2,
-                        Enchantment.leveledCost(5, 7),
-                        Enchantment.leveledCost(25, 9),
+                        Enchantment.leveledCost(15, 9),
+                        Enchantment.leveledCost(65, 9),
                         2,
                         AttributeModifierSlot.MAINHAND))
                 .exclusiveSet(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
