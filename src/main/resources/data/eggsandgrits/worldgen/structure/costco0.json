@@ -11,7 +11,7 @@
   "biomes": "#eggsandgrits:has_structure/testing",
 
   "step": "surface_structures",
-  "terrain_adaptation": "beard_thin",
+  "terrain_adaptation": "beard_box",
 
   "start_height": {
     "absolute": 1
