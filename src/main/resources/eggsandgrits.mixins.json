@@ -3,8 +3,8 @@
   "package": "net.dove.eggsandgrits.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleMixin",
-    "ModifyChunkGenMixin"
+    "ExampleMixin"
+    //"ModifyChunkGenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
