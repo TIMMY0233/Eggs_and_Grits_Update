@@ -2,7 +2,7 @@
 
   "structures": [
     {
-      "structure": "eggsandgrits:costco0",
+      "structure": "eggsandgrits:mountainstart",
       "weight": 1
     }
   ],
@@ -10,9 +10,13 @@
 
     "salt": 1224466834,
 
-    "spacing": 300,
+    "spacing": 100,
 
-    "separation": 250,
+    "separation": 75,
+    "exclusion_zone": {
+      "chunk_count": 10,
+      "other_set": "minecraft:villages"
+    },
 
     "type": "minecraft:random_spread"
   }

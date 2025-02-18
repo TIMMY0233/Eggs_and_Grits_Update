@@ -60,6 +60,7 @@ public class EggsAndGrits implements ModInitializer {
 
 		ModWorldGeneration.generateModWorldGen();
 
+		EggsAndGritsStructures.registerStructureFeatures();
 
 
 		/*AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
