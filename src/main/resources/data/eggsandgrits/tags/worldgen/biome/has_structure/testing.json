@@ -1,6 +1,16 @@
 {
-  "replace": true,
+  "replace": false,
   "values": [
-    "minecraft:plains"
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:meadow",
+    "#minecraft:is_jungle",
+    "#minecraft:is_forest",
+    "#minecraft:is_taiga",
+    "minecraft:desert",
+    "minecraft:snowy_plains",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:windswept_savanna"
   ]
 }
