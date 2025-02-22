@@ -25,6 +25,8 @@
   "item.eggsandgrits.mystery_meat": "Mystery Meat",
   "item.eggsandgrits.sweet_baby_rays": "Sweet Baby Rays",
 
+  "item.eggsandgrits.cs_knife": "CS Knife",
+
 
   "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
   "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
@@ -33,6 +35,8 @@
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+  "effect.eggsandgrits.b_hop": "Bhop",
 
   "effect.eggsandgrits.diarrhea": "diarrhea",
 

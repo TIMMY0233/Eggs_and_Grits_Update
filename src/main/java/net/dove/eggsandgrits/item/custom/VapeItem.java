@@ -1,9 +1,14 @@
 package net.dove.eggsandgrits.item.custom;
 
+import net.dove.eggsandgrits.enchantment.ModEnchantments;
 import net.dove.eggsandgrits.entity.custom.VapeProjectileEntity;
+import net.fabricmc.fabric.api.item.v1.EnchantingContext;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
@@ -33,5 +38,21 @@ public class VapeItem extends Item {
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
+    }
+
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true; // Allows enchantments
+    }
+
+    @Override
+    public int getEnchantability() {
+        return 15; // Determines enchantability (same as Iron Sword)
+    }
+
+    @Override
+    public boolean canBeEnchantedWith(ItemStack stack, RegistryEntry<Enchantment> enchantment, EnchantingContext context) {
+        return enchantment == ModEnchantments.LIGHTNING_STRIKER || enchantment == Enchantments.LOOTING;
     }
 }

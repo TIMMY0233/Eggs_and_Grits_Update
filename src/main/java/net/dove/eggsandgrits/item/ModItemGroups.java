@@ -40,6 +40,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.PEPPER);
                         entries.add(ModItems.CS_KNIFE);
+                        entries.add(ModItems.CRATE);
+
 
                         entries.add(ModItems.PEPPERCORN);
 

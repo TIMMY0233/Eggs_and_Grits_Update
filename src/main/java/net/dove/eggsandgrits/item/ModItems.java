@@ -219,7 +219,7 @@ public class ModItems {
         }
     });
 
-    public static final Item REDBULL = registerItem("redbull", new Item(new Item.Settings().food(ModFoodComponents.REDBULL)) {
+    public static final Item REDBULL = registerItem("redbull", new DrinkItem(new Item.Settings().food(ModFoodComponents.REDBULL)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.eggsandgrits.redbull.tooltip"));
@@ -281,9 +281,11 @@ public class ModItems {
     );
 
     public static final Item CS_KNIFE = registerItem("cs_knife",
-            new Item(new Item.Settings().maxCount(1)));
+            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))));
 
-
+    public static final Item CRATE = registerItem("crate",
+            new CrateItem(new Item.Settings().maxCount(64)));
 
 
     private static Item registerItem(String name, Item item) {
