@@ -126,8 +126,6 @@ public class ModBlocks {
 
 
 
-    public static final Block CS_KNIFE_HEAD = registerBlock("cs_knife_head",
-            new WearableCarvedPumpkinBlock(AbstractBlock.Settings.create().strength(1F)));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

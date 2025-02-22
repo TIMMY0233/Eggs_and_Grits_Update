@@ -1,10 +1,10 @@
-// 1.21.1	2025-02-20T20:41:27.1893791	Eggs and Grits/Tags for minecraft:item
+// 1.21.1	2025-02-21T22:52:28.815471	Eggs and Grits/Tags for minecraft:item
 223d5b89f5db9024a7a3d19ad00c42a058ab2298 data\minecraft\tags\item\trimmable_armor.json
 f8f56b8eda9c78bd65658d660538478619ba6eee data\minecraft\tags\item\shovels.json
 9f29b612b9fcdb262529ee0d5893f8f6a136708a data\minecraft\tags\item\logs_that_burn.json
 2705c4c779424ec7b5871439adee9676347e8c22 data\minecraft\tags\item\axes.json
-99eb8d0c33295e01052dc539af787ed7a7b0b70c data\minecraft\tags\item\trim_materials.json
 aff9ad8ff336cfa6d2cec7c88454f49e89cb7d0c data\minecraft\tags\item\trim_templates.json
+99eb8d0c33295e01052dc539af787ed7a7b0b70c data\minecraft\tags\item\trim_materials.json
 d1ea18ebd19b767c5498f351893def18772892a9 data\minecraft\tags\item\swords.json
 d764740f45867202dd61a4f5356e39a9a7999689 data\minecraft\tags\item\hoes.json
 f8a0afe452a77bdf596cb35ee9d7727c4f22539b data\minecraft\tags\item\pickaxes.json

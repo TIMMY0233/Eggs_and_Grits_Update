@@ -43,6 +43,14 @@
       }
     ]
   },
+  "suge": {
+    "sounds": [
+      {
+        "name": "eggsandgrits:suge",
+        "stream": true
+      }
+    ]
+  },
   "toot": {
     "subtitle": "toot",
     "sounds": [
