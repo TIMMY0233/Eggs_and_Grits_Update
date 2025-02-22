@@ -18,6 +18,13 @@ public class ModEffects {
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final RegistryEntry<StatusEffect> POGO = registerStatusEffect("pogo",
+            new PogoEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                            Identifier.of(EggsAndGrits.MOD_ID, "pogo"), -0.25f,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
 
     public static final RegistryEntry<StatusEffect> DIARRHEA = registerStatusEffect("diarrhea",
             new DiarrheaEffect(StatusEffectCategory.NEUTRAL, 0x9d593a)

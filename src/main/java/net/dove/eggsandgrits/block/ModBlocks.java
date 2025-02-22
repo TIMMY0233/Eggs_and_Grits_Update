@@ -125,6 +125,11 @@ public class ModBlocks {
             new PeppercornBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
 
 
+
+    public static final Block CS_KNIFE_HEAD = registerBlock("cs_knife_head",
+            new WearableCarvedPumpkinBlock(AbstractBlock.Settings.create().strength(1F)));
+
+
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(EggsAndGrits.MOD_ID, name), block);
     }

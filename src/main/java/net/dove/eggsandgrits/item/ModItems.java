@@ -8,6 +8,8 @@ import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
 
 
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.gui.screen.Screen;
 
 import net.minecraft.item.*;
@@ -16,6 +18,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
 
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -276,6 +279,10 @@ public class ModItems {
     public static final Item SWEET_BABY_RAYS = registerItem(
             "sweet_baby_rays", new DrinkItem(new Item.Settings().food(ModFoodComponents.SWEET_BABY_RAYS).maxCount(16))
     );
+
+    public static final Item CS_KNIFE = registerItem("cs_knife",
+            new Item(new Item.Settings().maxCount(1)));
+
 
 
 
