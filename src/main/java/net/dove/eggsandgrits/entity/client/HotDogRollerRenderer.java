@@ -1,6 +1,5 @@
 package net.dove.eggsandgrits.entity.client;
 
-import net.dove.eggsandgrits.entity.custom.ChairEntity;
 import net.dove.eggsandgrits.entity.custom.HotDogRollerEntity;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.entity.EntityRenderer;
