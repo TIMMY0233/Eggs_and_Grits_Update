@@ -4,6 +4,7 @@ import net.dove.eggsandgrits.entity.ModEntities;
 import net.dove.eggsandgrits.entity.custom.DaleEntity;
 import net.dove.eggsandgrits.entity.custom.LarryEntity;
 import net.dove.eggsandgrits.entity.custom.MantisEntity;
+import net.dove.eggsandgrits.entity.custom.TinyGuyEntity;
 import net.dove.eggsandgrits.villager.ModVillagers;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -104,6 +105,9 @@ public class EggsAndGrits implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, LarryEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.TINYGUY, TinyGuyEntity.createAttributes());
+
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());
 

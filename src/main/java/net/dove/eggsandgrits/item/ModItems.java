@@ -112,7 +112,10 @@ public class ModItems {
         }
     });
 
-    public static final Item KAUPEN_BOW = registerItem("kaupen_bow", new BowItem(new Item.Settings().maxDamage(500).rarity(Rarity.EPIC)));
+    public static final Item KAUPEN_BOW = registerItem("kaupen_bow", new BowItem(new Item.Settings().maxDamage(100).rarity(Rarity.EPIC)));
+
+    public static final Item SLINGSHOT = registerItem("slingshot", new BowItem(new Item.Settings().maxDamage(100).rarity(Rarity.EPIC)));
+
 
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
@@ -154,6 +157,10 @@ public class ModItems {
             new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1)));
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(EggsAndGrits.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
+
+    public static final Item NINE_ELEVEN_PANTS = registerItem("nine_eleven_pants",
+            new ArmorItem(ModArmorMaterials.NINE_ELEVEN_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
 
 
     public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
@@ -200,6 +207,9 @@ public class ModItems {
             new SpawnEggItem(ModEntities.LARRY, 0x9dc783, 0xbda5f, new Item.Settings()));
 
     public static final Item DALE_SPAWN_EGG = registerItem("dale_spawn_egg",
+            new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
+
+    public static final Item TINYGUY_SPAWN_EGG = registerItem("dale_spawn_egg",
             new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
 
     public static final Item VAPE = registerItem("vape",

@@ -119,6 +119,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_HOTDOG, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_HOTDOG, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ECLIPSE, Models.GENERATED);
+
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.PEPPERCORN, Models.GENERATED);
@@ -147,6 +149,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_BOOTS));
 
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NINE_ELEVEN_PANTS));
+
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.KAUPEN_SMITHING_TEMPLATE, Models.GENERATED);
 
@@ -159,6 +163,9 @@ public class ModModelProvider extends FabricModelProvider {
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
 
         itemModelGenerator.register(ModItems.DALE_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.TINYGUY_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

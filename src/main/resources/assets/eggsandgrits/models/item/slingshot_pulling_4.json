@@ -1,0 +1,6 @@
+{
+  "parent": "eggsandgrits:item/slingshot",
+  "textures": {
+    "layer0": "eggsandgrits:item/slingshot_pulling_4"
+  }
+}

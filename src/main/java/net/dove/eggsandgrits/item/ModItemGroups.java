@@ -108,6 +108,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.ECLIPSE);
 
+                        entries.add(ModItems.SLINGSHOT);
+                        entries.add(ModItems.NINE_ELEVEN_PANTS);
+
 
                     }).build());
 

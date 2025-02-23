@@ -14,6 +14,7 @@ public class ModModelPredicates {
                 (stack, world, entity, seed) -> stack.get(ModDataComponentTypes.COORDINATES) != null ? 1f : 0f);
 
         registerCustomBow(ModItems.KAUPEN_BOW);
+        registerCustomBow(ModItems.SLINGSHOT);
     }
 
     private static void registerCustomBow(Item item) {

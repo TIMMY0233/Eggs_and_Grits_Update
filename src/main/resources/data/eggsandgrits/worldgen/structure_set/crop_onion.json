@@ -1,0 +1,23 @@
+{
+
+  "structures": [
+    {
+      "structure": "eggsandgrits:crop_onion1",
+      "weight": 1
+    },
+    {
+      "structure": "eggsandgrits:crop_onion2",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1642136478,
+
+    "spacing": 25,
+
+    "separation": 10,
+
+    "type": "minecraft:random_spread"
+  }
+}
