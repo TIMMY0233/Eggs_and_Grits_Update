@@ -10,6 +10,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -50,6 +51,9 @@ public class ModBlocks {
 
     public static final Block STOOL = registerBlock("stool",
             new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block HOT_DOG_ROLLER = registerBlock("hot_dog_roller",
+            new HotDogRollerBlock(AbstractBlock.Settings.create().nonOpaque().strength(1f)));
 
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
@@ -123,6 +127,7 @@ public class ModBlocks {
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",
             new PeppercornBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
+
 
 
 

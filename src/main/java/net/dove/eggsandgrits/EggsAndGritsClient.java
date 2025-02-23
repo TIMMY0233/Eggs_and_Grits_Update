@@ -45,5 +45,7 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
         EntityRendererRegistry.register(ModEntities.STOOL, StoolRenderer::new);
+
+        EntityRendererRegistry.register(ModEntities.HOT_DOG_ROLLER, HotDogRollerRenderer::new);
     }
 }

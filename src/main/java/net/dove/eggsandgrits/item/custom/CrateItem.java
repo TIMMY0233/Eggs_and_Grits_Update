@@ -1,22 +1,23 @@
 package net.dove.eggsandgrits.item.custom;
 
-import net.dove.eggsandgrits.sound.ModSounds;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
+
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.minecraft.server.MinecraftServer;
 
-import java.awt.*;
 
 public class CrateItem extends Item {
     public CrateItem(Settings settings) {
@@ -37,9 +38,16 @@ public class CrateItem extends Item {
                 // Use Minecraft's server scheduler to run after 3 seconds (60 ticks)
                 MinecraftServer server = ((ServerWorld) world).getServer();
                 server.execute(() -> giveReward(player));  // Schedule task to run
-            }
-        }
 
+                ((ServerWorld) world).spawnParticles(ParticleTypes.FIREWORK,
+                        context.getBlockPos().getX() + 0.5,
+                        context.getBlockPos().getY() + 1.2,
+                        context.getBlockPos().getZ() + 0.5, 20, 0,0,0,0.3);
+            }
+            ItemStack stack = player.getStackInHand(context.getHand());
+            stack.decrement(1);
+
+        }
         return ActionResult.SUCCESS;
     }
 
@@ -56,10 +64,11 @@ public class CrateItem extends Item {
         // Give the item to the player
         player.getInventory().insertStack(rewardStack);
 
+
         // Show reward message to the player
         player.sendMessage(Text.literal("You received: ")
                 .append(Text.literal(reward.getName().getString())
-                        .setStyle(Style.EMPTY.withColor(rarity.getColor()).withBold(true))), true);
+                        .setStyle(Style.EMPTY.withColor(rarity.getColor()).withBold(false).withItalic(false))), true);
 
         // If the item is epic, announce it to the whole server
         if (rarity == Rarity.EPIC) {
@@ -68,7 +77,7 @@ public class CrateItem extends Item {
                 ServerWorld serverWorld = (ServerWorld) player.getWorld();
                 serverWorld.getPlayers().forEach(p ->
                         p.sendMessage(Text.literal(player.getName().getString() + " received: ")
-                                .append(Text.literal(reward.getName().getString()).setStyle(Style.EMPTY.withColor(Formatting.LIGHT_PURPLE).withBold(true)))));
+                                .append(Text.literal(reward.getName().getString()).setStyle(Style.EMPTY.withColor(Formatting.LIGHT_PURPLE).withBold(false).withItalic(true)))));
 
             }
         }
@@ -88,5 +97,8 @@ public class CrateItem extends Item {
         }
     }
 
+
 }
+
+
 

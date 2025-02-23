@@ -1,0 +1,123 @@
+{
+  "type": "chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "functions": [
+        {
+          "function": "set_count",
+          "count": {
+            "type": "uniform",
+            "min": 6,
+            "max": 16
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "eggsandgrits:beans",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "eggsandgrits:onion",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "eggsandgrits:corn",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "eggsandgrits:rice",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "functions": [
+        {
+          "function": "set_count",
+          "count": {
+            "type": "uniform",
+            "min": 2,
+            "max": 6
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "eggsandgrits:chili",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "functions": [
+        {
+          "function": "set_count",
+          "count": {
+            "type": "uniform",
+            "min": 1,
+            "max": 4
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "eggsandgrits:crate",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "eggsandgrits:toast",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "item",
+          "name": "stick",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_name",
+              "name":
+              {
+                "text": "Super Stick",
+                "bold": true,
+                "color": "#FFAA00",
+                "italic": false
+              }
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "knockback": 20
+              },
+              "add": true
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "eggsandgrits:fiestada",
+          "weight": 9
+        }
+      ]
+    }
+  ]
+}

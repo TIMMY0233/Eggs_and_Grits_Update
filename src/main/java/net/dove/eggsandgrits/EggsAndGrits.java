@@ -4,12 +4,14 @@ import net.dove.eggsandgrits.entity.ModEntities;
 import net.dove.eggsandgrits.entity.custom.DaleEntity;
 import net.dove.eggsandgrits.entity.custom.LarryEntity;
 import net.dove.eggsandgrits.entity.custom.MantisEntity;
+import net.dove.eggsandgrits.villager.ModVillagers;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.*;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.component.ModDataComponentTypes;
@@ -22,10 +24,14 @@ import net.dove.eggsandgrits.sound.ModSounds;
 import net.dove.eggsandgrits.util.HammerUsageEvent;
 
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 import net.minecraft.potion.Potions;
 
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,6 +67,8 @@ public class EggsAndGrits implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		EggsAndGritsStructures.registerStructureFeatures();
+
+		ModVillagers.registerVillagers();
 
 
 		/*AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
@@ -98,6 +106,42 @@ public class EggsAndGrits implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, LarryEntity.createAttributes());
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());
+
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.BEANS, 8), 7, 2, 0.04f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 9),
+					new ItemStack(ModItems.CHILI, 2), 3, 4, 0.04f));
+		});
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.CAULIFLOWER, 8), 7, 2, 0.04f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 9),
+					new ItemStack(ModItems.CAULIFLOWER_SEEDS, 2), 3, 4, 0.04f));
+		});
+
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.KAUPENGER, 1, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.CAULIFLOWER, 8), 7, 2, 0.04f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 9),
+					new ItemStack(ModItems.CAULIFLOWER_SEEDS, 2), 3, 4, 0.04f));
+		});
+		TradeOfferHelper.registerVillagerOffers(ModVillagers.KAUPENGER, 2, factories -> {
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 3),
+					new ItemStack(ModItems.MOUNTAIN_DEW, 8), 7, 2, 0.04f));
+			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 9),
+					new ItemStack(ModItems.MEATBALL, 2), 3, 4, 0.04f));
+		});
+
+
 
 	}
 }

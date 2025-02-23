@@ -26,9 +26,20 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "eggsandgrits:shell_inside2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "eggsandgrits:shell_inside3",
 
         "processors": "minecraft:empty",
 

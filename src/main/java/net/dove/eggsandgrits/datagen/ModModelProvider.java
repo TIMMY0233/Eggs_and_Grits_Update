@@ -72,6 +72,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CHAIR);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.STOOL);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.HOT_DOG_ROLLER);
     }
 
     @Override
@@ -115,6 +116,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.CRATE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.RAW_HOTDOG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_HOTDOG, Models.GENERATED);
+
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.PEPPERCORN, Models.GENERATED);
@@ -149,6 +153,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModBlocks.DRIFTWOOD_SAPLING.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MANTIS_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.LARRY_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.DALE_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

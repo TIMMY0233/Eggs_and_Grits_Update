@@ -269,6 +269,12 @@ public class ModItems {
     public static final Item MEATBALL = registerItem("meatball", new Item(new Item.Settings().food(ModFoodComponents.MEATBALL)) {
     });
 
+    public static final Item RAW_HOTDOG = registerItem("raw_hotdog", new Item(new Item.Settings().food(ModFoodComponents.RAW_HOTDOG)) {
+    });
+
+    public static final Item COOKED_HOTDOG = registerItem("cooked_hotdog", new Item(new Item.Settings().food(ModFoodComponents.COOKED_HOTDOG)) {
+    });
+
     public static final Item MYSTERY_MEAT = registerItem("mystery_meat", new Item(new Item.Settings().food(ModFoodComponents.MYSTERY_MEAT)) {
     });
 
@@ -286,6 +292,9 @@ public class ModItems {
 
     public static final Item CRATE = registerItem("crate",
             new CrateItem(new Item.Settings().maxCount(64)));
+
+    public static final Item ECLIPSE = registerItem("eclipse",
+            new EclipseItem(new Item.Settings().maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

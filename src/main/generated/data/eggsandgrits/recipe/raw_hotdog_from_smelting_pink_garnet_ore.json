@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "hot_dog",
+  "ingredient": {
+    "item": "eggsandgrits:pink_garnet_ore"
+  },
+  "result": {
+    "id": "eggsandgrits:raw_hotdog"
+  }
+}

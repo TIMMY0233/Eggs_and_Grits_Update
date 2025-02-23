@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "eggsandgrits:kaupen_poi",
+      "required": false
+    }
+  ]
+}

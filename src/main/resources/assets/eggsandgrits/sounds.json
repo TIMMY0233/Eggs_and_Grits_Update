@@ -92,5 +92,29 @@
     "sounds": [
       "eggsandgrits:git_r_done"
     ]
+  },
+  "sizzle": {
+    "subtitle": "Sizzle",
+    "sounds": [
+      "eggsandgrits:sizzle"
+    ]
+  },
+  "sizzle2": {
+    "subtitle": "Sizzle",
+    "sounds": [
+      "eggsandgrits:sizzle2"
+    ]
+  },
+  "sizzle3": {
+    "subtitle": "Sizzle",
+    "sounds": [
+      "eggsandgrits:sizzle3"
+    ]
+  },
+  "sizzle4": {
+    "subtitle": "Sizzle",
+    "sounds": [
+      "eggsandgrits:sizzle4"
+    ]
   }
 }

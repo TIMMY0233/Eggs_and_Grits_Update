@@ -103,6 +103,11 @@ public class ModItemGroups {
                         entries.add(ModItems.QUAALUDE);
                         entries.add(ModItems.MOUNTAIN_DEW);
 
+                        entries.add(ModItems.COOKED_HOTDOG);
+                        entries.add(ModItems.RAW_HOTDOG);
+
+                        entries.add(ModItems.ECLIPSE);
+
 
                     }).build());
 
@@ -146,6 +151,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.CHAIR);
                         entries.add(ModBlocks.STOOL);
+
+                        entries.add(ModBlocks.HOT_DOG_ROLLER);
 
 
 

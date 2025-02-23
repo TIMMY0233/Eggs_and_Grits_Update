@@ -13,22 +13,24 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(LivingEntity.class)
-public abstract class HoldingItemEffectMixin {
+    @Mixin(LivingEntity.class)
+    public abstract class HoldingItemEffectMixin {
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    private void applyHoldingEffect(CallbackInfo info) {
-        LivingEntity entity = (LivingEntity) (Object) this;
+        @Inject(method = "tick", at = @At("HEAD"))
+        private void applyHoldingEffect(CallbackInfo info) {
+            LivingEntity entity = (LivingEntity) (Object) this;
 
-        if (entity instanceof PlayerEntity player) {
-            ItemStack heldItem = player.getMainHandStack();
+            if (entity instanceof PlayerEntity player) {
+                ItemStack heldItem = player.getMainHandStack();
 
-            if (heldItem.getItem() == Items.NETHER_STAR) { // Change to your desired item
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10, 1, true, false));
-            }
-            if (heldItem.getItem() == ModItems.CS_KNIFE) { // Change to your desired item
-                player.addStatusEffect(new StatusEffectInstance(ModEffects.B_HOP, 10, 1, true, false));
+                if (heldItem.getItem() == Items.NETHER_STAR) { // Change to your desired item
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10, 1, true, false));
+                }
+                if (heldItem.getItem() == ModItems.CS_KNIFE) { // Change to your desired item
+                    player.addStatusEffect(new StatusEffectInstance(ModEffects.B_HOP, 10, 1, true, false));
+                }
             }
         }
     }
-}
+
+

@@ -45,6 +45,11 @@ public class ModSounds {
 
     public static final SoundEvent GIT_R_DONE = registerSoundEvent("git_r_done");
 
+    public static final SoundEvent SIZZLE = registerSoundEvent("sizzle");
+    public static final SoundEvent SIZZLE2 = registerSoundEvent("sizzle2");
+    public static final SoundEvent SIZZLE3 = registerSoundEvent("sizzle3");
+    public static final SoundEvent SIZZLE4 = registerSoundEvent("sizzle4");
+
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));

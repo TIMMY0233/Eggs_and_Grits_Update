@@ -41,6 +41,11 @@ public class ModEntities {
             EntityType.Builder.create(StoolEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, .85f).build());
 
+    public static final EntityType<HotDogRollerEntity> HOT_DOG_ROLLER = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "hot_dog_roller_entity"),
+            EntityType.Builder.create(HotDogRollerEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, .85f).build());
+
 
 
 
