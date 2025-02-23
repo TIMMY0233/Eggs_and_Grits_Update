@@ -63,12 +63,12 @@ public class TinyGuyModel< T extends TinyGuyEntity> extends SinglePartEntityMode
 
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        body.render(matrices, vertexConsumer, light, overlay, color);
+        tinyguy.render(matrices, vertexConsumer, light, overlay, color);
     }
 
     @Override
     public ModelPart getPart() {
-        return body;
+        return tinyguy;
     }
 
     private void setHeadAngles(float headYaw, float headPitch) {

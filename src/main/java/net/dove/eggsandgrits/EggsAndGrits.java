@@ -1,10 +1,7 @@
 package net.dove.eggsandgrits;
 
 import net.dove.eggsandgrits.entity.ModEntities;
-import net.dove.eggsandgrits.entity.custom.DaleEntity;
-import net.dove.eggsandgrits.entity.custom.LarryEntity;
-import net.dove.eggsandgrits.entity.custom.MantisEntity;
-import net.dove.eggsandgrits.entity.custom.TinyGuyEntity;
+import net.dove.eggsandgrits.entity.custom.*;
 import net.dove.eggsandgrits.villager.ModVillagers;
 import net.dove.eggsandgrits.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -110,6 +107,9 @@ public class EggsAndGrits implements ModInitializer {
 
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.DABABY, DaBabyEntity.createAttributes());
+
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
 			factories.add((entity, random) -> new TradeOffer(

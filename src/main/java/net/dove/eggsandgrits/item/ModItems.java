@@ -209,8 +209,8 @@ public class ModItems {
     public static final Item DALE_SPAWN_EGG = registerItem("dale_spawn_egg",
             new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
 
-    public static final Item TINYGUY_SPAWN_EGG = registerItem("dale_spawn_egg",
-            new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
+    public static final Item TINYGUY_SPAWN_EGG = registerItem("tinyguy_spawn_egg",
+            new SpawnEggItem(ModEntities.TINYGUY, 0x9dc383, 0xbf, new Item.Settings()));
 
     public static final Item VAPE = registerItem("vape",
             new VapeItem(new Item.Settings().maxCount(16)));

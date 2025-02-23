@@ -30,6 +30,11 @@ public class ModEntities {
             EntityType.Builder.create(TinyGuyEntity::new, SpawnGroup.CREATURE)
                     .dimensions(.5f, 2f).build());
 
+    public static final EntityType<DaBabyEntity> DABABY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "dababy"),
+            EntityType.Builder.create(DaBabyEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(.5f, 1.5f).build());
+
 
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "vape_ring"),
