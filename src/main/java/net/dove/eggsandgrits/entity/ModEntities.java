@@ -2,6 +2,8 @@ package net.dove.eggsandgrits.entity;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.entity.custom.*;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -28,12 +30,17 @@ public class ModEntities {
     public static final EntityType<TinyGuyEntity> TINYGUY = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "tinyguy"),
             EntityType.Builder.create(TinyGuyEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(.5f, 2f).build());
+                    .dimensions(.5f, 1f).build());
 
     public static final EntityType<DaBabyEntity> DABABY = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "dababy"),
             EntityType.Builder.create(DaBabyEntity::new, SpawnGroup.CREATURE)
                     .dimensions(.5f, 1.5f).build());
+
+    public static final EntityType<AttackHelicopterEntity> ATTACK_HELICOPTER = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "attackhelicopter"),
+            EntityType.Builder.create(AttackHelicopterEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1f, .5f).build());
 
 
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,

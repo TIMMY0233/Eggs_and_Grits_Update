@@ -137,13 +137,6 @@ public class DaBabyEntity extends AnimalEntity {
         return ModEntities.DABABY.create(world);
     }
 
-    public boolean isHasBeenAttacked() {
-        return hasBeenAttacked;
-    }
-
-    public void setHasBeenAttacked(boolean hasBeenAttacked) {
-        this.hasBeenAttacked = hasBeenAttacked;
-    }
 
     @Override
     public boolean damage(DamageSource source, float amount) {

@@ -9,6 +9,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.*;
 import net.dove.eggsandgrits.block.ModBlocks;
@@ -104,6 +105,8 @@ public class EggsAndGrits implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.LARRY, LarryEntity.createAttributes());
 
 		FabricDefaultAttributeRegistry.register(ModEntities.TINYGUY, TinyGuyEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.ATTACK_HELICOPTER, AttackHelicopterEntity.createAttributes());
 
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DALE, DaleEntity.createAttributes());

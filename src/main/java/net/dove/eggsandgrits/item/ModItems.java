@@ -219,7 +219,8 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(1)));
 
     public static final Item EXTENSION_CORD = registerItem("extension_cord",
-            new Item(new Item.Settings().maxDamage(250)));
+            new Item(new Item.Settings().maxCount(1)));
+
 
     public static final Item FIESTADA = registerItem("fiestada", new Item(new Item.Settings().food(ModFoodComponents.FIESTADA)) {
         @Override

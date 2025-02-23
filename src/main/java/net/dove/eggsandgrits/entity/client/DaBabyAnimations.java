@@ -113,7 +113,7 @@ public class DaBabyAnimations {
                                     Transformation.Interpolations.LINEAR),
                             new Keyframe(1f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
-    public static final Animation ANIM_DABABY_ATTACK = Animation.Builder.create(0.5f).looping()
+    public static final Animation ANIM_DABABY_ATTACK = Animation.Builder.create(0.5f)
             .addBoneAnimation("bone",
                     new Transformation(Transformation.Targets.ROTATE,
                             new Keyframe(0f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
