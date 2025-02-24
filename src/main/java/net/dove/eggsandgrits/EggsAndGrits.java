@@ -23,11 +23,15 @@ import net.dove.eggsandgrits.sound.ModSounds;
 import net.dove.eggsandgrits.util.HammerUsageEvent;
 
 
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 import net.minecraft.potion.Potions;
 
+import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
 import net.minecraft.village.VillagerProfession;
@@ -148,7 +152,12 @@ public class EggsAndGrits implements ModInitializer {
 					new ItemStack(ModItems.MEATBALL, 2), 3, 4, 0.04f));
 		});
 
-
+		CustomPortalBuilder.beginPortal()
+				.frameBlock(Blocks.GLOWSTONE)
+				.lightWithFluid(Fluids.WATER)
+				.destDimID(Identifier.of(EggsAndGrits.MOD_ID, "kaupendim"))
+				.tintColor(0xc76efa)
+				.registerPortal();
 
 	}
 }

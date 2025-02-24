@@ -1,0 +1,10 @@
+{
+  "type": "eggsandgrits:kaupendim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:the_end"
+    }
+  }
+}
