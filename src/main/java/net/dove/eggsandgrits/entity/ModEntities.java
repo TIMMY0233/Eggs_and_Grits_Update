@@ -2,7 +2,6 @@ package net.dove.eggsandgrits.entity;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.entity.custom.*;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -43,10 +42,17 @@ public class ModEntities {
                     .dimensions(1f, .5f).build());
 
 
+
+
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "vape_ring"),
             EntityType.Builder.<VapeProjectileEntity>create(VapeProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 1.15f).build());
+
+    public static final EntityType<MissileProjectileEntity> MISSILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "missile"),
+            EntityType.Builder.<MissileProjectileEntity>create(MissileProjectileEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.25f, 0.25f).build());
 
     public static final EntityType<ChairEntity> CHAIR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "chair_entity"),

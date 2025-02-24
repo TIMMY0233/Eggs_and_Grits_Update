@@ -26,9 +26,6 @@ public class VapeProjectileEntity extends PersistentProjectileEntity {
         super(ModEntities.VAPE_RING, player, world, new ItemStack(ModItems.VAPE), null);
     }
 
-    public VapeProjectileEntity(World world, TinyGuyEntity tinyGuyEntity) {
-        super(ModEntities.VAPE_RING, tinyGuyEntity, world, new ItemStack(ModItems.VAPE), null);
-    }
 
     @Override
     protected ItemStack getDefaultItemStack() {

@@ -18,6 +18,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.PhantomEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.sound.SoundEvents;
@@ -34,6 +35,9 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
     private int idleAnimationTimeout = 0;
 
     private boolean isAttacking = false;
+    private int missileCount = 0;  // Counter to track how many missiles have been shot
+    private int missileCooldown = 0;  // Delay counter for missile shots
+    private int barrageTimeout = 0;
 
 
     public AttackHelicopterEntity(EntityType<? extends HostileEntity> entityType, World world) {
@@ -82,7 +86,10 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
         this.goalSelector.add(3, new FollowTargetGoal(this, 1.2D, 20.0F, 2.0F));
 
 
-        this.goalSelector.add(2, new ProjectileAttackGoal(this, 1, 5, 5.0F));
+        this.goalSelector.add(2, new ProjectileAttackGoal(this, 1, 1, 5.0F));
+
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PhantomEntity.class, true));
+
 
 
     }
@@ -112,6 +119,24 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
         if (this.getWorld().isClient()) {
             this.setupAnimationStates();
         }
+        if (missileCooldown > 0) {
+            missileCooldown--;  // Decrease missile cooldown for the next shot
+        }
+
+        if (missileCount > 0 && missileCount < 5 && missileCooldown <= 0) {
+            shootMissile(this.getTarget());  // Shoot the next missile in the barrage
+            missileCooldown = 5;  // Reset cooldown for the next missile
+            missileCount++;  // Increment missile count
+        }
+
+        if (missileCount >= 5 && barrageTimeout <= 0) {
+            barrageTimeout = 60;  // Set cooldown after all missiles are fired (60 ticks)
+            missileCount = 0;  // Reset missile count for the next barrage
+        }
+
+        if (barrageTimeout > 0) {
+            barrageTimeout--;  // Decrease barrage cooldown
+        }
 
     }
 
@@ -135,7 +160,7 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
     }
 
 
-    //Shoots snowball?
+   /* //Shoots snowball?
    @Override
     public void shootAt(LivingEntity target, float pullProgress) {
         SnowballEntity snowballEntity = new SnowballEntity(this.getWorld(), this);
@@ -149,6 +174,105 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
         this.getWorld().spawnEntity(snowballEntity);
     }
 
+    */
+//shoots missile
+   /* @Override
+    public void shootAt(LivingEntity target, float pullProgress) {
+        // Create a new instance of your custom missile entity
+        MissileProjectileEntity missileProjectileEntity = new MissileProjectileEntity(this.getWorld(), this);
+
+        // Calculate the position to shoot from (adjust as needed)
+        double d = target.getEyeY() - 1.1F;  // Adjust target height if needed
+        double e = target.getX() - this.getX();
+        double f = d - missileProjectileEntity.getY();
+        double g = target.getZ() - this.getZ();
+
+        // Calculate the distance and set velocity (adjust the factor for missile speed)
+        double h = Math.sqrt(e * e + g * g) * 0.2F;
+
+        // Set the missile's velocity
+        missileProjectileEntity.setVelocity(e, f + h, g, 1.6F, 12.0F);
+
+        // Play the shooting sound (you can change this to a custom sound if you have one)
+        this.playSound(SoundEvents.ENTITY_SNOW_GOLEM_SHOOT, 1.0F, 0.4F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
+
+        // Spawn the missile entity in the world
+        this.getWorld().spawnEntity(missileProjectileEntity);
+    }
+
+    */
+//multishot missile
+ /*  @Override
+    public void shootAt(LivingEntity target, float pullProgress) {
+        if (barrageTimeout <= 0) {  // Check if the barrage is off cooldown
+            // Fire a barrage of missiles
+            for (int i = 0; i < 5; ++i) {  // Fire 5 missiles (you can adjust the number)
+                // Create a new missile projectile entity
+                    MissileProjectileEntity missileProjectileEntity = new MissileProjectileEntity(this.getWorld(), this);
+
+                    // Calculate the position to shoot from
+                    double d = target.getEyeY() - 1.1F;  // Adjust target height if needed
+                    double e = target.getX() - this.getX();
+                    double f = d - missileProjectileEntity.getY();
+                    double g = target.getZ() - this.getZ();
+
+                    // Calculate velocity for the missile
+                    double h = Math.sqrt(e * e + g * g) * 0.2F;
+
+                    // Set the missile's velocity
+                    missileProjectileEntity.setVelocity(e, f + h, g, 1.6F, 12.0F);
+
+                    // Play the shooting sound (you can change this to a custom sound if you have one)
+                    this.playSound(SoundEvents.ENTITY_SNOW_GOLEM_SHOOT, 1.0F, 0.4F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
+
+                    // Spawn the missile entity in the world
+                    this.getWorld().spawnEntity(missileProjectileEntity);
+                }
+
+
+
+            // Set the cooldown (in this case, 60 ticks = 3 seconds)
+            barrageTimeout = 60;  // You can adjust this to control the cooldown duration
+        }
+    }
+
+  */
+
+    @Override
+    public void shootAt(LivingEntity target, float pullProgress) {
+        if (target != null && barrageTimeout <= 0 && missileCount == 0) {  // Ensure target is not null
+            shootMissile(target);  // Fire the first missile
+            missileCooldown = 5;  // Set cooldown between missiles
+            missileCount++;  // Increment missile count
+        }
+    }
+
+
+    private void shootMissile(LivingEntity target) {
+        if (target == null) return;  // Ensure target is not null before proceeding
+
+        // Create a new missile projectile entity
+        MissileProjectileEntity missileProjectileEntity = new MissileProjectileEntity(this.getWorld(), this);
+
+        // Calculate the position to shoot from
+        double d = target.getEyeY() - 1.1F;  // Adjust target height if needed
+        double e = target.getX() - this.getX();
+        double f = d - missileProjectileEntity.getY();
+        double g = target.getZ() - this.getZ();
+
+        // Calculate velocity for the missile
+        double h = Math.sqrt(e * e + g * g) * 0.2F;
+
+        // Set the missile's velocity
+        missileProjectileEntity.setVelocity(e, f + h, g, 1.6F, 12.0F);
+
+        // Play the shooting sound (you can change this to a custom sound if you have one)
+        this.playSound(SoundEvents.ENTITY_SNOW_GOLEM_SHOOT, 1.0F, 0.4F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
+
+        // Spawn the missile entity in the world
+        this.getWorld().spawnEntity(missileProjectileEntity);
+        missileCooldown = 5;
+    }
 
 
     class HeliWanderAroundGoal extends Goal {
