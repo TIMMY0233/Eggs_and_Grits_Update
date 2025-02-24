@@ -8,7 +8,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -19,7 +18,7 @@ public class EclipseItem extends Item {
         super(settings);
     }
 
-    private static final int COOLDOWN_TIME = 200;  // 100 ticks, which is 5 seconds
+    private static final int COOLDOWN_TIME = 12000;  // 100 ticks, which is 5 seconds
 
 
     @Override

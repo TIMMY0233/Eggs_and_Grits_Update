@@ -6,19 +6,12 @@ import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
-
-
-import net.minecraft.block.*;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.gui.screen.Screen;
-
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
-
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -306,6 +299,12 @@ public class ModItems {
 
     public static final Item ECLIPSE = registerItem("eclipse",
             new EclipseItem(new Item.Settings().maxCount(1)));
+
+
+    public static final Item CS_GLOVES = registerItem("cs_gloves", new Item(new Item.Settings()));
+
+    public static final Item CS_BUTTERFLY_KNIFE = registerItem("cs_butterfly_knife", new Item(new Item.Settings()));
+
 
 
     private static Item registerItem(String name, Item item) {

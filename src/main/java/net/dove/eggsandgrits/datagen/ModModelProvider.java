@@ -71,6 +71,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DRIFTWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CHAIR);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TOILET);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.EVIL_CHAIR);
+
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.STOOL);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.HOT_DOG_ROLLER);
     }

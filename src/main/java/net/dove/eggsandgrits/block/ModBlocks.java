@@ -49,6 +49,12 @@ public class ModBlocks {
     public static final Block CHAIR = registerBlock("chair",
             new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final Block TOILET = registerBlock("toilet",
+            new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block EVIL_CHAIR = registerBlock("evil_chair",
+            new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
+
     public static final Block STOOL = registerBlock("stool",
             new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
 

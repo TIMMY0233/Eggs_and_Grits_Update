@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "eggsandgrits:block/evil_chair",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "eggsandgrits:block/evil_chair"
+    },
+    "facing=south": {
+      "model": "eggsandgrits:block/evil_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "eggsandgrits:block/evil_chair",
+      "y": 270
+    }
+  }
+}

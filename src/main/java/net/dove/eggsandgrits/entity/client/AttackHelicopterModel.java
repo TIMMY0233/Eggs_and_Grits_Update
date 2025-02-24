@@ -2,7 +2,6 @@ package net.dove.eggsandgrits.entity.client;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.entity.custom.AttackHelicopterEntity;
-import net.dove.eggsandgrits.entity.custom.TinyGuyEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;

@@ -62,8 +62,10 @@ public class CrateItem extends Item {
         ItemStack rewardStack = new ItemStack(reward);
 
         // Give the item to the player
-        player.getInventory().insertStack(rewardStack);
-
+        boolean addedToInventory = player.getInventory().insertStack(rewardStack);
+        if(!addedToInventory){
+            player.dropItem(rewardStack, false);
+        }
 
         // Show reward message to the player
         player.sendMessage(Text.literal("You received: ")
@@ -73,8 +75,7 @@ public class CrateItem extends Item {
         // If the item is epic, announce it to the whole server
         if (rarity == Rarity.EPIC) {
             // Broadcast to all players
-            if (player.getWorld() instanceof ServerWorld) {
-                ServerWorld serverWorld = (ServerWorld) player.getWorld();
+            if (player.getWorld() instanceof ServerWorld serverWorld) {
                 serverWorld.getPlayers().forEach(p ->
                         p.sendMessage(Text.literal(player.getName().getString() + " received: ")
                                 .append(Text.literal(reward.getName().getString()).setStyle(Style.EMPTY.withColor(Formatting.LIGHT_PURPLE).withBold(false).withItalic(true)))));

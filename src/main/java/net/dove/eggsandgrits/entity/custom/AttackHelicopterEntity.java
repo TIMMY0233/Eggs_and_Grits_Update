@@ -139,7 +139,7 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
    @Override
     public void shootAt(LivingEntity target, float pullProgress) {
         SnowballEntity snowballEntity = new SnowballEntity(this.getWorld(), this);
-        double d = target.getEyeY() - 1F;
+        double d = target.getEyeY()- 1.1F;
         double e = target.getX() - this.getX();
         double f = d - snowballEntity.getY();
         double g = target.getZ() - this.getZ();

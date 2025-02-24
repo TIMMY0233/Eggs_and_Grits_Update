@@ -154,6 +154,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
 
                         entries.add(ModBlocks.CHAIR);
+
+                        entries.add(ModBlocks.TOILET);
+
+                        entries.add(ModBlocks.EVIL_CHAIR);
+
                         entries.add(ModBlocks.STOOL);
 
                         entries.add(ModBlocks.HOT_DOG_ROLLER);
