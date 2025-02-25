@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.dove.eggsandgrits.EggsAndGritsClient"
+		],
+		"terrablender": [
+			"net.dove.eggsandgrits.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

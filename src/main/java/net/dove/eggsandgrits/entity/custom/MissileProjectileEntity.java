@@ -36,7 +36,7 @@ public class MissileProjectileEntity extends ThrownItemEntity {
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (!this.getWorld().isClient) {
-            this.getWorld().createExplosion(null, this.getX(), this.getY(), this.getZ(), 1.0F, World.ExplosionSourceType.MOB);
+            this.getWorld().createExplosion(null, this.getX(), this.getY(), this.getZ(), 1F, World.ExplosionSourceType.MOB);
             this.discard(); // Remove the entity after impact
         }
     }

@@ -156,7 +156,7 @@ public class EggsAndGrits implements ModInitializer {
 				.frameBlock(Blocks.GLOWSTONE)
 				.lightWithFluid(Fluids.WATER)
 				.destDimID(Identifier.of(EggsAndGrits.MOD_ID, "kaupendim"))
-				.tintColor(0xc76efa)
+				.tintColor(0xE6E6FA)
 				.registerPortal();
 
 	}

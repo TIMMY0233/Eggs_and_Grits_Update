@@ -83,10 +83,10 @@ public class AttackHelicopterEntity extends HostileEntity implements RangedAttac
         //this.goalSelector.add(2, new MeleeAttackGoal(this, 1.2D, true));
 
         this.targetSelector.add(1,new RevengeGoal(this));
-        this.goalSelector.add(3, new FollowTargetGoal(this, 1.2D, 20.0F, 2.0F));
+        this.goalSelector.add(3, new FollowTargetGoal(this, 1.2D, 40F, 10F));
 
 
-        this.goalSelector.add(2, new ProjectileAttackGoal(this, 1, 1, 5.0F));
+        this.goalSelector.add(2, new ProjectileAttackGoal(this, 1, 1, 40F));
 
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PhantomEntity.class, true));
 

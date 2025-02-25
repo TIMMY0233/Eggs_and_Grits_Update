@@ -2,6 +2,7 @@ package net.dove.eggsandgrits;
 
 import net.dove.eggsandgrits.world.ModConfiguredFeatures;
 import net.dove.eggsandgrits.world.ModPlacedFeatures;
+import net.dove.eggsandgrits.world.biome.ModBiomes;
 import net.dove.eggsandgrits.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -37,6 +38,7 @@ public class EggsAndGritsDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 
 	}
 }
