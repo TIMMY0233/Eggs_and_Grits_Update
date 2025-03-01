@@ -2,10 +2,13 @@ package net.dove.eggsandgrits.entity.custom;
 
 import net.dove.eggsandgrits.entity.ai.OceanGateAttackGoal;
 import net.dove.eggsandgrits.sound.ModSounds;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.RangedAttackMob;
+import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.RevengeGoal;
+import net.minecraft.entity.ai.goal.SwimAroundGoal;
+import net.minecraft.entity.ai.pathing.EntityNavigation;
+import net.minecraft.entity.ai.pathing.SwimNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
@@ -29,13 +32,10 @@ import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
 
 public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState attackAnimationState = new AnimationState(); // Add attack animation state
-
     public final AnimationState deathAnimationState = new AnimationState(); // Add attack animation state
 
     public int ticksSinceDeath;
@@ -43,21 +43,23 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     private int idleAnimationTimeout = 0;
     public int attackAnimationTimeout = 0;
     private final float healthThreshold = 5;
-
+    private boolean hasBeenAttacked = false;
+    protected final SwimNavigation waterNavigation;
+    boolean targetingUnderwater;
 
 
 
     public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(OceanGateEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
-    private boolean hasBeenAttacked = false;
-
-
-    public OceanGateEntity(EntityType<? extends HostileEntity> entityType, World world) {
-        super(entityType, world);
-    }
 
     private final ServerBossBar bossBar = new ServerBossBar(Text.literal("Titan Submersible"),
             BossBar.Color.BLUE, BossBar.Style.PROGRESS);
+
+    public OceanGateEntity(EntityType<? extends HostileEntity> entityType, World world) {
+        super(entityType, world);
+        this.waterNavigation = new SwimNavigation(this, world);
+
+    }
 
 
     @Override
@@ -65,7 +67,10 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
         super.initGoals();
 
         this.goalSelector.add(1, new OceanGateAttackGoal(this, 1.2D, true));
-        this.targetSelector.add(1,new RevengeGoal(this));
+        this.targetSelector.add(0,new RevengeGoal(this));
+        this.goalSelector.add(3, new SwimAroundGoal(this, (double) 1.0F, 10));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+
 
 
     }
@@ -73,9 +78,9 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 18)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 3)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20);
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 100);
     }
 
     private void setupAnimationStates() {
@@ -113,13 +118,66 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
             }
         }
 
-
         this.setNoGravity(true);
         //this.setNoGravity(this.isTouchingWater());
 
     }
+    // MISC AND MOVEMENT //
 
-        // ATTACKS //
+    protected EntityNavigation createNavigation(World world) {
+        return new SwimNavigation(this, world);
+    }
+
+    @Override
+    public int getAir() {
+        return Integer.MAX_VALUE;  // This makes the mob have infinite air supply
+    }
+
+    @Override
+    public void setAir(int air) {
+        // Do nothing to prevent air depletion
+    }
+
+
+    @Override
+    public void travel(Vec3d movementInput) {
+        if (this.isLogicalSideForUpdatingMovement() && this.isTouchingWater() && this.isTargetingUnderwater()) {
+            this.updateVelocity(0.01F, movementInput);
+            this.move(MovementType.SELF, this.getVelocity());
+            this.setVelocity(this.getVelocity().multiply(0.9));
+        } else {
+            super.travel(movementInput);
+        }
+
+    }
+
+    @Override
+    public void tickMovement() {
+        super.tickMovement();
+
+        // Get current and target yaw
+        float currentYaw = this.getYaw();
+        float targetYaw = this.bodyYaw; // Or use some custom logic for target direction
+
+        // Smoothly interpolate rotation
+        float maxTurnSpeed = 2.0F; // Max degrees per tick (lower = slower)
+        float rotationChange = MathHelper.clamp(targetYaw - currentYaw, -maxTurnSpeed, maxTurnSpeed);
+        this.setYaw(currentYaw + rotationChange);
+    }
+
+
+
+    // ATTACKS //
+
+    boolean isTargetingUnderwater() {
+        if (this.targetingUnderwater) {
+            return true;
+        } else {
+            LivingEntity livingEntity = this.getTarget();
+            return livingEntity != null && livingEntity.isTouchingWater();
+        }
+    }
+
     @Override
     public void shootAt(LivingEntity target, float pullProgress) {
 
@@ -235,7 +293,7 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
             }
         }
 
-        this.move(MovementType.SELF, new Vec3d(0.0F, 0.4F, 0.0F));
+        this.move(MovementType.SELF, new Vec3d(0.0F, 0.1F, 0.0F));
         if (this.ticksSinceDeath == 70 && this.getWorld() instanceof ServerWorld) {
             if (bl) {
                 CustomExperienceOrbEntity.spawn((ServerWorld)this.getWorld(), this.getPos(), MathHelper.floor((float)i * 0.2F));

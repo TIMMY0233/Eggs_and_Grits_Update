@@ -1,6 +1,5 @@
 package net.dove.eggsandgrits.entity.client;
 
-import net.dove.eggsandgrits.entity.custom.DaBabyEntity;
 import net.dove.eggsandgrits.entity.custom.OceanGateEntity;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.dove.eggsandgrits.EggsAndGrits;
@@ -8,7 +7,6 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
@@ -118,6 +116,13 @@ public class OceanGateModel<T extends OceanGateEntity> extends SinglePartEntityM
         root.render(matrices, vertexConsumer, light, overlay, color);
     }
 
+    private void setHeadAngles(float headYaw, float headPitch) {
+        headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
+        headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
+
+        this.window.yaw = headYaw * 0.017453292F;
+        this.window.pitch = headPitch * 0.017453292F;
+    }
 
     @Override
     public ModelPart getPart() {
