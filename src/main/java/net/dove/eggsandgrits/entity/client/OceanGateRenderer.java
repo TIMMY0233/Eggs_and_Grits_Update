@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class OceanGateRenderer extends MobEntityRenderer<OceanGateEntity, OceanGateModel<OceanGateEntity>> {
     public final float size = 1;
     public OceanGateRenderer(EntityRendererFactory.Context context) {
-        super(context, new OceanGateModel<>(context.getPart(OceanGateModel.OCEAN_GATE)), 8f);
+        super(context, new OceanGateModel<>(context.getPart(OceanGateModel.OCEAN_GATE)), 1f);
     }
 
     @Override

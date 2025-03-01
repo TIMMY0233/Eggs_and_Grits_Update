@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-28T22:52:34.8288887	Eggs and Grits/Model Definitions
+// 1.21.1	2025-03-01T13:01:28.9060469	Eggs and Grits/Model Definitions
 0e0997a45d88ac136214244a08d077adfb1cbc77 assets\eggsandgrits\blockstates\pink_garnet_end_ore.json
 11e8d0beb9d8717db283bbd9bcdf801e1dea47fa assets\eggsandgrits\models\item\ritz.json
 f140fb8b3a47c2791c2025f8e4825a356c8ebb27 assets\eggsandgrits\blockstates\pink_garnet_button.json
@@ -47,8 +47,8 @@ dc59075b4df3df94b1a1adc9447d4c83e907fa1b assets\eggsandgrits\models\block\pink_g
 592c22a028c7b8e95ead67e7527228afad7aa884 assets\eggsandgrits\models\item\pink_garnet_helmet_emerald_trim.json
 3f82d17039d73efd904d6b7cf2e85c6324effeea assets\eggsandgrits\models\block\pink_garnet_lamp.json
 2a3e1847e10262ce635b56f4bf40b5da03e6af1f assets\eggsandgrits\models\block\pink_garnet_fence_gate_open.json
-b58024072e1bab4454e8365c8300da84bef73e11 assets\eggsandgrits\blockstates\driftwood_leaves.json
 25a95a0ad44d193b9da1590c993f62f3dc37ab0f assets\eggsandgrits\blockstates\driftwood_log.json
+b58024072e1bab4454e8365c8300da84bef73e11 assets\eggsandgrits\blockstates\driftwood_leaves.json
 6963f04b0bfacd9aa74a7da87b186553d7d13c42 assets\eggsandgrits\models\item\nine_eleven_pants_diamond_trim.json
 a0fe76484c35abe874395ca231c2d6db70adc0fb assets\eggsandgrits\models\block\pink_garnet_end_ore.json
 30ab83fc28dbc101af67bf3c185aa621314f7e62 assets\eggsandgrits\models\item\pink_garnet_leggings_emerald_trim.json
@@ -111,8 +111,8 @@ eece9e03c8e0211824dc1137162717d57e3e352b assets\eggsandgrits\models\item\starlig
 8f406f619c21de36f6d68fc74a05a270b37c2b5d assets\eggsandgrits\models\item\bar_brawl_music_disc.json
 58358907481d5941833d91f7b1ae3e3d2fbfe344 assets\eggsandgrits\models\block\pink_garnet_fence_inventory.json
 84c5258592465be54f6974a423224d4ece68949e assets\eggsandgrits\models\item\redbull.json
-509ce5688cb09b68366cf4c4020b514f92a00021 assets\eggsandgrits\models\block\stripped_driftwood_log.json
 df899f26daaa35df3b8ee9c90c76af40314dbafa assets\eggsandgrits\models\item\jak.json
+509ce5688cb09b68366cf4c4020b514f92a00021 assets\eggsandgrits\models\block\stripped_driftwood_log.json
 cadcf67700cdf711998be739bb7914c4101a58a4 assets\eggsandgrits\models\block\corn_crop_stage3.json
 5c0bb6ccecfcc5cc86fc3d9294d282bdaf932e31 assets\eggsandgrits\models\block\pink_garnet_slab.json
 2db0f98b63e495b273194530c57ad309f2aed004 assets\eggsandgrits\models\item\eclipse.json

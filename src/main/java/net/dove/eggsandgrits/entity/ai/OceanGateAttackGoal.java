@@ -1,26 +1,27 @@
 package net.dove.eggsandgrits.entity.ai;
 
-import net.dove.eggsandgrits.entity.custom.DaBabyEntity;
+import net.dove.eggsandgrits.entity.custom.OceanGateEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.Hand;
 
-public class DaBabyAttackGoal extends MeleeAttackGoal {
-    private final DaBabyEntity entity;
+public class OceanGateAttackGoal extends MeleeAttackGoal {
+    public OceanGateAttackGoal(PathAwareEntity mob, double speed, boolean pauseWhenMobIdle) {
+        super(mob, speed, pauseWhenMobIdle);
+        entity = ((OceanGateEntity) mob);
+    }
+
+    private final OceanGateEntity entity;
     private int attackDelay = 20;
     private int ticksUntilNextAttack = 20;
     private boolean shouldCountTillNextAttack = false;
 
-    public DaBabyAttackGoal(PathAwareEntity mob, double speed, boolean pauseWhenMobIdle) {
-        super(mob, speed, pauseWhenMobIdle);
-        entity = ((DaBabyEntity) mob);
-    }
 
     @Override
     public void start() {
         super.start();
-        attackDelay = 5;
+        attackDelay = 20;
         ticksUntilNextAttack = 20;
     }
 

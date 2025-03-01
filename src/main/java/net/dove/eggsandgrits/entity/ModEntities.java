@@ -46,6 +46,12 @@ public class ModEntities {
             EntityType.Builder.create(OceanGateEntity::new, SpawnGroup.CREATURE)
                     .dimensions(4f, 6f).build());
 
+    public static final EntityType<CustomExperienceOrbEntity> CUSTOM_EXPERIENCE_ORB_ENTITY= Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "custom_xp"),
+            EntityType.Builder.create(CustomExperienceOrbEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(.25f, .25f).build());
+
+
 
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "vape_ring"),

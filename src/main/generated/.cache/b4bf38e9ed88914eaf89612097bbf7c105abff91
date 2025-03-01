@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-28T22:52:34.8258258	Eggs and Grits/Block Loot Tables
+// 1.21.1	2025-03-01T13:01:28.9020583	Eggs and Grits/Block Loot Tables
 464616296aa6e1cf0c78c6c560157e18899d8e02 data\eggsandgrits\loot_table\blocks\peppercorn_bush.json
 9e62444763b1e91f95f91b7a5b668ff4ad7df7f1 data\eggsandgrits\loot_table\blocks\beans_crop.json
 12f687fb016f33fcd0c86d351a74d1dd8053b737 data\eggsandgrits\loot_table\blocks\driftwood_leaves.json
@@ -17,8 +17,8 @@ cbfdd8108c0d72397b00c6c1240cfd0dc0e1906f data\eggsandgrits\loot_table\blocks\pin
 80b1625fd6d7411cb0070040341be0cccf81c196 data\eggsandgrits\loot_table\blocks\stripped_driftwood_wood.json
 4cfe9fad989d13add33883bfe4ac42abc1422afa data\eggsandgrits\loot_table\blocks\pink_garnet_end_ore.json
 25142f8463ad96d7534e635caf5335250992f6ae data\eggsandgrits\loot_table\blocks\corn_crop.json
-3664f177b87132cc457c47e7bf472fba31d70c0c data\eggsandgrits\loot_table\blocks\pink_garnet_door.json
 5226b61514eb03dc70170699867eec4f50e8ec40 data\eggsandgrits\loot_table\blocks\pink_garnet_stairs.json
+3664f177b87132cc457c47e7bf472fba31d70c0c data\eggsandgrits\loot_table\blocks\pink_garnet_door.json
 d0a449132d1faf7e92b3676c7fc5e87810611c91 data\eggsandgrits\loot_table\blocks\driftwood_wood.json
 caf73b7a883c46e34b565421d07dda0c95260ecc data\eggsandgrits\loot_table\blocks\rice_crop.json
 9868a385e3d5aff6b75b0630a8c22db272ab82a3 data\eggsandgrits\loot_table\blocks\driftwood_log.json

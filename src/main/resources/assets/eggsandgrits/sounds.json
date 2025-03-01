@@ -116,5 +116,11 @@
     "sounds": [
       "eggsandgrits:sizzle4"
     ]
+  },
+  "ocean_death": {
+    "subtitle": "Ocean Gate Implodes",
+    "sounds": [
+      "eggsandgrits:ocean_death"
+    ]
   }
 }
