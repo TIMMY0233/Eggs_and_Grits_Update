@@ -117,6 +117,9 @@ public class EggsAndGrits implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DABABY, DaBabyEntity.createAttributes());
 
+		FabricDefaultAttributeRegistry.register(ModEntities.OCEAN_GATE_ENTITY, OceanGateEntity.createAttributes());
+
+
 
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
 			factories.add((entity, random) -> new TradeOffer(
@@ -156,7 +159,7 @@ public class EggsAndGrits implements ModInitializer {
 				.frameBlock(Blocks.GLOWSTONE)
 				.lightWithFluid(Fluids.WATER)
 				.destDimID(Identifier.of(EggsAndGrits.MOD_ID, "kaupendim"))
-				.tintColor(0xE6E6FA)
+				.tintColor(0x7d26cd)
 				.registerPortal();
 
 	}

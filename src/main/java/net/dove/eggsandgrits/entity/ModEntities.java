@@ -41,7 +41,10 @@ public class ModEntities {
             EntityType.Builder.create(AttackHelicopterEntity::new, SpawnGroup.CREATURE)
                     .dimensions(1f, .5f).build());
 
-
+    public static final EntityType<OceanGateEntity> OCEAN_GATE_ENTITY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "ocean_gate"),
+            EntityType.Builder.create(OceanGateEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1f, 4f).build());
 
 
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,
