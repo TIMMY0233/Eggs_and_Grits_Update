@@ -9,8 +9,9 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class OceanGateRenderer extends MobEntityRenderer<OceanGateEntity, OceanGateModel<OceanGateEntity>> {
+    public final float size = 1;
     public OceanGateRenderer(EntityRendererFactory.Context context) {
-        super(context, new OceanGateModel<>(context.getPart(OceanGateModel.OCEAN_GATE)), 1f);
+        super(context, new OceanGateModel<>(context.getPart(OceanGateModel.OCEAN_GATE)), 8f);
     }
 
     @Override
@@ -21,11 +22,7 @@ public class OceanGateRenderer extends MobEntityRenderer<OceanGateEntity, OceanG
     @Override
     public void render(OceanGateEntity livingEntity, float f, float g, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider, int i) {
-        if(livingEntity.isBaby()) {
-            matrixStack.scale(0.5f, 0.5f, 0.5f);
-        } else {
-            matrixStack.scale(2f, 2f, 2f);
-        }
+                matrixStack.scale(this.size, this.size, this.size);
 
         super.render(livingEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
