@@ -120,8 +120,8 @@ public class OceanGateModel<T extends OceanGateEntity> extends SinglePartEntityM
         headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
         headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
 
-        this.window.yaw = headYaw * 0.017453292F;
-        this.window.pitch = headPitch * 0.017453292F;
+        this.root.yaw = headYaw * 0.017453292F;
+        this.root.pitch = headPitch * 0.017453292F;
     }
 
     @Override
@@ -132,6 +132,7 @@ public class OceanGateModel<T extends OceanGateEntity> extends SinglePartEntityM
     @Override
     public void setAngles(OceanGateEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.getPart().traverse().forEach(ModelPart::resetTransform);
+        this.setHeadAngles(netHeadYaw, headPitch);
 
         this.updateAnimation(entity.deathAnimationState, OceanGateAnimations.ANIM_OCEAN_GATE_DEATH, ageInTicks, 1f);
     }

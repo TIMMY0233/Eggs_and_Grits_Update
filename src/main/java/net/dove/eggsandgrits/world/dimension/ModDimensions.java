@@ -24,6 +24,14 @@ public class ModDimensions {
             Identifier.of(EggsAndGrits.MOD_ID, "kaupendim_type"));
 
 
+    public static final RegistryKey<DimensionOptions> OCEANDIM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            Identifier.of(EggsAndGrits.MOD_ID, "oceandim"));
+    public static final RegistryKey<World> OCEANDIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            Identifier.of(EggsAndGrits.MOD_ID, "oceandim"));
+    public static final RegistryKey<DimensionType> OCEAN_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "oceandim_type"));
+
+
     public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(KAUPEN_DIM_TYPE, new DimensionType(
                 OptionalLong.of(12000), // fixedTime
@@ -34,9 +42,26 @@ public class ModDimensions {
                 1.0, // coordinateScale
                 true, // bedWorks
                 false, // respawnAnchorWorks
-                0, // minY
-                256, // height
-                256, // logicalHeight
+                -64, // minY
+                320, // height
+                320, // logicalHeight
+                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
+                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                1.0f, // ambientLight
+                new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 0), 0)));
+
+        context.register(OCEAN_DIM_TYPE, new DimensionType(
+                OptionalLong.of(12000), // fixedTime
+                true, // hasSkylight
+                false, // hasCeiling
+                false, // ultraWarm
+                true, // natural
+                1.0, // coordinateScale
+                false, // bedWorks
+                false, // respawnAnchorWorks
+                -64, // minY
+                320, // height
+                320, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
                 DimensionTypes.OVERWORLD_ID, // effectsLocation
                 1.0f, // ambientLight

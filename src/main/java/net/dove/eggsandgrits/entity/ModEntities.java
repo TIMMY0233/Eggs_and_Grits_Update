@@ -44,7 +44,7 @@ public class ModEntities {
     public static final EntityType<OceanGateEntity> OCEAN_GATE_ENTITY = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "ocean_gate"),
             EntityType.Builder.create(OceanGateEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(4f, 6f).build());
+                    .dimensions(4f, 5f).build());
 
     public static final EntityType<CustomExperienceOrbEntity> CUSTOM_EXPERIENCE_ORB_ENTITY= Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "custom_xp"),

@@ -7,7 +7,7 @@ import net.minecraft.entity.ai.RangedAttackMob;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.RevengeGoal;
 import net.minecraft.entity.ai.goal.SwimAroundGoal;
-import net.minecraft.entity.ai.pathing.EntityNavigation;
+import net.minecraft.entity.ai.goal.WanderAroundGoal;
 import net.minecraft.entity.ai.pathing.SwimNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -19,13 +19,17 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.GameRules;
@@ -49,6 +53,7 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
 
 
 
+
     public static final TrackedData<Boolean> ATTACKING = DataTracker.registerData(OceanGateEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
 
@@ -66,12 +71,14 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     protected void initGoals() {
         super.initGoals();
 
-        this.goalSelector.add(1, new OceanGateAttackGoal(this, 1.2D, true));
-        this.targetSelector.add(0,new RevengeGoal(this));
-        this.goalSelector.add(3, new SwimAroundGoal(this, (double) 1.0F, 10));
+        //this.goalSelector.add(1, new OceanGateAttackGoal(this, 1.2D, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, DolphinEntity.class, true));
 
+        this.targetSelector.add(2,new RevengeGoal(this));
 
+        this.goalSelector.add(2, new SwimAroundGoal(this,  1.0F, 10));
+        this.goalSelector.add(3, new WanderAroundGoal(this, 1.0F, 80));
 
     }
 
@@ -118,15 +125,12 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
             }
         }
 
-        this.setNoGravity(true);
-        //this.setNoGravity(this.isTouchingWater());
+        //this.setNoGravity(true);
+        this.setNoGravity(this.isTouchingWater());
 
     }
     // MISC AND MOVEMENT //
 
-    protected EntityNavigation createNavigation(World world) {
-        return new SwimNavigation(this, world);
-    }
 
     @Override
     public int getAir() {
@@ -139,32 +143,12 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     }
 
 
-    @Override
-    public void travel(Vec3d movementInput) {
-        if (this.isLogicalSideForUpdatingMovement() && this.isTouchingWater() && this.isTargetingUnderwater()) {
-            this.updateVelocity(0.01F, movementInput);
-            this.move(MovementType.SELF, this.getVelocity());
-            this.setVelocity(this.getVelocity().multiply(0.9));
-        } else {
-            super.travel(movementInput);
-        }
 
+
+
+    public int getMaxLookPitchChange() {
+        return 180;
     }
-
-    @Override
-    public void tickMovement() {
-        super.tickMovement();
-
-        // Get current and target yaw
-        float currentYaw = this.getYaw();
-        float targetYaw = this.bodyYaw; // Or use some custom logic for target direction
-
-        // Smoothly interpolate rotation
-        float maxTurnSpeed = 2.0F; // Max degrees per tick (lower = slower)
-        float rotationChange = MathHelper.clamp(targetYaw - currentYaw, -maxTurnSpeed, maxTurnSpeed);
-        this.setYaw(currentYaw + rotationChange);
-    }
-
 
 
     // ATTACKS //
@@ -180,7 +164,14 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
 
     @Override
     public void shootAt(LivingEntity target, float pullProgress) {
-
+        SnowballEntity snowballEntity = new SnowballEntity(this.getWorld(), this);
+        double d = target.getEyeY()- 1.1F;
+        double e = target.getX() - this.getX();
+        double f = d - snowballEntity.getY();
+        double g = target.getZ() - this.getZ();
+        double h = Math.sqrt(e * e + g * g) * 0.2F;
+        snowballEntity.setVelocity(e, f + h, g, 1.6F, 12.0F);
+        this.getWorld().spawnEntity(snowballEntity);
     }
 
     public void setAttacking(boolean attacking){
@@ -199,9 +190,9 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
 
     @Override
     public boolean damage(DamageSource source, float amount) {
-        if (source.getAttacker() instanceof PlayerEntity) {
-            this.hasBeenAttacked = true;  // Mark as attacked
-            this.setTarget(attackingPlayer);  // Set player as target
+        if (source.getAttacker() instanceof PlayerEntity player) {
+            this.hasBeenAttacked = true;  // Mark as attacked by a player
+            this.setTarget(player);// Set the player as the target
         }
         return super.damage(source, amount);
     }
