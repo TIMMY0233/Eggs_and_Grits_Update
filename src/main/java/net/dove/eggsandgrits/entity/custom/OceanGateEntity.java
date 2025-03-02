@@ -4,10 +4,10 @@ import net.dove.eggsandgrits.entity.ai.OceanGateAttackGoal;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.RangedAttackMob;
-import net.minecraft.entity.ai.goal.ActiveTargetGoal;
-import net.minecraft.entity.ai.goal.RevengeGoal;
-import net.minecraft.entity.ai.goal.SwimAroundGoal;
-import net.minecraft.entity.ai.goal.WanderAroundGoal;
+import net.minecraft.entity.ai.control.AquaticMoveControl;
+import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.pathing.EntityNavigation;
+import net.minecraft.entity.ai.pathing.PathNodeNavigator;
 import net.minecraft.entity.ai.pathing.SwimNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -22,6 +22,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.SnowballEntity;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -36,6 +37,8 @@ import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.EnumSet;
+
 
 public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     public final AnimationState idleAnimationState = new AnimationState();
@@ -48,7 +51,6 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     public int attackAnimationTimeout = 0;
     private final float healthThreshold = 5;
     private boolean hasBeenAttacked = false;
-    protected final SwimNavigation waterNavigation;
     boolean targetingUnderwater;
 
 
@@ -62,7 +64,8 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
 
     public OceanGateEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
-        this.waterNavigation = new SwimNavigation(this, world);
+        this.moveControl = new AquaticMoveControl(this, 85, 10, 0.02F, 0.1F, true);
+
 
     }
 
@@ -70,6 +73,7 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
     @Override
     protected void initGoals() {
         super.initGoals();
+        this.goalSelector.add(0, new MoveIntoWaterGoal(this));
 
         //this.goalSelector.add(1, new OceanGateAttackGoal(this, 1.2D, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
@@ -78,7 +82,7 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
         this.targetSelector.add(2,new RevengeGoal(this));
 
         this.goalSelector.add(2, new SwimAroundGoal(this,  1.0F, 10));
-        this.goalSelector.add(3, new WanderAroundGoal(this, 1.0F, 80));
+
 
     }
 
@@ -125,12 +129,15 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
             }
         }
 
-        //this.setNoGravity(true);
-        this.setNoGravity(this.isTouchingWater());
-
+        // Set the gravity to zero if in water
+        //this.setNoGravity(this.isTouchingWater());
     }
+
     // MISC AND MOVEMENT //
 
+    public boolean cannotDespawn() {
+        return super.cannotDespawn();
+    }
 
     @Override
     public int getAir() {
@@ -142,13 +149,34 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
         // Do nothing to prevent air depletion
     }
 
-
-
-
+    protected EntityNavigation createNavigation(World world) {
+        return new SwimNavigation(this, world);
+    }
 
     public int getMaxLookPitchChange() {
-        return 180;
+        return 1;
     }
+
+    public int getMaxHeadRotation() {
+        return 1;
+    }
+
+
+    public void travel(Vec3d movementInput) {
+        if (this.canMoveVoluntarily() && this.isTouchingWater()) {
+            this.updateVelocity(this.getMovementSpeed(), movementInput);
+            this.move(MovementType.SELF, this.getVelocity());
+            this.setVelocity(this.getVelocity().multiply(0.4));
+            if (this.getTarget() == null) {
+                this.setVelocity(this.getVelocity().add((double)0.0F, -0.005, (double)0.0F));
+            }
+        } else {
+            super.travel(movementInput);
+        }
+
+    }
+
+
 
 
     // ATTACKS //
