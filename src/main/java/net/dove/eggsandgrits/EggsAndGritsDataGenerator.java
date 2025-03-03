@@ -25,6 +25,8 @@ public class EggsAndGritsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModAdvancementsProvider::new);
+
 	}
 
 	@Override

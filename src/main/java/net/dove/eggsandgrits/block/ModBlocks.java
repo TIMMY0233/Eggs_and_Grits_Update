@@ -129,6 +129,10 @@ public class ModBlocks {
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
             new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.SAND));
 
+    public static final Block DRIFTWOOD_DOOR = registerBlock("driftwood_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
+    public static final Block DRIFTWOOD_TRAPDOOR = registerBlock("driftwood_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
 
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",

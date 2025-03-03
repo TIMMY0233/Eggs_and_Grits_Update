@@ -97,6 +97,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.PEPPERCORN), conditionsFromItem(ModItems.PEPPERCORN))
                 .offerTo(exporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIFTWOOD_PLANKS, 4)
+                .input(ModBlocks.DRIFTWOOD_LOG)
+                .criterion(hasItem(ModBlocks.DRIFTWOOD_LOG), conditionsFromItem(ModBlocks.DRIFTWOOD_LOG))
+                .offerTo(exporter);
+
 
       }
 }

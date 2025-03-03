@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:eggsandgrits/got_hammer",
+  "criteria": {
+    "got_eclipse": {
+      "conditions": {
+        "items": [
+          {
+            "items": "eggsandgrits:eclipse"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Please be careful with that",
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "eggsandgrits:eclipse"
+    },
+    "title": "Oh No"
+  },
+  "requirements": [
+    [
+      "got_eclipse"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

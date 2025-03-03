@@ -8,6 +8,10 @@
     {
       "structure": "eggsandgrits:shell_station",
       "weight": 5
+    },
+    {
+      "structure": "eggsandgrits:bp_station",
+      "weight": 5
     }
   ],
   "placement": {

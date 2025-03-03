@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -305,7 +307,17 @@ public class ModItems {
 
     public static final Item CS_BUTTERFLY_KNIFE = registerItem("cs_butterfly_knife", new Item(new Item.Settings()));
 
+    public static final Item SPOON = registerItem("spoon",
+            new ShovelItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ToolMaterials.IRON,1.5f, -3.0f))));
 
+    public static final Item KNIFE = registerItem("knife",
+            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON,3, -2.4f))));
+
+    public static final Item FORK = registerItem("fork",
+            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON,5, -3.4f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);

@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:eggsandgrits/got_eclipse",
+  "criteria": {
+    "got_hot_dog": {
+      "conditions": {
+        "items": [
+          {
+            "items": "eggsandgrits:raw_hotdog"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Can I Boil This?",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "eggsandgrits:raw_hotdog"
+    },
+    "title": "A Raw Hot Dog?"
+  },
+  "requirements": [
+    [
+      "got_hot_dog"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

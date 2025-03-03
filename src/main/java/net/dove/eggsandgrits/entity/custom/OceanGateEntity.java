@@ -135,6 +135,19 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
 
     // MISC AND MOVEMENT //
 
+
+    @Override
+    public void tickMovement() {
+        super.tickMovement();
+        if (this.isTouchingWater()) {
+            Vec3d vec3d = this.getRotationVec(0.0F);
+
+            for(int i = 0; i < 2; ++i) {
+                this.getWorld().addParticle(ParticleTypes.BUBBLE, this.getParticleX((double)0.5F) - vec3d.x * (double)1.5F, this.getRandomBodyY() - vec3d.y * (double)1.5F, this.getParticleZ((double)0.5F) - vec3d.z * (double)1.5F, (double)0.0F, (double)0.0F, (double)0.0F);
+            }
+        }
+    }
+
     public boolean cannotDespawn() {
         return super.cannotDespawn();
     }
@@ -291,14 +304,14 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
             float f = (this.random.nextFloat() - 0.5F) * 8.0F;
             float g = (this.random.nextFloat() - 0.5F) * 4.0F;
             float h = (this.random.nextFloat() - 0.5F) * 8.0F;
-            this.getWorld().addParticle(ParticleTypes.BUBBLE_POP, this.getX() + (double)f, this.getY() + (double)2.0F + (double)g, this.getZ() + (double)h, 0.0F, 0.0F, 0.0F);
+            this.getWorld().addParticle(ParticleTypes.BUBBLE, this.getX() + (double)f, this.getY() + (double)2.0F + (double)g, this.getZ() + (double)h, 0.0F, 0.0F, 0.0F);
         }
 
-        if (this.ticksSinceDeath >= 50 && this.ticksSinceDeath <= 55) {
+        if (this.ticksSinceDeath >= 50 && this.ticksSinceDeath <= 100) {
             float f = (this.random.nextFloat() - 0.5F) * 8.0F;
             float g = (this.random.nextFloat() - 0.5F) * 4.0F;
             float h = (this.random.nextFloat() - 0.5F) * 8.0F;
-            this.getWorld().addParticle(ParticleTypes.EXPLOSION_EMITTER, this.getX() + (double)f, this.getY() + (double)2.0F + (double)g, this.getZ() + (double)h, 0.0F, 0.0F, 0.0F);
+            this.getWorld().addParticle(ParticleTypes.BUBBLE_POP, this.getX() + (double)f, this.getY() + (double)2.0F + (double)g, this.getZ() + (double)h, 0.0F, 0.0F, 0.0F);
 
         }
 
@@ -313,7 +326,7 @@ public class OceanGateEntity extends HostileEntity implements RangedAttackMob {
         }
 
         this.move(MovementType.SELF, new Vec3d(0.0F, 0.1F, 0.0F));
-        if (this.ticksSinceDeath == 70 && this.getWorld() instanceof ServerWorld) {
+        if (this.ticksSinceDeath == 100 && this.getWorld() instanceof ServerWorld) {
             if (bl) {
                 CustomExperienceOrbEntity.spawn((ServerWorld)this.getWorld(), this.getPos(), MathHelper.floor((float)i * 0.2F));
             }

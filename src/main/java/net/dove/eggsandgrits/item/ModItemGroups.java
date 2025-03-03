@@ -111,6 +111,11 @@ public class ModItemGroups {
                         entries.add(ModItems.SLINGSHOT);
                         entries.add(ModItems.NINE_ELEVEN_PANTS);
 
+                        entries.add(ModItems.SPOON);
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModItems.FORK);
+
+
 
 
                     }).build());
@@ -152,6 +157,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_PLANKS);
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.DRIFTWOOD_DOOR);
+                        entries.add(ModBlocks.DRIFTWOOD_TRAPDOOR);
 
                         entries.add(ModBlocks.CHAIR);
 

@@ -96,6 +96,14 @@
   "item.eggsandgrits.toast_egg": "Toast & Eggs",
   "item.eggsandgrits.toast_onion": "Fried Onions On A Slice Of Bread",
 
+  "item.eggsandgrits.crate": "CS Crate",
+  "item.eggsandgrits.cooked_hotdog": "Cooked Hot Dog",
+  "item.eggsandgrits.raw_hotdog": "Raw Hot Dog",
+  "item.eggsandgrits.eclipse": "Eclipse",
+  "item.eggsandgrits.slingshot": "Slingshot",
+  "item.eggsandgrits.spoon": "Comically Large Spoon",
+  "item.eggsandgrits.fork": "Fork",
+  "item.eggsandgrits.knife": "Knife",
 
 
 
@@ -135,7 +143,7 @@
   "block.eggsandgrits.driftwood_log": "Driftwood Log",
   "block.eggsandgrits.stripped_driftwood_log": "Stripped Driftwood Log",
   "block.eggsandgrits.driftwood_wood": "Driftwood Wood",
-  "block.eggsandgrits.driftwood_plank": "Driftwood Plank",
+  "block.eggsandgrits.driftwood_planks": "Driftwood Plank",
   "block.eggsandgrits.driftwood_leaves": "Driftwood Leaves",
   "block.eggsandgrits.driftwood_sapling": "Driftwood Sapling",
   "block.eggsandgrits.stripped_driftwood_wood": "Stripped Driftwood Wood",
@@ -143,6 +151,13 @@
   "block.eggsandgrits.salt_block": "Salt Block",
   "block.eggsandgrits.chair": "Chair",
   "block.eggsandgrits.stool": "Stool",
+
+  "block.eggsandgrits.evil_chair": "Evil Chair",
+  "block.eggsandgrits.toilet": "Toilet",
+  "block.eggsandgrits.hot_dog_roller": "Hot Dog Roller",
+
+
+
 
 
 
@@ -166,6 +181,12 @@
   "tooltip.eggsandgrits.toast_onion.tooltip": "mmmmm",
   "tooltip.eggsandgrits.redbull.tooltip": "Take a sip, do it.",
   "tooltip.eggsandgrits.fiestada.tooltip": "Made with love - Lunch Lady",
+
+  "tooltip.eggsandgrits.eggs.tooltip": "Do you have Grits?",
+  "tooltip.eggsandgrits.grits.tooltip": "Do you have Eggs?",
+  "tooltip.eggsandgrits.ritz.tooltip": "Don't eat too many",
+
+
 
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",

@@ -1,5 +1,5 @@
 {
-  "name": "eggsandgrits:gas_station/shell/side_pool",
+  "name": "eggsandgrits:gas_station/bp/side_pool",
 
   "fallback": "minecraft:empty",
   "elements": [
@@ -28,7 +28,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "eggsandgrits:shell_inside1",
+        "location": "eggsandgrits:bp_inside1",
 
         "processors": "minecraft:empty",
 
@@ -39,7 +39,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "eggsandgrits:shell_inside2",
+        "location": "eggsandgrits:bp_inside2",
 
         "processors": "minecraft:empty",
 
@@ -50,7 +50,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "eggsandgrits:shell_inside3",
+        "location": "eggsandgrits:bp_inside3",
 
         "processors": "minecraft:empty",
 

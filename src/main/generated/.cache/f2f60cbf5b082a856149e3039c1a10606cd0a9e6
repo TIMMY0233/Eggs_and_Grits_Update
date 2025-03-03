@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-01T20:20:31.3579222	Eggs and Grits/Recipes
+// 1.21.1	2025-03-02T22:11:23.2011665	Eggs and Grits/Recipes
 b805323556e804eb2062f02c1432c8b1f6942fac data\eggsandgrits\advancement\recipes\misc\raw_pink_garnet_block.json
 252a8988647921c3a567a22f35d14c99c4abc0fa data\eggsandgrits\recipe\butter.json
 bf72c2221413ffc7f04ec15c39fd72c4bbda5183 data\eggsandgrits\recipe\diamond_hammer.json
@@ -12,6 +12,7 @@ cb454e6314d0d07b2532ff1210540b080d2b026c data\eggsandgrits\recipe\pink_garnet_fr
 ed0176c0449155a3f2bfcbd6def9f1af0a654332 data\eggsandgrits\advancement\recipes\misc\pink_garnet_from_smelting_pink_garnet_ore.json
 82bf1037f394e5b4a193733cf9930b022033a689 data\eggsandgrits\advancement\recipes\misc\pink_garnet_from_smelting_pink_garnet_deepslate_ore.json
 60136e1da794d83dc9c6b813834ecfa021a243cb data\eggsandgrits\advancement\recipes\misc\raw_pink_garnet.json
+af92aefeffb7925ef5e666ec55b9c88c5b2e0d30 data\eggsandgrits\recipe\driftwood_planks.json
 3d405ade792edf369f21122962c3e23390b8f262 data\eggsandgrits\advancement\recipes\misc\chili.json
 fe7e440bf58c219472c17fdbc04639861f5255cc data\eggsandgrits\recipe\ground_corn.json
 f1ee6fced971a73dff2120a8e8cb0a9e76ab33b0 data\eggsandgrits\advancement\recipes\building_blocks\pink_garnet.json
@@ -28,6 +29,7 @@ bcb6a210b196d0576addb2ec2630040b5359ecd8 data\eggsandgrits\recipe\pink_garnet_fr
 50704342b797f2151a51026fae7bfa8d42c68457 data\eggsandgrits\advancement\recipes\decorations\pink_garnet_block.json
 0148882aac6e708c2b2c07f4cafa98e72d05abfb data\eggsandgrits\recipe\cream.json
 212df54c71d1bc15f9742c22736b22915fccabfd data\eggsandgrits\recipe\kaupen.json
+a9bb53541715f5f0b17a74f799353516cbd75ec4 data\eggsandgrits\advancement\recipes\building_blocks\driftwood_planks.json
 8d863a6f6207643f1c1c2a8ce88de0654c372e6c data\eggsandgrits\recipe\pink_garnet_block.json
 1524f739b4629a08a29cc89c4d88abf860d6b5da data\eggsandgrits\advancement\recipes\misc\cream.json
 1def6267ea0cb206c61678e9743f34115685971f data\eggsandgrits\recipe\pink_garnet.json

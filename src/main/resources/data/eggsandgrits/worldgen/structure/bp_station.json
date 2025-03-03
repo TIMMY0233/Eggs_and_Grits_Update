@@ -2,7 +2,7 @@
 
   "type": "minecraft:jigsaw",
 
-  "start_pool": "eggsandgrits:gas_station/shell/start_pool",
+  "start_pool": "eggsandgrits:gas_station/bp/start_pool",
 
   "size": 5,
 

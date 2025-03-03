@@ -27,11 +27,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.PINK_GARNET_SWORD);
+                .add(ModItems.PINK_GARNET_SWORD)
+                .add(ModItems.KNIFE)
+                .add(ModItems.FORK);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.PINK_GARNET_PICKAXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.PINK_GARNET_SHOVEL);
+                .add(ModItems.PINK_GARNET_SHOVEL)
+                .add(ModItems.SPOON);
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.PINK_GARNET_AXE);
         getOrCreateTagBuilder(ItemTags.HOES)
@@ -58,6 +61,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.DRIFTWOOD_PLANKS.asItem());
-
     }
 }

@@ -65,6 +65,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PINK_GARNET_DOOR, doorDrops(ModBlocks.PINK_GARNET_DOOR));
         addDrop(ModBlocks.PINK_GARNET_TRAPDOOR);
+        addDrop(ModBlocks.DRIFTWOOD_DOOR, doorDrops(ModBlocks.DRIFTWOOD_DOOR));
+        addDrop(ModBlocks.DRIFTWOOD_TRAPDOOR);
+
 
 
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER_CROP)
@@ -125,7 +128,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DRIFTWOOD_PLANKS);
         addDrop(ModBlocks.DRIFTWOOD_SAPLING);
 
-        addDrop(ModBlocks.DRIFTWOOD_LEAVES, leavesDrops(ModBlocks.DRIFTWOOD_LEAVES, ModBlocks.DRIFTWOOD_SAPLING, 0.0625f));
+        addDrop(ModBlocks.DRIFTWOOD_LEAVES, leavesDrops(ModBlocks.DRIFTWOOD_LEAVES, ModBlocks.DRIFTWOOD_SAPLING, 0.0325f));
 
     }
 

@@ -64,5 +64,6 @@ public class EggsAndGritsClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.HOT_DOG_ROLLER, HotDogRollerRenderer::new);
 
+
     }
 }
