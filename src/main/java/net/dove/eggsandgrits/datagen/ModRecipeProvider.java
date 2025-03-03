@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -97,9 +98,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.PEPPERCORN), conditionsFromItem(ModItems.PEPPERCORN))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIFTWOOD_PLANKS, 4)
+        /*ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIFTWOOD_PLANKS, 4)
                 .input(ModBlocks.DRIFTWOOD_LOG)
                 .criterion(hasItem(ModBlocks.DRIFTWOOD_LOG), conditionsFromItem(ModBlocks.DRIFTWOOD_LOG))
+                .offerTo(exporter);
+
+         */
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRIFTWOOD_DOOR, 3)
+                .pattern("DD")
+                .pattern("DD")
+                .pattern("DD")
+                .input('D', ModBlocks.DRIFTWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.DRIFTWOOD_PLANKS), conditionsFromItem(ModBlocks.DRIFTWOOD_PLANKS))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.DRIFTWOOD_TRAPDOOR, 2)
+                .pattern("DDD")
+                .pattern("DDD")
+                .pattern("   ")
+                .input('D', ModBlocks.DRIFTWOOD_PLANKS)
+                .criterion(hasItem(ModBlocks.DRIFTWOOD_PLANKS), conditionsFromItem(ModBlocks.DRIFTWOOD_PLANKS))
                 .offerTo(exporter);
 
 

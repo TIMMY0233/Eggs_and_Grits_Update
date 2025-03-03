@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_driftwood_log": {
+    "has_driftwood_planks": {
       "conditions": {
         "items": [
           {
-            "items": "eggsandgrits:driftwood_log"
+            "items": "eggsandgrits:driftwood_planks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "eggsandgrits:driftwood_planks"
+        "recipe": "eggsandgrits:driftwood_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_driftwood_log"
+      "has_driftwood_planks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "eggsandgrits:driftwood_planks"
+      "eggsandgrits:driftwood_door"
     ]
   }
 }

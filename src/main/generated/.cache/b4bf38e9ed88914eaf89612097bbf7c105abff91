@@ -1,7 +1,7 @@
-// 1.21.1	2025-03-02T22:11:23.1991715	Eggs and Grits/Block Loot Tables
+// 1.21.1	2025-03-03T00:04:21.4456091	Eggs and Grits/Block Loot Tables
 464616296aa6e1cf0c78c6c560157e18899d8e02 data\eggsandgrits\loot_table\blocks\peppercorn_bush.json
 9e62444763b1e91f95f91b7a5b668ff4ad7df7f1 data\eggsandgrits\loot_table\blocks\beans_crop.json
-12f687fb016f33fcd0c86d351a74d1dd8053b737 data\eggsandgrits\loot_table\blocks\driftwood_leaves.json
+2dfd5bee6233320e6c7ce51ab3377a1e896fb392 data\eggsandgrits\loot_table\blocks\driftwood_leaves.json
 2c1d6a742a1ff43ef61c3ceda4bb1535577f59ba data\eggsandgrits\loot_table\blocks\cauliflower_crop.json
 606eb72b20a59ee2dd191b82a97b18133f324158 data\eggsandgrits\loot_table\blocks\onion_crop.json
 faf07cd66da068bba47f78b998c6c42298d5747e data\eggsandgrits\loot_table\blocks\driftwood_planks.json
@@ -11,6 +11,7 @@ f4727988a8f37ecaefc18259d5d2d583e24fa710 data\eggsandgrits\loot_table\blocks\pin
 076406f55fe8f35e1cf64789f20c0208d6c450b5 data\eggsandgrits\loot_table\blocks\raw_pink_garnet_block.json
 0799e798e12ce8ef076b0c8f7476d24953832f8d data\eggsandgrits\loot_table\blocks\pink_garnet_fence_gate.json
 5130c55e76fa534e8ef3b62e28a9e1237b994818 data\eggsandgrits\loot_table\blocks\pink_garnet_wall.json
+ca8c750992ab6c1889ec5f953dc4d260c0b22d32 data\eggsandgrits\loot_table\blocks\driftwood_door.json
 cbfdd8108c0d72397b00c6c1240cfd0dc0e1906f data\eggsandgrits\loot_table\blocks\pink_garnet_nether_ore.json
 83c37d9171ce260263993aac10cc5907a433e7c7 data\eggsandgrits\loot_table\blocks\magic_block.json
 3dbc6cbc4f1dfaefc7e6c3d85c1b0c13292977ee data\eggsandgrits\loot_table\blocks\stripped_driftwood_log.json
@@ -30,5 +31,6 @@ c5608909dccfbf2961faedd63d940482fdcfe534 data\eggsandgrits\loot_table\blocks\sal
 034ab21bb085506d3a3f8883ae9d4f3367a98fb3 data\eggsandgrits\loot_table\blocks\pink_garnet_deepslate_ore.json
 dde5f0ca47d89535b1f0b6bd12ede1c21c61e815 data\eggsandgrits\loot_table\blocks\pink_garnet_pressure_plate.json
 fb6fee22b627368cde7ca5394d43f8bdb695aa49 data\eggsandgrits\loot_table\blocks\pink_garnet_ore.json
+0800ba7d00201f587e8a0e9e464842075f56167f data\eggsandgrits\loot_table\blocks\driftwood_trapdoor.json
 e39c7dd8171cf405f58a9044c6270c0f07a71346 data\eggsandgrits\loot_table\blocks\hot_dog_roller.json
 acab5e609b300739e726a5466be46aa9f7ee1160 data\eggsandgrits\loot_table\blocks\pink_garnet_trapdoor.json

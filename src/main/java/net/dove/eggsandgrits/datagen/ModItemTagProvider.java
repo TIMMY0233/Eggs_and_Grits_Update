@@ -7,7 +7,9 @@ import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.util.ModTags;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -58,8 +60,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.DRIFTWOOD_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.asItem());
 
-
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.DRIFTWOOD_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+                .add(ModBlocks.DRIFTWOOD_DOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.DRIFTWOOD_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS)
+                .add(ModBlocks.DRIFTWOOD_LOG.asItem());
+
+
     }
 }

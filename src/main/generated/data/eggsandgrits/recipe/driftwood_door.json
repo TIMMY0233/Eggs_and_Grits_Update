@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "eggsandgrits:driftwood_planks"
+    }
+  },
+  "pattern": [
+    "DD",
+    "DD",
+    "DD"
+  ],
+  "result": {
+    "count": 3,
+    "id": "eggsandgrits:driftwood_door"
+  }
+}

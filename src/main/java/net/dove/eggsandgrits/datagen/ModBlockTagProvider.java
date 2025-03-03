@@ -6,6 +6,8 @@ import net.dove.eggsandgrits.block.ModBlocks;
 import net.dove.eggsandgrits.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
+
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
@@ -43,6 +45,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG)
                 .add(ModBlocks.DRIFTWOOD_WOOD)
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(ModBlocks.DRIFTWOOD_LOG);
 
     }
 
