@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "eggsandgrits:block/driftwood_planks",
+    "side": "eggsandgrits:block/driftwood_planks",
+    "top": "eggsandgrits:block/driftwood_planks"
+  }
+}

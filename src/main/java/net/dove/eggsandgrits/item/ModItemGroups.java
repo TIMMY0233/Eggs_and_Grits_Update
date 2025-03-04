@@ -159,6 +159,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
                         entries.add(ModBlocks.DRIFTWOOD_DOOR);
                         entries.add(ModBlocks.DRIFTWOOD_TRAPDOOR);
+                        entries.add(ModBlocks.DRIFTWOOD_SLAB);
+                        entries.add(ModBlocks.DRIFTWOOD_STAIRS);
+                        entries.add(ModBlocks.DRIFTWOOD_BUTTON);
+                        entries.add(ModBlocks.DRIFTWOOD_FENCE);
+                        entries.add(ModBlocks.DRIFTWOOD_FENCE_GATE);
+
 
                         entries.add(ModBlocks.CHAIR);
 

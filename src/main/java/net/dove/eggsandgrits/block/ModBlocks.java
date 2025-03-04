@@ -133,6 +133,21 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
     public static final Block DRIFTWOOD_TRAPDOOR = registerBlock("driftwood_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
+    public static final Block DRIFTWOOD_SLAB = registerBlock("driftwood_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f)));
+
+    public static final Block DRIFTWOOD_STAIRS = registerBlock("driftwood_stairs",
+            new StairsBlock(ModBlocks.DRIFTWOOD_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
+    public static final Block DRIFTWOOD_BUTTON = registerBlock("driftwood_button",
+            new ButtonBlock(BlockSetType.OAK, 2, AbstractBlock.Settings.create().strength(2f).requiresTool().noCollision()));
+
+    public static final Block DRIFTWOOD_FENCE = registerBlock("driftwood_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block DRIFTWOOD_FENCE_GATE = registerBlock("driftwood_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
 
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",

@@ -72,6 +72,18 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.LOGS)
                 .add(ModBlocks.DRIFTWOOD_LOG.asItem());
 
+        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                .add(ModBlocks.DRIFTWOOD_SLAB.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+                .add(ModBlocks.DRIFTWOOD_FENCE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.FENCE_GATES)
+                .add(ModBlocks.DRIFTWOOD_FENCE_GATE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                .add(ModBlocks.DRIFTWOOD_STAIRS.asItem());
+
 
     }
 }

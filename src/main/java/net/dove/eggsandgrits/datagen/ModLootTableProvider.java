@@ -68,6 +68,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DRIFTWOOD_DOOR, doorDrops(ModBlocks.DRIFTWOOD_DOOR));
         addDrop(ModBlocks.DRIFTWOOD_TRAPDOOR);
 
+        addDrop(ModBlocks.DRIFTWOOD_STAIRS);
+        addDrop(ModBlocks.DRIFTWOOD_SLAB, slabDrops(ModBlocks.DRIFTWOOD_SLAB));
+
+        addDrop(ModBlocks.DRIFTWOOD_BUTTON);
+
+        addDrop(ModBlocks.DRIFTWOOD_FENCE);
+        addDrop(ModBlocks.DRIFTWOOD_FENCE_GATE);
+
 
 
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER_CROP)

@@ -84,7 +84,7 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(
                         Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PEPPERCORN_BUSH_BLOCK
-                                .getDefaultState().with(SweetBerryBushBlock.AGE, Integer.valueOf(3)))),
+                                .getDefaultState().with(SweetBerryBushBlock.AGE, 3))),
                         List.of(Blocks.GRASS_BLOCK))
         );
 
@@ -108,8 +108,9 @@ public class ModConfiguredFeatures {
                         ConstantIntProvider.create(5),  // Radius
                         0.25f, 0.5f, 0.1666667f, 0.33333334f // Blossom-like shape factors
                 ),
-                new TwoLayersFeatureSize(1, 0, 2)
-        ).build());
+                new TwoLayersFeatureSize(1, 0, 2))
+                .dirtProvider(BlockStateProvider.of(Blocks.SAND)) // Prevents dirt from being placed
+                .build());
 
 
 
