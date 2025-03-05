@@ -26,6 +26,8 @@ public class ModOreGeneration {
         //BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST), GenerationStep.Feature.UNDERGROUND_ORES,
           //              ModPlacedFeatures.SALT_BLOCK_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.SALT_ORE_PLACE_KEY);
 
     }
 }

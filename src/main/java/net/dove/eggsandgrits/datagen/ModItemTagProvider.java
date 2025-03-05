@@ -7,7 +7,9 @@ import net.dove.eggsandgrits.item.ModItems;
 import net.dove.eggsandgrits.util.ModTags;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,11 +29,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.PINK_GARNET_SWORD);
+                .add(ModItems.PINK_GARNET_SWORD)
+                .add(ModItems.KNIFE)
+                .add(ModItems.FORK);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.PINK_GARNET_PICKAXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.PINK_GARNET_SHOVEL);
+                .add(ModItems.PINK_GARNET_SHOVEL)
+                .add(ModItems.SPOON);
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.PINK_GARNET_AXE);
         getOrCreateTagBuilder(ItemTags.HOES)
@@ -55,9 +60,30 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.DRIFTWOOD_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.asItem());
 
-
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(ModBlocks.DRIFTWOOD_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+                .add(ModBlocks.DRIFTWOOD_DOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.DRIFTWOOD_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LOGS)
+                .add(ModBlocks.DRIFTWOOD_LOG.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                .add(ModBlocks.DRIFTWOOD_SLAB.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+                .add(ModBlocks.DRIFTWOOD_FENCE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.FENCE_GATES)
+                .add(ModBlocks.DRIFTWOOD_FENCE_GATE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                .add(ModBlocks.DRIFTWOOD_STAIRS.asItem());
+
 
     }
 }

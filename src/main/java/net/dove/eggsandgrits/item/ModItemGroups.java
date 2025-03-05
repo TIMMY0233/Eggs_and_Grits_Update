@@ -39,6 +39,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.PEPPER);
+                        entries.add(ModItems.CS_KNIFE);
+                        entries.add(ModItems.CRATE);
+
 
                         entries.add(ModItems.PEPPERCORN);
 
@@ -100,6 +103,20 @@ public class ModItemGroups {
                         entries.add(ModItems.QUAALUDE);
                         entries.add(ModItems.MOUNTAIN_DEW);
 
+                        entries.add(ModItems.COOKED_HOTDOG);
+                        entries.add(ModItems.RAW_HOTDOG);
+
+                        entries.add(ModItems.ECLIPSE);
+
+                        entries.add(ModItems.SLINGSHOT);
+                        entries.add(ModItems.NINE_ELEVEN_PANTS);
+
+                        entries.add(ModItems.SPOON);
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModItems.FORK);
+
+
+
 
                     }).build());
 
@@ -140,9 +157,24 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DRIFTWOOD_PLANKS);
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                         entries.add(ModBlocks.DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.DRIFTWOOD_DOOR);
+                        entries.add(ModBlocks.DRIFTWOOD_TRAPDOOR);
+                        entries.add(ModBlocks.DRIFTWOOD_SLAB);
+                        entries.add(ModBlocks.DRIFTWOOD_STAIRS);
+                        entries.add(ModBlocks.DRIFTWOOD_BUTTON);
+                        entries.add(ModBlocks.DRIFTWOOD_FENCE);
+                        entries.add(ModBlocks.DRIFTWOOD_FENCE_GATE);
+
 
                         entries.add(ModBlocks.CHAIR);
+
+                        entries.add(ModBlocks.TOILET);
+
+                        entries.add(ModBlocks.EVIL_CHAIR);
+
                         entries.add(ModBlocks.STOOL);
+
+                        entries.add(ModBlocks.HOT_DOG_ROLLER);
 
 
 

@@ -10,6 +10,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -48,8 +49,17 @@ public class ModBlocks {
     public static final Block CHAIR = registerBlock("chair",
             new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final Block TOILET = registerBlock("toilet",
+            new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block EVIL_CHAIR = registerBlock("evil_chair",
+            new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
+
     public static final Block STOOL = registerBlock("stool",
             new StoolBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block HOT_DOG_ROLLER = registerBlock("hot_dog_roller",
+            new HotDogRollerBlock(AbstractBlock.Settings.create().nonOpaque().strength(1f)));
 
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
@@ -119,10 +129,33 @@ public class ModBlocks {
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
             new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.SAND));
 
+    public static final Block DRIFTWOOD_DOOR = registerBlock("driftwood_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
+    public static final Block DRIFTWOOD_TRAPDOOR = registerBlock("driftwood_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().strength(2f).nonOpaque()));
+    public static final Block DRIFTWOOD_SLAB = registerBlock("driftwood_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f)));
+
+    public static final Block DRIFTWOOD_STAIRS = registerBlock("driftwood_stairs",
+            new StairsBlock(ModBlocks.DRIFTWOOD_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
+    public static final Block DRIFTWOOD_BUTTON = registerBlock("driftwood_button",
+            new ButtonBlock(BlockSetType.OAK, 2, AbstractBlock.Settings.create().strength(2f).requiresTool().noCollision()));
+
+    public static final Block DRIFTWOOD_FENCE = registerBlock("driftwood_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
+    public static final Block DRIFTWOOD_FENCE_GATE = registerBlock("driftwood_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().strength(2f).requiresTool()));
+
 
 
     public static Block PEPPERCORN_BUSH_BLOCK = registerBlockWithoutBlockItem("peppercorn_bush",
             new PeppercornBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
+
+
+
+
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

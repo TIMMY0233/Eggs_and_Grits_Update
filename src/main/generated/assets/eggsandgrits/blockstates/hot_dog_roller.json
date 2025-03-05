@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "eggsandgrits:block/hot_dog_roller",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "eggsandgrits:block/hot_dog_roller"
+    },
+    "facing=south": {
+      "model": "eggsandgrits:block/hot_dog_roller",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "eggsandgrits:block/hot_dog_roller",
+      "y": 270
+    }
+  }
+}

@@ -2,6 +2,7 @@ package net.dove.eggsandgrits.enchantment;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.enchantment.custom.LightningStrikerEnchantmentEffect;
+import net.dove.eggsandgrits.item.ModItems;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;

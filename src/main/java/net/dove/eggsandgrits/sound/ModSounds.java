@@ -2,14 +2,14 @@ package net.dove.eggsandgrits.sound;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.minecraft.block.jukebox.JukeboxSong;
-import net.minecraft.client.sound.Sound;
+
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
+
 import net.minecraft.util.Identifier;
 
 public class ModSounds {
@@ -29,6 +29,10 @@ public class ModSounds {
     public static final RegistryKey<JukeboxSong> BAR_BRAWL_KEY =
             RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(EggsAndGrits.MOD_ID, "bar_brawl"));
 
+    public static final SoundEvent SUGE = registerSoundEvent("suge");
+    public static final RegistryKey<JukeboxSong> SUGE_KEY =
+            RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(EggsAndGrits.MOD_ID, "suge"));
+
     public static final SoundEvent TOOT = registerSoundEvent("toot");
     public static final SoundEvent TOOT2 = registerSoundEvent("toot2");
 
@@ -40,6 +44,14 @@ public class ModSounds {
     public static final SoundEvent HE_DID_WHAT = registerSoundEvent("he_did_what");
 
     public static final SoundEvent GIT_R_DONE = registerSoundEvent("git_r_done");
+
+    public static final SoundEvent SIZZLE = registerSoundEvent("sizzle");
+    public static final SoundEvent SIZZLE2 = registerSoundEvent("sizzle2");
+    public static final SoundEvent SIZZLE3 = registerSoundEvent("sizzle3");
+    public static final SoundEvent SIZZLE4 = registerSoundEvent("sizzle4");
+
+    public static final SoundEvent OCEAN_DEATH = registerSoundEvent("ocean_death");
+
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);

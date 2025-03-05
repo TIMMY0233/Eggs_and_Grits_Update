@@ -25,6 +25,8 @@
   "item.eggsandgrits.mystery_meat": "Mystery Meat",
   "item.eggsandgrits.sweet_baby_rays": "Sweet Baby Rays",
 
+  "item.eggsandgrits.cs_knife": "CS Knife",
+
 
   "item.eggsandgrits.bar_brawl_music_disc": "Hopsin",
   "item.eggsandgrits.bar_brawl_music_disc.desc": "Hopsin - Happy Ending",
@@ -33,6 +35,8 @@
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+  "effect.eggsandgrits.b_hop": "Bhop",
 
   "effect.eggsandgrits.diarrhea": "diarrhea",
 
@@ -65,6 +69,8 @@
 
   "item.eggsandgrits.kaupen_bow": "Kaupen Bow",
 
+  "item.eggsandgrits.nine_eleven_pants": "Alex's 9/11 Pants",
+
   "item.eggsandgrits.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
   "item.eggsandgrits.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
 
@@ -90,6 +96,14 @@
   "item.eggsandgrits.toast_egg": "Toast & Eggs",
   "item.eggsandgrits.toast_onion": "Fried Onions On A Slice Of Bread",
 
+  "item.eggsandgrits.crate": "CS Crate",
+  "item.eggsandgrits.cooked_hotdog": "Cooked Hot Dog",
+  "item.eggsandgrits.raw_hotdog": "Raw Hot Dog",
+  "item.eggsandgrits.eclipse": "Eclipse",
+  "item.eggsandgrits.slingshot": "Slingshot",
+  "item.eggsandgrits.spoon": "Comically Large Spoon",
+  "item.eggsandgrits.fork": "Fork",
+  "item.eggsandgrits.knife": "Knife",
 
 
 
@@ -129,14 +143,29 @@
   "block.eggsandgrits.driftwood_log": "Driftwood Log",
   "block.eggsandgrits.stripped_driftwood_log": "Stripped Driftwood Log",
   "block.eggsandgrits.driftwood_wood": "Driftwood Wood",
-  "block.eggsandgrits.driftwood_plank": "Driftwood Plank",
+  "block.eggsandgrits.driftwood_planks": "Driftwood Plank",
   "block.eggsandgrits.driftwood_leaves": "Driftwood Leaves",
   "block.eggsandgrits.driftwood_sapling": "Driftwood Sapling",
   "block.eggsandgrits.stripped_driftwood_wood": "Stripped Driftwood Wood",
+  "block.eggsandgrits.driftwood_door": "Driftwood Door",
+  "block.eggsandgrits.driftwood_trapdoor": "Driftwood Trapdoor",
+  "block.eggsandgrits.driftwood_slab": "Driftwood Slab",
+  "block.eggsandgrits.driftwood_stairs": "Driftwood Stairs",
+
+
+
+
 
   "block.eggsandgrits.salt_block": "Salt Block",
   "block.eggsandgrits.chair": "Chair",
   "block.eggsandgrits.stool": "Stool",
+
+  "block.eggsandgrits.evil_chair": "Evil Chair",
+  "block.eggsandgrits.toilet": "Toilet",
+  "block.eggsandgrits.hot_dog_roller": "Hot Dog Roller",
+
+
+
 
 
 
@@ -161,11 +190,18 @@
   "tooltip.eggsandgrits.redbull.tooltip": "Take a sip, do it.",
   "tooltip.eggsandgrits.fiestada.tooltip": "Made with love - Lunch Lady",
 
+  "tooltip.eggsandgrits.eggs.tooltip": "Do you have Grits?",
+  "tooltip.eggsandgrits.grits.tooltip": "Do you have Eggs?",
+  "tooltip.eggsandgrits.ritz.tooltip": "Don't eat too many",
+
+
+
   "trim_material.eggsandgrits.pink_garnet": "Pink Garnet Material",
   "trim_pattern.eggsandgrits.kaupen": "Kaupen Armor Pattern",
 
   "entity.eggsandgrits.mantis": "Mantis",
   "entity.eggsandgrits.larry": "Larry The Cable Guy",
 
-  "entity.eggsandgrits.vape_cloud": "Vape Ring"
+  "entity.eggsandgrits.vape_cloud": "Vape Ring",
+  "entity.minecraft.villager.eggsandgrits.kaupenger": "Kaupenger"
 }

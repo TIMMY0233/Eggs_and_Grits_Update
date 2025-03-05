@@ -1,11 +1,16 @@
 {
-	"required": true,
-	"package": "net.dove.eggsandgrits.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "net.dove.eggsandgrits.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "HoldingItemEffectMixin",
+    "ModifyChunkGenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "AbstractClientPlayerEntityMixin"
+  ]
 }

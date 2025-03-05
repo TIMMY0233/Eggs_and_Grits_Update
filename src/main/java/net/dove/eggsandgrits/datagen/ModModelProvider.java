@@ -19,6 +19,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool pinkGarnetPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_GARNET_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool driftwoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DRIFTWOOD_PLANKS);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINK_GARNET_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
@@ -43,6 +45,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.PINK_GARNET_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.PINK_GARNET_TRAPDOOR);
 
+        blockStateModelGenerator.registerDoor(ModBlocks.DRIFTWOOD_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.DRIFTWOOD_TRAPDOOR);
+        driftwoodPool.slab(ModBlocks.DRIFTWOOD_SLAB);
+        driftwoodPool.stairs(ModBlocks.DRIFTWOOD_STAIRS);
+
+        driftwoodPool.button(ModBlocks.DRIFTWOOD_BUTTON);
+
+        driftwoodPool.fence(ModBlocks.DRIFTWOOD_FENCE);
+        driftwoodPool.fenceGate(ModBlocks.DRIFTWOOD_FENCE_GATE);
+
+
         Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.PINK_GARNET_LAMP, blockStateModelGenerator.modelCollector);
         Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.PINK_GARNET_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.PINK_GARNET_LAMP)
@@ -66,12 +79,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.DRIFTWOOD_LOG).log(ModBlocks.DRIFTWOOD_LOG).wood(ModBlocks.DRIFTWOOD_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_DRIFTWOOD_LOG).log(ModBlocks.STRIPPED_DRIFTWOOD_LOG).wood(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIFTWOOD_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.DRIFTWOOD_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DRIFTWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CHAIR);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TOILET);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.EVIL_CHAIR);
+
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.STOOL);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.HOT_DOG_ROLLER);
     }
 
     @Override
@@ -111,6 +129,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAUSAGE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BACON, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYSTERY_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ONION, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.CRATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.RAW_HOTDOG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_HOTDOG, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ECLIPSE, Models.GENERATED);
 
         //itemModelGenerator.register(ModItems.CORN_SEED, Models.GENERATED);
 
@@ -140,12 +166,23 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_BOOTS));
 
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NINE_ELEVEN_PANTS));
+
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.KAUPEN_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModBlocks.DRIFTWOOD_SAPLING.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MANTIS_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.LARRY_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.DALE_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.register(ModItems.TINYGUY_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

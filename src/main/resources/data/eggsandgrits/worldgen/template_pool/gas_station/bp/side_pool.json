@@ -1,0 +1,62 @@
+{
+  "name": "eggsandgrits:gas_station/bp/side_pool",
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:trapped_loot",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "eggsandgrits:non_trap",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "eggsandgrits:bp_inside1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "eggsandgrits:bp_inside2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "eggsandgrits:bp_inside3",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

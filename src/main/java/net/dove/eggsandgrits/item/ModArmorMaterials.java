@@ -27,6 +27,12 @@ public class ModArmorMaterials {
             }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.PINK_GARNET),
                     List.of(new ArmorMaterial.Layer(Identifier.of(EggsAndGrits.MOD_ID, "pink_garnet"))), 0,0));
 
+    public static final RegistryEntry<ArmorMaterial> NINE_ELEVEN_ARMOR_MATERIAL = registerArmorMaterial("nine_eleven",
+            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.PINK_GARNET),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(EggsAndGrits.MOD_ID, "nine_eleven"))), 0,0));
+
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(EggsAndGrits.MOD_ID, name), material.get());

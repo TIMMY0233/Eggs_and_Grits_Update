@@ -18,6 +18,13 @@ public class ModEffects {
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final RegistryEntry<StatusEffect> B_HOP = registerStatusEffect("b_hop",
+            new BunnyHopEffect(StatusEffectCategory.NEUTRAL, 0xbab055)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                            Identifier.of(EggsAndGrits.MOD_ID, "b_hop"), 0f,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
 
     public static final RegistryEntry<StatusEffect> DIARRHEA = registerStatusEffect("diarrhea",
             new DiarrheaEffect(StatusEffectCategory.NEUTRAL, 0x9d593a)

@@ -2,6 +2,7 @@ package net.dove.eggsandgrits.entity;
 
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.entity.custom.*;
+import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -25,11 +26,42 @@ public class ModEntities {
             EntityType.Builder.create(DaleEntity::new, SpawnGroup.CREATURE)
                     .dimensions(.5f, 2f).build());
 
+    public static final EntityType<TinyGuyEntity> TINYGUY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "tinyguy"),
+            EntityType.Builder.create(TinyGuyEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(.5f, 1f).build());
+
+    public static final EntityType<DaBabyEntity> DABABY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "dababy"),
+            EntityType.Builder.create(DaBabyEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(.5f, 1.5f).build());
+
+    public static final EntityType<AttackHelicopterEntity> ATTACK_HELICOPTER = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "attackhelicopter"),
+            EntityType.Builder.create(AttackHelicopterEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1f, .5f).build());
+
+    public static final EntityType<OceanGateEntity> OCEAN_GATE_ENTITY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "ocean_gate"),
+            EntityType.Builder.create(OceanGateEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(4f, 5f).build());
+
+    public static final EntityType<CustomExperienceOrbEntity> CUSTOM_EXPERIENCE_ORB_ENTITY= Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "custom_xp"),
+            EntityType.Builder.create(CustomExperienceOrbEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(.25f, .25f).build());
+
+
 
     public static final EntityType<VapeProjectileEntity> VAPE_RING = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "vape_ring"),
             EntityType.Builder.<VapeProjectileEntity>create(VapeProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 1.15f).build());
+
+    public static final EntityType<MissileProjectileEntity> MISSILE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "missile"),
+            EntityType.Builder.<MissileProjectileEntity>create(MissileProjectileEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.25f, 0.25f).build());
 
     public static final EntityType<ChairEntity> CHAIR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "chair_entity"),
@@ -39,6 +71,11 @@ public class ModEntities {
     public static final EntityType<StoolEntity> STOOL = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(EggsAndGrits.MOD_ID, "stool_entity"),
             EntityType.Builder.create(StoolEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, .85f).build());
+
+    public static final EntityType<HotDogRollerEntity> HOT_DOG_ROLLER = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(EggsAndGrits.MOD_ID, "hot_dog_roller_entity"),
+            EntityType.Builder.create(HotDogRollerEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, .85f).build());
 
 

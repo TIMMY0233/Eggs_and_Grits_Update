@@ -1,12 +1,19 @@
-// 1.21.1	2025-02-16T17:12:43.7888011	Eggs and Grits/Tags for minecraft:item
+// 1.21.1	2025-03-03T21:59:41.2079338	Eggs and Grits/Tags for minecraft:item
 223d5b89f5db9024a7a3d19ad00c42a058ab2298 data\minecraft\tags\item\trimmable_armor.json
-f8f56b8eda9c78bd65658d660538478619ba6eee data\minecraft\tags\item\shovels.json
+18f839f82f01dec5ec232c3cf101f57882e918e9 data\minecraft\tags\item\shovels.json
 9f29b612b9fcdb262529ee0d5893f8f6a136708a data\minecraft\tags\item\logs_that_burn.json
-2705c4c779424ec7b5871439adee9676347e8c22 data\minecraft\tags\item\axes.json
 99eb8d0c33295e01052dc539af787ed7a7b0b70c data\minecraft\tags\item\trim_materials.json
 aff9ad8ff336cfa6d2cec7c88454f49e89cb7d0c data\minecraft\tags\item\trim_templates.json
-d1ea18ebd19b767c5498f351893def18772892a9 data\minecraft\tags\item\swords.json
+4f27edb43e237512d8d17e49c9ad5677eff3a031 data\minecraft\tags\item\swords.json
 d764740f45867202dd61a4f5356e39a9a7999689 data\minecraft\tags\item\hoes.json
-f8a0afe452a77bdf596cb35ee9d7727c4f22539b data\minecraft\tags\item\pickaxes.json
 0357f4755c6aa9897976ef99ce49037a9c974c06 data\minecraft\tags\item\planks.json
 6fa6714b7249fcbf1d5a15f7004edb2943477dd8 data\eggsandgrits\tags\item\transformable_items.json
+a1ac318816e2844798060e5496e755bbba489d1e data\minecraft\tags\item\wooden_fences.json
+a00306f7c5f26404502d4d5a65e40747c1d04e3d data\minecraft\tags\item\wooden_stairs.json
+77a6bbf91ffb4b15ccdd820794ae3f785bfbce3f data\minecraft\tags\item\logs.json
+c84292a7af936a328de580457bde880bf9ca7f58 data\minecraft\tags\item\wooden_doors.json
+5613f324d37446fb4b3d8519a793250041cf3fea data\minecraft\tags\item\wooden_slabs.json
+fc89458087dffa30340378d62f8a0582287d573d data\minecraft\tags\item\fence_gates.json
+2705c4c779424ec7b5871439adee9676347e8c22 data\minecraft\tags\item\axes.json
+7084e27bb94b8f1352bb42b49acd2c62acd4f098 data\minecraft\tags\item\wooden_trapdoors.json
+f8a0afe452a77bdf596cb35ee9d7727c4f22539b data\minecraft\tags\item\pickaxes.json

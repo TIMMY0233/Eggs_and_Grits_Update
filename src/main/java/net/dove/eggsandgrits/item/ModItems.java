@@ -6,16 +6,14 @@ import net.dove.eggsandgrits.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.dove.eggsandgrits.EggsAndGrits;
 import net.dove.eggsandgrits.sound.ModSounds;
-
-
 import net.minecraft.client.gui.screen.Screen;
-
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
-
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -109,7 +107,10 @@ public class ModItems {
         }
     });
 
-    public static final Item KAUPEN_BOW = registerItem("kaupen_bow", new BowItem(new Item.Settings().maxDamage(500).rarity(Rarity.EPIC)));
+    public static final Item KAUPEN_BOW = registerItem("kaupen_bow", new BowItem(new Item.Settings().maxDamage(100).rarity(Rarity.EPIC)));
+
+    public static final Item SLINGSHOT = registerItem("slingshot", new BowItem(new Item.Settings().maxDamage(100).rarity(Rarity.EPIC)));
+
 
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
@@ -151,6 +152,10 @@ public class ModItems {
             new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1)));
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(EggsAndGrits.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
+
+    public static final Item NINE_ELEVEN_PANTS = registerItem("nine_eleven_pants",
+            new ArmorItem(ModArmorMaterials.NINE_ELEVEN_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
 
 
     public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
@@ -199,6 +204,9 @@ public class ModItems {
     public static final Item DALE_SPAWN_EGG = registerItem("dale_spawn_egg",
             new SpawnEggItem(ModEntities.DALE, 0x9dc383, 0xbf, new Item.Settings()));
 
+    public static final Item TINYGUY_SPAWN_EGG = registerItem("tinyguy_spawn_egg",
+            new SpawnEggItem(ModEntities.TINYGUY, 0x9dc383, 0xbf, new Item.Settings()));
+
     public static final Item VAPE = registerItem("vape",
             new VapeItem(new Item.Settings().maxCount(16)));
 
@@ -206,7 +214,8 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(1)));
 
     public static final Item EXTENSION_CORD = registerItem("extension_cord",
-            new Item(new Item.Settings().maxDamage(250)));
+            new Item(new Item.Settings().maxCount(1)));
+
 
     public static final Item FIESTADA = registerItem("fiestada", new Item(new Item.Settings().food(ModFoodComponents.FIESTADA)) {
         @Override
@@ -216,7 +225,7 @@ public class ModItems {
         }
     });
 
-    public static final Item REDBULL = registerItem("redbull", new Item(new Item.Settings().food(ModFoodComponents.REDBULL)) {
+    public static final Item REDBULL = registerItem("redbull", new DrinkItem(new Item.Settings().food(ModFoodComponents.REDBULL)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.eggsandgrits.redbull.tooltip"));
@@ -266,6 +275,12 @@ public class ModItems {
     public static final Item MEATBALL = registerItem("meatball", new Item(new Item.Settings().food(ModFoodComponents.MEATBALL)) {
     });
 
+    public static final Item RAW_HOTDOG = registerItem("raw_hotdog", new Item(new Item.Settings().food(ModFoodComponents.RAW_HOTDOG)) {
+    });
+
+    public static final Item COOKED_HOTDOG = registerItem("cooked_hotdog", new Item(new Item.Settings().food(ModFoodComponents.COOKED_HOTDOG)) {
+    });
+
     public static final Item MYSTERY_MEAT = registerItem("mystery_meat", new Item(new Item.Settings().food(ModFoodComponents.MYSTERY_MEAT)) {
     });
 
@@ -277,7 +292,32 @@ public class ModItems {
             "sweet_baby_rays", new DrinkItem(new Item.Settings().food(ModFoodComponents.SWEET_BABY_RAYS).maxCount(16))
     );
 
+    public static final Item CS_KNIFE = registerItem("cs_knife",
+            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))));
 
+    public static final Item CRATE = registerItem("crate",
+            new CrateItem(new Item.Settings().maxCount(64)));
+
+    public static final Item ECLIPSE = registerItem("eclipse",
+            new EclipseItem(new Item.Settings().maxCount(1)));
+
+
+    public static final Item CS_GLOVES = registerItem("cs_gloves", new Item(new Item.Settings()));
+
+    public static final Item CS_BUTTERFLY_KNIFE = registerItem("cs_butterfly_knife", new Item(new Item.Settings()));
+
+    public static final Item SPOON = registerItem("spoon",
+            new ShovelItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ToolMaterials.IRON,1.5f, -3.0f))));
+
+    public static final Item KNIFE = registerItem("knife",
+            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON,3, -2.4f))));
+
+    public static final Item FORK = registerItem("fork",
+            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON,5, -3.4f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EggsAndGrits.MOD_ID, name), item);

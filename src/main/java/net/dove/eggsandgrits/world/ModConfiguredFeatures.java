@@ -34,6 +34,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_PINK_GARNET_ORE_KEY = registerKey("nether_pink_garnet_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_PINK_GARNET_ORE_KEY = registerKey("end_pink_garnet_ore");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SALT_ORE_KEY = registerKey("salt_ore_key");
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> DRIFTWOOD_KEY = registerKey("driftwood");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PEPPERCORN_BUSH_KEY = registerKey("peppercorn");
@@ -60,12 +62,18 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> endPinkGarnetOres =
                 List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.PINK_GARNET_END_ORE.getDefaultState()));
 
-
+        List<OreFeatureConfig.Target> overworldSaltOre =
+                List.of(
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SALT_BLOCK.getDefaultState())
+                );
 
 
         register(context, PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
         register(context, NETHER_PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherPinkGarnetOres, 12));
         register(context, END_PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(endPinkGarnetOres, 12));
+
+        register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSaltOre, 12));
+
 
 
 
@@ -76,7 +84,7 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(
                         Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PEPPERCORN_BUSH_BLOCK
-                                .getDefaultState().with(SweetBerryBushBlock.AGE, Integer.valueOf(3)))),
+                                .getDefaultState().with(SweetBerryBushBlock.AGE, 3))),
                         List.of(Blocks.GRASS_BLOCK))
         );
 
@@ -100,8 +108,9 @@ public class ModConfiguredFeatures {
                         ConstantIntProvider.create(5),  // Radius
                         0.25f, 0.5f, 0.1666667f, 0.33333334f // Blossom-like shape factors
                 ),
-                new TwoLayersFeatureSize(1, 0, 2)
-        ).build());
+                new TwoLayersFeatureSize(1, 0, 2))
+                .dirtProvider(BlockStateProvider.of(Blocks.SAND)) // Prevents dirt from being placed
+                .build());
 
 
 

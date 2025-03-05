@@ -26,6 +26,7 @@ public class VapeProjectileEntity extends PersistentProjectileEntity {
         super(ModEntities.VAPE_RING, player, world, new ItemStack(ModItems.VAPE), null);
     }
 
+
     @Override
     protected ItemStack getDefaultItemStack() {
         return new ItemStack(ModItems.VAPE);

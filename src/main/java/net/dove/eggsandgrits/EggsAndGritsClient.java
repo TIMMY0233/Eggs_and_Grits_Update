@@ -16,6 +16,10 @@ public class EggsAndGritsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_GARNET_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_GARNET_TRAPDOOR, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIFTWOOD_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIFTWOOD_TRAPDOOR, RenderLayer.getCutout());
+
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CAULIFLOWER_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ONION_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BEANS_CROP, RenderLayer.getCutout());
@@ -37,13 +41,33 @@ public class EggsAndGritsClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(LarryModel.LARRY, LarryModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.LARRY, LarryRenderer::new);
 
-        EntityModelLayerRegistry.registerModelLayer(DaleModel.DALE, DaleModel::getTexturedModelData);
+       EntityModelLayerRegistry.registerModelLayer(DaleModel.DALE, DaleModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.DALE, DaleRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(DaBabyModel.DABABY, DaBabyModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.DABABY, DaBabyRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(AttackHelicopterModel.ATTACKHELICOPTER, AttackHelicopterModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.ATTACK_HELICOPTER, AttackHelicopterRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(TinyGuyModel.TINYGUY, TinyGuyModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.TINYGUY, TinyGuyRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(VapeProjectileModel.VAPE_RING, VapeProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VAPE_RING, VapeProjectileRenderer::new);
 
+
+        EntityModelLayerRegistry.registerModelLayer(MissileEntityModel.MISSILE, MissileEntityModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.MISSILE, MissileEntityRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(OceanGateModel.OCEAN_GATE, OceanGateModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.OCEAN_GATE_ENTITY, OceanGateRenderer::new);
+
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
         EntityRendererRegistry.register(ModEntities.STOOL, StoolRenderer::new);
+
+        EntityRendererRegistry.register(ModEntities.HOT_DOG_ROLLER, HotDogRollerRenderer::new);
+
+
     }
 }

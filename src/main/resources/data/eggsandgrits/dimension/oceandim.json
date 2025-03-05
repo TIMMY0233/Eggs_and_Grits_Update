@@ -1,0 +1,19 @@
+{
+  "type": "eggsandgrits:oceandim_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:deep_ocean",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "height": 1,
+          "block": "minecraft:bedrock"
+        }
+      ],
+      "structure_overrides":
+      []
+    }
+  }
+}
