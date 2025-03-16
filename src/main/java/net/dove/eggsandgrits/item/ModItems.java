@@ -82,6 +82,8 @@ public class ModItems {
         }
     });
 
+    public static Item OCEAN_FRUIT = registerItem("ocean_fruit", new OceanFruitItem(new Item.Settings().maxCount(1)));
+
     public static final Item PEPPER = registerItem("pepper", new Item(new Item.Settings().food(ModFoodComponents.PEPPER)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {

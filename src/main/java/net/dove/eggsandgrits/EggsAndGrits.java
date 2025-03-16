@@ -173,5 +173,12 @@ public class EggsAndGrits implements ModInitializer {
 				.tintColor(0x3432234) // Portal tint
 				.registerPortal();
 
+		CustomPortalBuilder.beginPortal()
+				.frameBlock(Blocks.OAK_PLANKS) // Portal frame block
+				.lightWithItem(Items.DIAMOND) // Portal ignition item
+				.destDimID(Identifier.of("minecraft","the_end"))
+				.tintColor(0x3432234) // Portal tint
+				.registerPortal();
+
 	}
 }

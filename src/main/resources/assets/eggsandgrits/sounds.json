@@ -122,5 +122,11 @@
     "sounds": [
       "eggsandgrits:ocean_death"
     ]
+  },
+  "radar_ping": {
+    "subtitle": "Radar Ping",
+    "sounds": [
+      "eggsandgrits:radar_ping"
+    ]
   }
 }

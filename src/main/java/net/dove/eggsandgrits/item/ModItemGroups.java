@@ -115,6 +115,8 @@ public class ModItemGroups {
                         entries.add(ModItems.KNIFE);
                         entries.add(ModItems.FORK);
 
+                        entries.add(ModItems.OCEAN_FRUIT);
+
 
 
 

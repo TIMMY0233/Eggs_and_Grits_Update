@@ -52,6 +52,9 @@ public class ModSounds {
 
     public static final SoundEvent OCEAN_DEATH = registerSoundEvent("ocean_death");
 
+    public static final SoundEvent RADAR_PING = registerSoundEvent("radar_ping");
+
+
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(EggsAndGrits.MOD_ID, name);
