@@ -1,4 +1,4 @@
-package net.dove.eggsandgrits.mixin;
+/*package net.dove.eggsandgrits.mixin;
 
 import net.minecraft.world.chunk.ChunkGenerationSteps;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,3 +20,5 @@ public class ModifyChunkGenMixin {
         return 17;
     }
 }
+
+ */

@@ -74,6 +74,7 @@ public class OceanGateEntity extends HostileEntity {
         perchPoints.add(new Vec3d(-17, 123, 34));
         perchPoints.add(new Vec3d(-8, 127, 81));
         perchPoints.add(new Vec3d(35, 122, 81));
+        this.calculateDimensions();
     }
 
 
@@ -82,7 +83,7 @@ public class OceanGateEntity extends HostileEntity {
         super.initGoals();
         //this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(2, new FollowTargetGoal(this, 2, 30.0F, 0.5F)); // Make sure it follows the player
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 30.0F));
+        this.goalSelector.add(0, new LookAtEntityGoal(this, PlayerEntity.class, 30.0F));
 
 
         this.targetSelector.add(1,new RevengeGoal(this));
@@ -134,6 +135,9 @@ public class OceanGateEntity extends HostileEntity {
     @Override
     public void tick() {
         super.tick();
+        if(!dead) {
+            this.updateBoundingBox();
+        }
 
         if (this.getWorld().isClient()) {
             this.setupAnimationStates();
@@ -253,6 +257,34 @@ public class OceanGateEntity extends HostileEntity {
             this.setPitch(this.getPitch() + Math.signum(targetPitch - this.getPitch()) * Math.min(pitchDifference, 5));  // Smooth pitch speed
         }
     }
+
+    private void updateBoundingBox() {
+        float yaw = (this.getYaw() % 360 + 360) % 360; // Normalize yaw to 0-360 range
+
+        double width = 4.0;  // Default width (X-axis)
+        double depth = 8.0;  // Default depth (Z-axis)
+        double height = 5.0; // Fixed height (Y-axis)
+
+        double halfWidth, halfDepth;
+
+        // Determine whether to swap width and depth
+        if ((yaw >= 45 && yaw < 135) || (yaw >= 225 && yaw < 315)) {
+            // Facing EAST or WEST → Swap width and depth
+            halfWidth = depth / 2.0;
+            halfDepth = width / 2.0;
+        } else {
+            // Facing NORTH or SOUTH → Keep default width and depth
+            halfWidth = width / 2.0;
+            halfDepth = depth / 2.0;
+        }
+
+        // Update bounding box to match rotation
+        this.setBoundingBox(new Box(
+                this.getX() - halfWidth, this.getY(), this.getZ() - halfDepth, // Min X, Y, Z
+                this.getX() + halfWidth, this.getY() + height, this.getZ() + halfDepth  // Max X, Y, Z
+        ));
+    }
+
 
 
     // ATTACKS //
@@ -472,6 +504,9 @@ public class OceanGateEntity extends HostileEntity {
     @Override
     protected void updatePostDeath() {
         ++this.ticksSinceDeath;
+        flameAttackCooldown = 1000;
+        sphereAttackCooldown = 1000;
+
         if(!playingDeathAnim) {
             deathAnimationState.start(this.age);
             playingDeathAnim = true;
@@ -486,7 +521,6 @@ public class OceanGateEntity extends HostileEntity {
             float g = (this.random.nextFloat() - 0.5F) * 4.0F;
             float h = (this.random.nextFloat() - 0.5F) * 8.0F;
             this.getWorld().addParticle(ParticleTypes.SONIC_BOOM, this.getX() + (double)f, this.getY() + (double)2.0F + (double)g, this.getZ() + (double)h, 0.0F, 0.0F, 0.0F);
-
         }
         if (this.ticksSinceDeath >= 30 && this.ticksSinceDeath <= 55) {
             float f = (this.random.nextFloat() - 0.5F) * 8.0F;
